@@ -1,0 +1,41 @@
+baseURL: 'https://caldei.github.io/'
+canonifyURLs: true
+languageCode: en-us
+title: KDSN
+theme: PaperMod
+paginate: 20
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: KDNS
+  disableScrollToTop: true
+  # Don't display posts list on Home Page
+  mainSections: []
+  # Color theme (auto, light or dark)
+  defaultTheme: auto
+  #custom_css = ["css/custom.css"]
+  assets:
+    favicon: images/favicon.png
+
+menu:
+  main:
+    - name: Home
+      identifier: home
+      weight: 100
+      url: /
+    - name: Kill Chain
+      weight: 200
+      identifier: posts
+      url: /killchain/
+    - name: Tools
+      weight: 300
+      identifier: tools
+      url: /tools/
+    - name: About
+      weight: 400
+      identifier: about
+      url: /about/

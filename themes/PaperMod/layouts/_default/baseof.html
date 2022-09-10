@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default " auto" }}">
+
+<head>
+    {{- partial "head.html" . }}
+
+    <!-- Axentix CSS minified version -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@2.2.0/dist/axentix.min.css">
+    {{ $options := (dict "targetPath" "css/custom.css" "outputStyle" "compressed") }}
+    {{ $style:= resources.Get "css/custom.scss" | toCSS $options }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    <!-- {{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{- end }} -->
+</head>
+
+<body class="layout-sidenav-fixed
+<!-- {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}} -->
+<!-- {{- print " list" -}} -->
+    <!-- {{- end -}} -->
+    <!-- {{- if eq site.Params.defaultTheme `dark` -}} -->
+    <!-- {{- print " dark" }} -->
+    <!-- {{- end -}} -->
+    " id="top">
+    {{- partialCached "header.html" . .Page -}}
+    <main class="main">
+
+        <!-- Custom Side Nav -->
+        <div id="example-sidenav" data-ax="sidenav"
+            class="sidenav bd-r-solid bd-3 bd-grey bd-light-2 sidenav-fixed white">
+            <div class="d-flex my-auto fx-col">
+                <div class="sidenav-header">
+                    <img class="responsive-media px-5 rounded-full" src="/images/logo.png" alt="Logo"/>
+                    <div class="h1">KDSN</div>
+                    <p>KALDEI’S SEC NOTES</p>
+                </div>
+
+                <div class="btn-group btn-group-small mx-auto">
+                    <a href="https://www.linkedin.com/in/arthur-caldeireiro/" target="_blank" rel="noopener"
+                        class="btn transparent text-grey" data-waves>
+                        <span class="iconify-inline font-s7" data-icon="akar-icons:linkedin-box-fill"></span>
+                    </a>
+                    <a href="https://github.com/Caldei" target="_blank" rel="noopener" class="btn transparent text-grey"
+                        data-waves>
+                        <span class="iconify-inline font-s7" data-icon="akar-icons:github-fill"></span>
+                    </a>
+                    <a href="https://www.root-me.org/Kaldei" target="_blank" rel="noopener"
+                        class="btn transparent text-grey" data-waves>
+                        <span class="iconify-inline font-s7" data-icon="fa6-solid:skull"></span>
+                    </a>
+                    <a href="https://tryhackme.com/p/Caldei" target="_blank" rel="noopener"
+                        class="btn transparent text-grey" data-waves>
+                        <span class="iconify-inline font-s7" data-icon="bi:cloud-fill"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Custom Side Nav -->
+
+
+        {{- block "main" . }}{{ end }}
+
+        <!-- Scrollspy -->
+        <div id="scrollspy-sidenav" data-ax="sidenav" class="sidenav sidenav-right sidenav-fixed white">
+            <div class="scrollspy d-flex my-auto fx-col text-grey" id="scrollspy-auto"></div>
+        </div>
+
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+
+    <!-- Axentix JS minified version -->
+    <script src="https://cdn.jsdelivr.net/npm/axentix@2.2.0/dist/axentix.min.js"></script>
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <!-- Scrollspy -->
+    <script>
+        // NOTE: this is NOT to be used if data-ax="scrollspy" is set in your HTML
+        // This example is based on this documentation scrollspy.
+        let scrollSpy = new Axentix.ScrollSpy('#scrollspy-auto', {
+            auto: {
+                enabled: true,
+                classes: 'mt-1 font-w500 pl-2 bd-l-2',
+                selector: 'h1,h2',
+            },
+            classes: "active"
+
+        });
+    </script>
+</body>
+
+</html>

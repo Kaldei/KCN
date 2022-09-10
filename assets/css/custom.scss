@@ -1,0 +1,63 @@
+:root {
+    --ax-sidenav-width: 20rem;
+}
+
+.sidenav-right{
+    --ax-sidenav-width: 15rem;
+}
+
+.nav{
+    margin-inline-start: 0;
+    max-width: 100%;
+    //justify-content: start; //space-between;
+}
+
+header:not(.header){
+    padding: 0!important;
+}
+
+.footer{
+    max-width: unset;
+    justify-content: center;
+}
+
+.main{
+    max-width: unset;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.post-content a{
+    box-shadow: none;
+}
+
+body{
+    &.dark{
+        .sidenav{
+            background-color: #1d1e20;
+            color: #fff;
+        }
+        .scrollspy a.active{
+            color:#fff; 
+            border-left: solid;
+            border-color: #fff;
+        }
+        .card{
+            background-color: #2e2e33;
+            color: #fff;
+        }
+    }
+}
+
+
+.scrollspy a.active{
+    color:#000; 
+    border-left: solid;
+    border-color: #000;
+}
+
+
+.h1{
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    font-weight: bold;
+}
