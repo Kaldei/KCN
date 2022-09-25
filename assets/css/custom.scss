@@ -46,6 +46,10 @@ body{
             background-color: #2e2e33;
             color: #fff;
         }
+        .pagination a{
+            background-color: #2e2e33;
+            color: #fff;
+        }
     }
 }
 
@@ -60,4 +64,10 @@ body{
 .h1{
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
     font-weight: bold;
+}
+
+
+.pagination a{
+    background-color: #fff;
+    color: #000;
 }
