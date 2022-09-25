@@ -53,21 +53,22 @@ body{
     }
 }
 
-
 .scrollspy a.active{
     color:#000; 
     border-left: solid;
     border-color: #000;
 }
 
-
 .h1{
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
     font-weight: bold;
 }
 
-
 .pagination a{
     background-color: #fff;
     color: #000;
 }
+
+.entry-content {
+    font-size: 16px;
+} 
