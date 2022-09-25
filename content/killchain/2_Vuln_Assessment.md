@@ -1,5 +1,7 @@
 ---
-title: 2 - Vulnerability Assessment
+title: 2 – Vulns Assessment
+summary: Vulnerability Assessment step – a note for finding and assessing vulnerabilities.
+description: Vulnerability Assesment step – a note for finding and assessing vulnerabilities.
 ---
 
 # Exploit Database

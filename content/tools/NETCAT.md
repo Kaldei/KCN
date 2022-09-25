@@ -1,6 +1,10 @@
 ---
 title: NETCAT
+summary: A featured networking utility which reads and writes data across network connections.
+description: A featured networking utility which reads and writes data across network connections.
 ---
+
+[http://netcat.sourceforge.net/](http://netcat.sourceforge.net/)
 
 ## NETCAT Listener
 
@@ -9,7 +13,7 @@ title: NETCAT
  > **<font color=red>nc -lvnp</font> \[ATTACKER_PORT\]**</br>
  > Open a listener on port 2112
 
-## NETCAT REverse Shell
+## NETCAT Reverse Shell
 
 
  > 

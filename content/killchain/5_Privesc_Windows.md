@@ -1,8 +1,10 @@
 ---
-title: 5 - Privesc Windows
+title: 5 – Privesc Windows
+summary: Privilege Escalation step – a note for elevating privileges on a Windows machine.
+description: Privilege Escalation step – a note for elevating privileges on a Windows machine.
 ---
 
-# Privec Checklist
+# Privesc Checklist
 
 ---
 

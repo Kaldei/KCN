@@ -1,6 +1,10 @@
 ---
 title: FCRACKZIP
+summary: "A zip password cracker, similar to fzc, zipcrack and others."
+description: "A zip password cracker, similar to fzc, zipcrack and others."
 ---
+
+[http://oldhome.schmorp.de/marc/fcrackzip.html](http://oldhome.schmorp.de/marc/fcrackzip.html)
 
 ## FCRACKZIP Base
 

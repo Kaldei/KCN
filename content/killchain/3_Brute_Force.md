@@ -1,5 +1,7 @@
 ---
-title: 3 - Brute Force
+title: 3 – Brute Force
+summary: "Gaining Access step – a note for brute forcing passwords, login pages, archives, ..."
+description: "Gaining Access step – a note for brute forcing passwords, login pages, archives, ..."
 ---
 
 # Words Lists :

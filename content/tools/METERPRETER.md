@@ -1,6 +1,10 @@
 ---
 title: METERPRETER
+summary: A Metasploit attack payload that provides an interactive shell.
+description: A Metasploit attack payload that provides an interactive shell.
 ---
+
+[https://github.com/rapid7/meterpreter](https://github.com/rapid7/meterpreter)
 
 ## METERPRETER Enumeration
 

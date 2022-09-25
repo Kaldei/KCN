@@ -1,5 +1,7 @@
 ---
-title: 5 - Privesc Linux
+title: 5 – Privesc Linux
+summary: Privilege Escalation step – a note for elevating privileges on a Linux machine.
+description: Privilege Escalation step – a note for elevating privileges on a Linux machine.
 ---
 
 # Privesc Checklist

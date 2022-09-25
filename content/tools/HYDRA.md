@@ -1,6 +1,10 @@
 ---
 title: HYDRA
+summary: A very fast and flexible login cracker.
+description: A very fast and flexible login cracker.
 ---
+
+[https://github.com/vanhauser-thc/thc-hydra](https://github.com/vanhauser-thc/thc-hydra)
 
 ## HYDRA Base
 

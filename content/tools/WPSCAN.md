@@ -1,6 +1,10 @@
 ---
 title: WPSCAN
+summary: A WordPress security scanner.
+description: A WordPress security scanner.
 ---
+
+[https://github.com/wpscanteam/wpscan](https://github.com/wpscanteam/wpscan)
 
 ## WPSCAN Base
 

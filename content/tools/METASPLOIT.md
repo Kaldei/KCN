@@ -1,6 +1,10 @@
 ---
 title: METASPLOIT
+summary: A penetration testing framework.
+description: A penetration testing framework.
 ---
+
+[https://github.com/rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework)
 
 ## METASPLOIT Handler
 

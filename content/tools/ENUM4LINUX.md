@@ -1,5 +1,7 @@
 ---
 title: ENUM4LINUX
+summary: A Linux alternative to enum.exe for enumerating data from Windows and Samba hosts.
+description: A Linux alternative to enum.exe for enumerating data from Windows and Samba hosts.
 ---
 
 [https://github.com/CiscoCXSecurity/enum4linux](https://github.com/CiscoCXSecurity/enum4linux) 

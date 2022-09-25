@@ -1,6 +1,10 @@
 ---
 title: SMBCLIENT
+summary: A FTP-like client to access SMB/CIFS resources on servers.
+description: A FTP-like client to access SMB/CIFS resources on servers.
 ---
+
+[https://www.samba.org/samba/docs/current/man-html/smbclient.1.html](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)
 
 ## SMBCLIENT Base
 

@@ -1,12 +1,13 @@
 ---
 title: MIMIKATZ
+summary: "A tool to play with Windows security, written in C."
+description: "A tool to play with Windows security, written in C."
 ---
+
+[https://github.com/gentilkiwi/mimikatz](https://github.com/gentilkiwi/mimikatz)
 
 ## MIMIKATZ Base
 
-A tool to view and steal credentials.
-[https://github.com/gentilkiwi/mimikatz](https://github.com/gentilkiwi/mimikatz) 
-[https://github.com/gentilkiwi/mimikatz/wiki](https://github.com/gentilkiwi/mimikatz/wiki)
 
  > 
  > **<font color=red>load kiwi</font>**</br>

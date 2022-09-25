@@ -1,8 +1,12 @@
 ---
-title: NICKTO
+title: NIKTO
+summary: A web server scanner.
+description: A web server scanner.
 ---
 
-## NICKTO Base
+[https://github.com/sullo/nikto](https://github.com/sullo/nikto)
+
+## NIKTO Base
 
 
  > 

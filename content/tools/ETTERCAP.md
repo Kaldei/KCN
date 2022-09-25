@@ -1,6 +1,10 @@
 ---
 title: ETTERCAP
+summary: A comprehensive suite for man in the middle attacks.
+description: A comprehensive suite for man in the middle attacks.
 ---
+
+[https://github.com/Ettercap/ettercap](https://github.com/Ettercap/ettercap)
 
 ## ETTERCAP Base
 

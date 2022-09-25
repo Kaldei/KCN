@@ -1,5 +1,7 @@
 ---
-title: 3 - Reverse Shell
+title: 3 – Reverse Shell
+summary: Gaining Access step – a note for obtaining a reverse shell on the target.
+description: Gaining Access step – a note for obtaining a reverse shell on the target.
 ---
 
 # Reverse vs Bind vs Web Shell

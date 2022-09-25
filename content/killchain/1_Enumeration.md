@@ -1,8 +1,10 @@
 ---
-title: 1 - Enumeration
+title: 1 – Enumeration
+summary: "Enumeration step – a note for enumerating hosts, ports, subdomains, web paths, users, ..."
+description: "Enumeration step – a note for enumerating hosts, ports, subdomains, web paths, users, ..."
 ---
 
-# Host Dicovering
+# Host Discovering
 
 ---
 
@@ -88,7 +90,6 @@ title: 1 - Enumeration
 
 ### ASSETFINDER
 
-[https://github.com/tomnomnom/assetfinder](https://github.com/tomnomnom/assetfinder) 
 
  > 
  > **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
@@ -101,9 +102,8 @@ title: 1 - Enumeration
 
 ---
 
-### AMMAS
+### AMAS
 
-https://github.com/OWASP/Amass 
 
  > 
  > **<font color=orange>go install github.com/OWASP/Amass/v3/...@master</font>**
