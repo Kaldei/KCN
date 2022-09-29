@@ -9,6 +9,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      typographer: false
 
 params:
   title: KDNS
