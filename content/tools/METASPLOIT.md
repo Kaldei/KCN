@@ -33,7 +33,7 @@ Example: windows/meterpreter/reverse_tcp.
 
 ### Exploit Ranking
 
-![METASPLOIT ExploitRanking.png](../Snippets/imgs/METASPLOIT%20ExploitRanking.png)
+![METASPLOITExploitRanking.png](../imgs/METASPLOITExploitRanking.png)
 
 Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-ranking.html
 
@@ -43,30 +43,37 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > 
  > **<font color=red>msfdb init</font>**</br>
  > Initialize database.
+ > 
  > **<font color=red>msfconsole</font>**</br>
  > Start metasploit console.
+ > 
  > **<font color=red>db_status</font>**</br>
  > Check database connection.
 
  > 
  > **<font color=red>search </font>\[SERVICE_TO_EXPLOIT\]**</br>
  > Search for an exploit to use against the specified service.
+ > 
  > **<font color=red>use</font> \[MODULE\]**</br>
- > Select a module.	
+ > Select a module.
+ > 
  > **<font color=red>use auxiliary</font>**</br>
  > Select an auxiliary module. 
 
  > 
  > **<font color=red>info</font>**</br>
  > Display information about selected module.
+ > 
  > **<font color=red>show options</font>**</br>
  > Show variables (options) of selected module.
 
  > 
  > **<font color=red>set</font> \[VARIABLE\] \[VALUE\]**</br>
  > Set variable (option) of selected module.
+ > 
  > **<font color=red>setg</font> \[VARIABLE\] \[VALUE\]**</br>
  > Set variable (option) globaly (for all modules).
+ > 
  > **<font color=red>unset</font> \[VARIABLE\] \[VALUE\]**</br>
  > Unset variable.
 
@@ -77,14 +84,17 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > 
  > **<font color=red>sessions -l</font>**</br>
  > List opened sessions.
+ > 
  > **<font color=red>sessions</font> 1**</br>
  > Open session 1.
+ > 
  > **<font color=red>background</font>**</br>
  > Background session (Ctrl + z).
 
  > 
  > **<font color=red>connect</font> \[HOST\]**</br>
  > Netcat like connection.
+ > 
  > **<font color=red>spool</font>**</br>
  > Write console output into a file as well the screen.
 

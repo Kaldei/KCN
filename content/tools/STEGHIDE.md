@@ -14,5 +14,5 @@ description: A steganography tool that is able to hide data in various kinds of 
  > Hide file in an other file with a password.
 
  > 
- > **<font color=red>steghide extract -v -sf</font> \[myCoverFile\] <font color=red>--password </font>\[myPassword\]**
+ > **<font color=red>steghide extract -v -sf</font> \[myCoverFile\] <font color=red>--password </font>\[myPassword\]**</br>
  > Extract hidden file with the password.
