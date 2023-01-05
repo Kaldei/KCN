@@ -8,9 +8,9 @@ description: "A subdomains and related domains finder tool, written in Go."
 
 ## ASSETFINDER Base
 
+STEGHIDE> **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
+\>
 
- > 
- > **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
  > 
  > **<font color=red>assetfinder</font> \[TARGET_DOMAIN\]**</br>
  > Find subdomains and some that could be related.

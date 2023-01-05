@@ -22,7 +22,7 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList -u http://\[TARGET_IP\]:\[TARGET_PORT\]/login.php -d “username=<font color=red>FUZZ</font>&password=<font color=red>FUZZ</font>”</br>**
- > Fuzz Login.
+ > Fuzz POST Login.
 
 ---
 
@@ -209,7 +209,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 ---
 
-## JOHN
+### JOHN
 
 
  > 

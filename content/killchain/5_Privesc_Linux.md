@@ -21,7 +21,7 @@ description: Privilege Escalation step – a note for elevating privileges on a 
  > Show environment variables.
 
  > 
- > **<font color=red>find / -perm -u=s -type f 2>/dev/null</font>**</br>
+ > **<font color=red>find / -perm -u=s -type f 2> /dev/null</font>**</br>
  > Search for commands with SUID enabled (then check [https://gtfobins.github.io/](https://gtfobins.github.io/)) 
 
  > 
@@ -33,7 +33,7 @@ description: Privilege Escalation step – a note for elevating privileges on a 
  > Search for writable folders.
 
  > 
- > **<font color=red>\<find / -name id_rsa 2> /dev/null/br></font>**</br>
+ > **<font color=red>find / -name id_rsa 2> /dev/null/</font>**</br>
  > Search for SSH private keys.
 
  > 
@@ -67,6 +67,15 @@ https://github.com/rebootuser/LinEnum
 
  > 
  > **<font color=red>./LinEnum.sh</font>**
+
+---
+
+### METASPLOIT
+
+
+ > 
+ > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**
+ > Check exploits for privilege escalation.
 
 # SUID Examples
 

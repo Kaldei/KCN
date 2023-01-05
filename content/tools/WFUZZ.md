@@ -13,29 +13,36 @@ description: A web application fuzzer.
  > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/<font color=red>FUZZ</font></br>**
  > Fuzz Folders
 
-## WFUZZ API Fuzz
+## WFUZZ GET Fuzz
 
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/api/file?parameter=<font color=red>FUZZ</font></br>**
- > Fuzz API
+ > Fuzz GET Parameter (ex: API).
 
-## WFUZZ Login Brute Force
+## WFUZZ POST Login Brute Force
 
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList -u http://\[TARGET_IP\]:\[TARGET_PORT\]/login.php -d “username=<font color=red>FUZZ</font>&password=<font color=red>FUZZ</font>”</br>**
- > Fuzz Login.
+ > Fuzz POST Login.
 
 ## WFUZZ Flags
 
 
  > 
- > **<font color=red>-c</font></br>**
- > Shows the output in color.
- > 
  > **<font color=red>-z</font></br>**
  > Word File to replace FUZZ in the request. For example -z file,big.txt.
+
+ > 
+ > **<font color=red>-d</font></br>**
+ > Specifies POST parameters.
+ > 
+ > **<font color=red>-s</font></br>**
+ > Timing for requests.
+ > 
+ > **<font color=red>-c</font></br>**
+ > Shows the output in color.
 
  > 
  > **<font color=red>--hc</font></br>**

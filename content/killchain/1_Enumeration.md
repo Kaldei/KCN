@@ -12,7 +12,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>arp -scan -l -I</font> eth0**</br>
+ > **<font color=red>arp-scan -l -I</font> eth0**</br>
  > Scan for hosts in the same network of the specifeid interface.
 
  > 
@@ -90,9 +90,9 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 ### ASSETFINDER
 
+STEGHIDE> **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
+\>
 
- > 
- > **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
  > 
  > **<font color=red>assetfinder</font> \[TARGET_DOMAIN\]**</br>
  > Find subdomains and some that could be related.
@@ -193,7 +193,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/api/file?parameter=<font color=red>FUZZ</font></br>**
- > Fuzz API
+ > Fuzz GET Parameter (ex: API).
 
 # Virutals Hosts Fuzz
 
