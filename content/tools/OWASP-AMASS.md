@@ -6,7 +6,7 @@ description: An in-depth asset discovery tool.
 
 [https://github.com/OWASP/Amass](https://github.com/OWASP/Amass)
 
-## AMASS Base
+## OWASP-AMASS Base
 
 
  > 

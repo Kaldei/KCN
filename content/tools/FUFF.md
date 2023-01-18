@@ -29,9 +29,9 @@ description: "A fast web fuzzer, written in Go."
 
 ## FUFF HTTP POST Form Brute Force
 
-WPSCAN> **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font><font color=red>:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_IP\]/login <font color=red>-fc 200</font>**</br>
 
  > 
+ > **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font><font color=red>:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_IP\]/login <font color=red>-fc 200</font>**</br>
  > Brute Force HTTP POST form with valid username.
 
 ## FUFF Flags

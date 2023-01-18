@@ -8,9 +8,9 @@ description: A penetration testing framework.
 
 ## METASPLOIT Terminology
 
-### Non-Staged Payload (Singles or Inline)
+### Non-Staged Payload
 
-**Non-staged payload are sent all at once.**
+**Non-staged (Singles or Inline) payload are sent all at once.**
 
 Example: windows/meterpreter_reverse_tcp.
 

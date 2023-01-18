@@ -124,11 +124,7 @@ description: A very famous network discovery tool.
 
 ## NMAP Scripts
 
-[https://nmap.org/nsedoc/](https://nmap.org/nsedoc/) 
-
 **<font color='lightblue'>/usr/share/nmap/scripts</font>**
-
-![](https://lh5.googleusercontent.com/NHTCdufcZiTMmjJMx6MED47ZsVmNnTlLSwDAY7PkxCSbzdz88uaTSKEpHTILX5QhDs-tza6hgufWPm8u5Iy1enfl_wpXfF2XTzUBSRF6Z4g_31kxlbrqSIxqSN7tZZh89Tflpkj_OmjrGXgPCA)
 
  > 
  > **<font color=red>-sC</font></br>**
@@ -141,8 +137,8 @@ description: A very famous network discovery tool.
  > **<font color='red'>--script</font> vuln</br>**
  > Run a script.	
  > 
- > **<font color='red'>--script</font> http-put <font color='red'>--script-args</font></br>**
- > http-put.url='/dav/shell.php',http-put.file='./shell.php' : Script with arguments
+ > **<font color='red'>--script</font> http-put <font color='red'>--script-args</font> http-put.url='/dav/shell.php',http-put.file='./shell.php'**
+ > Script with arguments
 
 ## NMAP SMB Scan
 
@@ -154,3 +150,10 @@ description: A very famous network discovery tool.
  > 
  > **<font color=red>nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount</font> \[TARGET_IP\]</br>**
  > Enumerate rpcbind.
+
+## NMAP Weak Cipher Scan
+
+
+ > 
+ > **<font color=red>nmap --script=ssl-enum-ciphers -p 443</font> \[TARGET_IP\]**</br>
+ > Check for weak cipher. Under B score, it’s a bad cipher.

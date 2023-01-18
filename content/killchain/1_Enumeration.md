@@ -12,7 +12,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>arp-scan -l -I</font> eth0**</br>
+ > **<font color=red>arp-scan -l</font> eth0**</br>
  > Scan for hosts in the same network of the specifeid interface.
 
  > 
@@ -90,9 +90,9 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 ### ASSETFINDER
 
-STEGHIDE> **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
-\>
 
+ > 
+ > **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
  > 
  > **<font color=red>assetfinder</font> \[TARGET_DOMAIN\]**</br>
  > Find subdomains and some that could be related.
@@ -102,7 +102,7 @@ STEGHIDE> **<font color=orange>go install github.com/tomnomnom/assetfinder@lates
 
 ---
 
-### AMAS
+### OWASP-AMAS
 
 
  > 
