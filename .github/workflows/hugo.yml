@@ -1,69 +1,81 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Hugo to Pages
 
+
+# --- Trigger --- # 
 on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+
+# --- Permissions --- #
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+
+# --- Concurrency --- #
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# Default to bash
-defaults:
-  run:
-    shell: bash
 
+# --- Jobs --- #
 jobs:
-  # Build job
-  build:
+  # --- Job 1: Build --- # 
+  job_name_build:
     runs-on: ubuntu-latest
+    
     env:
       HUGO_VERSION: 0.102.3
+    
     steps:
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Checkout
+
+      - name: Checkout code 
         uses: actions/checkout@v3
         with:
-          submodules: recursive
-      - name: Setup Pages
+          submodules: recursive # Fetch Hugo themes
+          lfs: true # Fetch LFS data
+
+      - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v2
-      - name: Build with Hugo
+        
+      - name: Build Hugo
+        # For maximum backward compatibility with Hugo modules
         env:
-          # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
+          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+  
+      - name: Upload artifact (Hugo Build)
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
 
-  # Deployment job
-  deploy:
+
+  # --- Job 2: Deployment --- # 
+  job_name_deploy:      
+    runs-on: ubuntu-latest
+    
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+      url: ${{ steps.deployment.outputs.page_url }}    
+      
+    needs: job_name_build
+  
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
