@@ -127,12 +127,12 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>multi/manage/shell_to_meterpreter</font>**
+ > **<font color=red>use</font> <font color=lightblue>multi/manage/shell_to_meterpreter</font>**</br>
  > Upgrade shell to a Meterpreter session.
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**
+ > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**</br>
  > Check exploits for privilege escalation.
 
 ### Post Exploit Windows
@@ -144,7 +144,6 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
 
  > 
  > **<font color=red>use</font> <font color=lightblue>post/windows/manage/enable_rdp</font>**</br>
-  
  > Try to enable RDP.
 
  > 

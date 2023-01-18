@@ -74,7 +74,7 @@ https://github.com/rebootuser/LinEnum
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**
+ > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**</br>
  > Check exploits for privilege escalation.
 
 # SUID Examples
