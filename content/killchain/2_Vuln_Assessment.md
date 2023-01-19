@@ -74,7 +74,8 @@ description: Vulnerability Assesment step – a note for finding and assessing v
 
 The scanner will be accessible at: [https://127.0.0.1:8834/](https://127.0.0.1:8834/)
 
-To use the scanner, you need to create an account. You can create a free Nessus Essentials account here: [https://fr.tenable.com/products/nessus/nessus-essentials](https://fr.tenable.com/products/nessus/nessus-essentials)
+To use the scanner, you need to create an account.</br>
+You can create a free Nessus Essentials account here: [https://fr.tenable.com/products/nessus/nessus-essentials](https://fr.tenable.com/products/nessus/nessus-essentials)
 
 ---
 
