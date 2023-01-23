@@ -4,7 +4,7 @@ summary: A web application fuzzer.
 description: A web application fuzzer.
 ---
 
-[https://github.com/xmendez/wfuzz](https://github.com/xmendez/wfuzz)
+**[https://github.com/xmendez/wfuzz](https://github.com/xmendez/wfuzz)**
 
 ## WFUZZ Folder Fuzz
 

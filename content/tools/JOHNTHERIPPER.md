@@ -4,7 +4,7 @@ summary: An advanced offline password cracker.
 description: An advanced offline password cracker.
 ---
 
-[https://github.com/openwall/john](https://github.com/openwall/john)
+**[https://github.com/openwall/john](https://github.com/openwall/john)**
 
 ## Base
 

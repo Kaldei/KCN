@@ -4,7 +4,7 @@ summary: "A fast web fuzzer, written in Go."
 description: "A fast web fuzzer, written in Go."
 ---
 
-[https://github.com/ffuf/ffuf](https://github.com/ffuf/ffuf)
+**[https://github.com/ffuf/ffuf](https://github.com/ffuf/ffuf)**
 
 ## FUFF Web Paths
 

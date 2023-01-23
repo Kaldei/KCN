@@ -4,7 +4,7 @@ summary: An Active Directory audit tool.
 description: An Active Directory audit tool.
 ---
 
-[https://github.com/vletoux/pingcastle](https://github.com/vletoux/pingcastle)
+**[https://github.com/vletoux/pingcastle](https://github.com/vletoux/pingcastle)**
 
 Free, but if you want to use it for commercial purposes, you have to pay.
 

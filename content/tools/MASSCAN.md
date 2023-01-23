@@ -4,7 +4,7 @@ summary: An Internet-scale port scanner.
 description: An Internet-scale port scanner.
 ---
 
-[https://github.com/robertdavidgraham/masscan](https://github.com/robertdavidgraham/masscan)
+**[https://github.com/robertdavidgraham/masscan](https://github.com/robertdavidgraham/masscan)**
 
 ## MASSCAN Base
 

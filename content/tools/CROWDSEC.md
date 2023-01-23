@@ -4,7 +4,7 @@ summary: An open-source and paticipative IDS and IDS.
 description: An open-source and paticipative IDS and IDS.
 ---
 
-[https://www.crowdsec.net/](https://www.crowdsec.net/)
+**[https://www.crowdsec.net/](https://www.crowdsec.net/)**
 
 ## CROWDSEC Installation
 

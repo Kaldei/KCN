@@ -4,7 +4,7 @@ summary: A really fast password cracker.
 description: A really fast password cracker.
 ---
 
-[https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat)
+**[https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat)**
 
 ## HASHCAT Mods
 

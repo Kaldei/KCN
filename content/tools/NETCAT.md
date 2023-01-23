@@ -4,7 +4,7 @@ summary: A featured networking utility which reads and writes data across networ
 description: A featured networking utility which reads and writes data across network connections.
 ---
 
-[http://netcat.sourceforge.net/](http://netcat.sourceforge.net/)
+**[http://netcat.sourceforge.net/](http://netcat.sourceforge.net/)**
 
 ## NETCAT Listener
 

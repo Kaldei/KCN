@@ -4,7 +4,7 @@ summary: "A directory, file, DNS and vhost busting tool, written in Go."
 description: "A directory, file, DNS and vhost busting tool, written in Go."
 ---
 
-[https://github.com/OJ/gobuster](https://github.com/OJ/gobuster)
+**[https://github.com/OJ/gobuster](https://github.com/OJ/gobuster)**
 
 ## GOBUSTER Files and Folders Fuzz
 
