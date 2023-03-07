@@ -13,7 +13,7 @@ markup:
       typographer: false
 
 params:
-  title: KDNS
+  title: KDSN
   disableScrollToTop: true
   # Don't display posts list on Home Page
   mainSections: []
