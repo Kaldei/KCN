@@ -37,7 +37,7 @@ Example: windows/meterpreter/reverse_tcp.
 
 Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-ranking.html
 
-## METASPLOIT CONSOLE
+## METASPLOIT Console
 
 
  > 
@@ -98,7 +98,7 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > **<font color=red>spool</font>**</br>
  > Write console output into a file as well the screen.
 
-## METASPLOIT MODULES
+## METASPLOIT Modu
 
 ### Handler Multi
 
@@ -156,3 +156,5 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > 
  > **<font color=red>use</font> <font color=lightblue>linux/gather/hashdump</font>**</br>
  > Dump users hashes.
+
+## METASPLOIT Impersonate
