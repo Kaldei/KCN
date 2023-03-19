@@ -63,7 +63,7 @@ description: A Metasploit attack payload that provides an interactive shell.
 
 ## METERPRETER Impersonate
 
-When **SeDebugPrivilege** or **SeImpersonatePrivilege** are enabled, we can impersonate another user.
+When **SeDebugPrivilege** and **SeImpersonatePrivilege** are enabled, we can impersonate another user.
 
  > 
  > **<font color=red>load incognito</font>**</br>
