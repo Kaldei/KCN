@@ -18,7 +18,7 @@ description: A command line tool and library for transferring data with URL synt
 
  > 
  > **<font color=red>-s</font>**</br>
- > Silent.
+ > Silent (do not print curl info).
  > 
  > **<font color=red>-k</font>**</br>
  > Ignore HTTPS Errors.
