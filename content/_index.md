@@ -4,16 +4,17 @@ title: Index
 
 <h1 class="text-center">KALDEI'S SEC NOTES</h1>
 
-## What is this site? 🔮
-Since I began my studies, I got into the habit of taking notes. These notes take the form of "Cheat Sheets" and allow me to quickly recall and reuse tools that I've seen and studied. 
 
-I decided to publish here my cybersecurity-related notes to share my work (maybe my notes could be useful to others!).
+## What can you find here? 🔮
+My personal notes about cybersecurity and stuff. Could be useful to someone, so I share them. 
 
-This site is a never-ending work in progress: I am currently in the process of converting my notes to the right format, and I will continue to feed them as I learn.
+These notes take the form of "Cheat Sheets". This allow me to quickly recall and reuse tools that I've encountered. 
+This site is a never-ending work in progress: I am currently in the process of converting my notes to the right format, and I will continue to feed them as I learn new things.
 
-## What can you find here? 🧭
-My notes are sorted (for now) into two categories:
+Disclaimer: My notes are more or less updated and most likely contain mistakes or things that will not work. If you find something broken feel free to reach me.
 
+
+## Where to now? ? 🧭
 <article class="card shadow-1 rounded-3 white post-entry">
   <header class="entry-header">
     <div class="h2">Kill Chain</div>    
@@ -32,10 +33,3 @@ My notes are sorted (for now) into two categories:
   </div>
   <a class="entry-link" href="/tools/"></a>
 </article>
-
-## Whoami? 🥷
-I'm Kaldei, a computer engineering student aiming for a cybersecurity specialization and an insane desire to work as a Pentester!
-
-Disclaimer: Please note that my notes are most likely incomplete and could contain mistakes. If you find one, feel free to reach me 🙂.
-
-Enjoy my website ;)
