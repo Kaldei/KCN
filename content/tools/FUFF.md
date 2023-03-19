@@ -38,21 +38,21 @@ description: "A fast web fuzzer, written in Go."
 
 
  > 
- > **<font color=red>-fs</font></br>**
+ > **<font color=red>-fs</font>**</br>
  > Size to filter (do not show response with this size).
  > 
- > **<font color=red>-mr</font></br>**
+ > **<font color=red>-mr</font>**</br>
  > Text on the page we are looking for to validate.
 
  > 
- > **<font color=red>-w</font></br>**
+ > **<font color=red>-w</font>**</br>
  > Wordlist location.
  > 
- > **<font color=red>-u </font></br>**
+ > **<font color=red>-u </font>**</br>
  > Specifies the URL.
  > 
- > **<font color=red>-d</font></br>**
+ > **<font color=red>-d</font>**</br>
  > Data (fields) that we send.
  > 
- > **<font color=red>-H</font></br>**
+ > **<font color=red>-H</font>**</br>
  > Add additional headers to the request.
