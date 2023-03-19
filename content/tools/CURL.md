@@ -24,7 +24,11 @@ description: A command line tool and library for transferring data with URL synt
  > Ignore HTTPS Errors.
  > 
  > **<font color=red>-i</font>**</br>
- > Show Response Headers.
+ > Show response Headers.
+ > 
+ > **<font color=red>-o</font> myFile**</br>
+ > Save response in a file.
+
  > 
  > **<font color=red>-u</font> admin<font color=red>:</font>admin**</br>
  > Provide Credentials.
@@ -45,7 +49,7 @@ description: A command line tool and library for transferring data with URL synt
 
  > 
  > **<font color=red>curl '</font>http://\[TARGET_IP\]/api/book/1<font color=red>'  \\</font>**</br>
- > **<font color=red>-H 'Authorization: Bearer</font> \[JWT_TOKEN\]<font color=red>'</font>**
+ > **<font color=red>-H 'Authorization: Bearer</font> \[JWT_TOKEN\]<font color=red>'</font>**</br>
  > Example GET request with JWT.
 
 ## CURL Example POST Request with JSON content
@@ -55,7 +59,7 @@ description: A command line tool and library for transferring data with URL synt
  > **<font color=red>curl '</font>http://\[TARGET_IP\]/api/auth/login<font color=red>' \\</font>**</br>
  > **<font color=red>-X POST \\</font>**</br>
  > **<font color=red>-H "Content-Type: application/json" \\</font>**</br>
- > **<font color=red>-d '{"</font>username<font color=red>":"</font>User<font color=red>","</font>password<font color=red>":"</font>P@ssw0rd<font color=red>"}'</font>**
+ > **<font color=red>-d '{"</font>username<font color=red>":"</font>User<font color=red>","</font>password<font color=red>":"</font>P@ssw0rd<font color=red>"}'</font>**</br>
  > Example POST request with JSON content.
 
 ## CURL Send File
