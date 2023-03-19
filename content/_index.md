@@ -9,7 +9,7 @@ title: Index
 My personal notes about cybersecurity and stuff. Could be useful to someone, so I share them. 
 
 These notes take the form of "Cheat Sheets". This allow me to quickly recall and reuse tools that I've encountered. 
-This site is a never-ending work in progress: I am currently in the process of converting my notes to the right format, and I will continue to feed them as I learn new things.
+This website is a never-ending work in progress: I am currently in the process of converting my notes to the right format, and I will continue to feed them as I learn new things.
 
 Disclaimer: My notes are more or less updated and most likely contain mistakes or things that will not work. If you find something broken feel free to reach me.
 
