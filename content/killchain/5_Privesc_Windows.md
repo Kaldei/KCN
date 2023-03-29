@@ -9,6 +9,10 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 ---
 
  > 
+ > **<font color=red>doskey /history</font>**</br>
+ > Show user input history.
+
+ > 
  > **<font color=red>powershell -c "Get-Service"</font>**</br>
  > Return services.
 
