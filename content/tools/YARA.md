@@ -85,3 +85,5 @@ rule myRule {
  > 
  > **<font color=red>-o</font>**</br>
  > Output Yara rule file.
+
+## YARA with OSQUERY
