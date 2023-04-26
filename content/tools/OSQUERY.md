@@ -10,7 +10,7 @@ description: "An SQL powered operating system instrumentation, monitoring, and a
 
 
  > 
- > **<font color=red>osquery</font>**</br>
+ > **<font color=red>osqueryi</font>**</br>
  > Enter Osquery console.
 
  > 
