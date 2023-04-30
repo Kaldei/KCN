@@ -131,9 +131,16 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
  > 
  > **<font color=red>jwt-cracker </font> \[myToken\] \[myAlphabet\] \[myMaxSecretLengthExpected\]**</br>
- > Crack JWT token password.
+ > Brute force attack JWT token secret.
 
 Default Alphabet : abcdefghijklmnopqrstuvwxyz
+
+### JWT_TOOL
+
+
+ > 
+ > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**</br>
+ > Dictionnary attack JWT token secret.
 
 # MD5
 

@@ -11,6 +11,6 @@ description: A simple HS256 JWT token brute force cracker.
 
  > 
  > **<font color=red>jwt-cracker </font> \[myToken\] \[myAlphabet\] \[myMaxSecretLengthExpected\]**</br>
- > Crack JWT token password.
+ > Brute force attack JWT token secret.
 
 Default Alphabet : abcdefghijklmnopqrstuvwxyz
