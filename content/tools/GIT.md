@@ -23,18 +23,4 @@ description: A free and open source distributed version control system.
  > **<font color=red>git config --global</font> user.name myName**</br>
  > Change parameter value.
 
-## FCRACKZIP Flags
-
-
- > 
- > **<font color=red>-v</font>**</br>
- > Verbose.
- > 
- > **<font color=red>-D</font>**</br>
- > Dictionary attack.
- > 
- > **<font color=red>-p</font>**</br>
- > Password list.
- > 
- > **<font color=red>-u</font> myZip.zip**</br>
- > Zip file.
+## GIT Base
