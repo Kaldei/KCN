@@ -9,6 +9,8 @@ description: A comprehensive suite for man in the middle attacks.
 ## ETTERCAP Basis
 
 
+ > 
+ > **<font color=red>ettercap -T -S -i</font> wlan0 <font color=red>-M arp:remote /</font>\[ROUTER_IP\]<font color=red>// /</font>\[TARGET_IP\]<font color=red>//</font>**
 
 ## ETTERCAP Flags
 
