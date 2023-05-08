@@ -9,6 +9,9 @@ description: A WordPress security scanner.
 ## WPSCAN Basis
 
 
+ > 
+ > **<font color=red>wpscan --url</font> \[TARGET_IP\] <font color=red>-e u,vp,vt</font>**  
+ > Scan Wordpress.
 
 ## WPSCAN Flags
 

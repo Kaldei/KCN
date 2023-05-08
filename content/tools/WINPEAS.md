@@ -8,7 +8,11 @@ description: A Windows local Privilege Escalation Awesome Script.
 
 ## WINPEAS Basis
 
+**https://github.com/carlospolop/PEASS-ng/releases**
 
+ > 
+ > **<font color=red>winPEASx64.exe</font>**
+ > Run WinPEAD
 
 ## WINPEAS No quotes and Space detected
 

@@ -9,6 +9,9 @@ description: An advanced offline password cracker.
 ## Basis
 
 
+ > 
+ > **<font color=red>john --wordlist=</font>/usr/share/wordlists/rockyou.txt hash.txt**</br>
+ > Crack unknown hash.
 
 ## Flags
 

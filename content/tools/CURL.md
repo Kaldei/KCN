@@ -9,6 +9,9 @@ description: A command line tool and library for transferring data with URL synt
 ## CURL Basis
 
 
+ > 
+ > **<font color=red>curl</font> http://my.url**</br>
+ > Get HTTP Content.
 
 ## CURL Flags
 

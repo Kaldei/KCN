@@ -9,6 +9,8 @@ description: A very fast and flexible login cracker.
 ## HYDRA Basis
 
 
+ > 
+ > **<font color=red>hydra -l </font>username <font color=red>-P</font> wordlist.txt \[TARGET_IP\] service**
 
 ## HYDRA Flags
 

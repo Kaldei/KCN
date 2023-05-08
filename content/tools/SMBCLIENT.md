@@ -9,6 +9,17 @@ description: A FTP-like client to access SMB/CIFS resources on servers.
 ## SMBCLIENT Basis
 
 
+ > 
+ > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> --no-pass</font></br>**
+ > List Shares anonymously.
+
+ > 
+ > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> -U</font> myUser</br>**
+ > List Shares with a user.
+
+ > 
+ > **<font color=red>smbclient</font> <font color=red>//</font>\[TARGET_IP\]<font color=red>/</font>mySmbShare</br>**
+ > Connect to a Share.
 
 ## SMBCLIENT Flags
 

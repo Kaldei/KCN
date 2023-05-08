@@ -77,7 +77,11 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 
 ### WINPEAS
 
+**https://github.com/carlospolop/PEASS-ng/releases**
 
+ > 
+ > **<font color=red>winPEASx64.exe</font>**
+ > Run WinPEAD
 
 #### WINPEAS Output
 

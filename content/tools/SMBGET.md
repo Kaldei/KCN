@@ -9,3 +9,6 @@ description: A WGET-like utility to download files over SMB.
 ## SMBGET Basis
 
 
+ > 
+ > **<font color=red>smbget -R smb://</font>10.0.0.12<font color=red>/</font>smbShare</br>**
+ > : Recursively download the SMB share.

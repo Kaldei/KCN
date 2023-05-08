@@ -9,3 +9,6 @@ description: "A DNS enumeration Script, witten in Python."
 ## DNSRECON Basis :
 
 
+ > 
+ > **<font color=red>dnsrecon -t brt -d</font> \[TARGET_DOMAIN\]**</br>
+ > Find subdomains (brute force).

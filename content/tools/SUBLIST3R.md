@@ -9,3 +9,6 @@ description: A fast subdomains enumeration tool.
 ## SUBLIST3R Basis
 
 
+ > 
+ > **<font color=red>sublist3r.py -d</font>  \[TARGET_DOMAIN\]</br>**
+ > Find subdomains (using search engines).

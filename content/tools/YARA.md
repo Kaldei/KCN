@@ -9,6 +9,9 @@ description: A tool aimed to identify and classify malware samples.
 ## YARA Basis
 
 
+ > 
+ > **<font color=red>yara</font> myRule<font color=red>.yar</font> /some/file**</br>
+ > Execute Yara rule on a file: search for a pattern in the file.
 
 ## YARA Flag
 

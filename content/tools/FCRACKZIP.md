@@ -9,6 +9,9 @@ description: "A zip password cracker, similar to fzc, zipcrack and others."
 ## FCRACKZIP Basis
 
 
+ > 
+ > **<font color=red>fcrackzip -v -D -p</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font> <font color=red>-u </font>myZipFile.zip**</br>
+ > Crack ZIP archive password.
 
 ## FCRACKZIP Flags
 

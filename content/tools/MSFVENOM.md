@@ -8,7 +8,11 @@ description: A Metasploit module that generates shellcodes.
 
 ## MSFVENOM Basis
 
+Payloads naming convention : \[OS\]/\[arch\]/\[payload\]
 
+ > 
+ > **<font color=red>msfvenom --list payloads</font>**</br>
+ > List payloads.
 
 ## MSFVENOM Linux Reverse Shell
 

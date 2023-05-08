@@ -9,3 +9,8 @@ description: "A web screenshot utility using Chrome Headless, written in Go."
 ## GOWITNESS Basis
 
 
+ > 
+ > **<font color=orange>go install github.com/sensepost/gowitness@latest</font>**
+ > 
+ > **<font color=red>gowitness single</font>  https://\[TARGET_DOMAIN\]</br>**
+ > Take a Screenshot

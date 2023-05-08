@@ -9,6 +9,13 @@ description: A very famous network discovery tool.
 ## NMAP Basis
 
 
+ > 
+ > **<font color=red>nmap -sn</font> \[TARGET_NETWORK\]/24</br>**
+ > Do not do port scan: scan for hosts (ARP, ICMP, TCP/UDP Ping). 
+
+ > 
+ > **<font color=red>nmap -sV -sC</font>  \[TARGET_IP\]</br>**
+ > Ports services + Default script.
 
 ## NMAP Host dicovering Process (-sn)
 
