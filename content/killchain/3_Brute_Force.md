@@ -129,18 +129,10 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 ### JWT-CRACKER
 
 
- > 
- > **<font color=red>jwt-cracker </font> \[myToken\] \[myAlphabet\] \[myMaxSecretLengthExpected\]**</br>
- > Brute force attack JWT token secret.
-
-Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 ### JWT_TOOL
 
 
- > 
- > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**</br>
- > Dictionnary attack JWT token secret.
 
 # MD5
 
@@ -208,9 +200,6 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 ### FCRACKZIP
 
 
- > 
- > **<font color=red>fcrackzip -v -D -p</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font> <font color=red>-u </font>myZipFile.zip**</br>
- > Crack ZIP archive password.
 
 # RAR
 

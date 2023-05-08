@@ -24,9 +24,6 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 ### MASSCAN
 
 
- > 
- > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font>443</br>**
- > Host discovering scan.
 
 # Port Scan
 
@@ -35,13 +32,6 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 ### NMAP
 
 
- > 
- > **<font color=red>nmap -sn</font> \[TARGET_NETWORK\]/24</br>**
- > Do not do port scan: scan for hosts (ARP, ICMP, TCP/UDP Ping). 
-
- > 
- > **<font color=red>nmap -sV -sC</font>  \[TARGET_IP\]</br>**
- > Ports services + Default script.
 
 # SMB Scan
 
@@ -50,17 +40,6 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 ### SMBCLIENT
 
 
- > 
- > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> --no-pass</font></br>**
- > List Shares anonymously.
-
- > 
- > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> -U</font> myUser</br>**
- > List Shares with a user.
-
- > 
- > **<font color=red>smbclient</font> <font color=red>//</font>\[TARGET_IP\]<font color=red>/</font>mySmbShare</br>**
- > Connect to a Share.
 
 ---
 
@@ -91,43 +70,24 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 ### ASSETFINDER
 
 
- > 
- > **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
- > 
- > **<font color=red>assetfinder</font> \[TARGET_DOMAIN\]**</br>
- > Find subdomains and some that could be related.
- > 
- > **<font color=red>assetfinder --subs-only</font> \[TARGET_DOMAIN\]**</br>
- > Find only subdomains (stay in the scope).
 
 ---
 
 ### OWASP-AMAS
 
 
- > 
- > **<font color=orange>go install github.com/OWASP/Amass/v3/...@master</font>**
- > 
- > **<font color=red>amass enum -d</font> \[TARGET_DOMAIN\]**</br>
- > Find subdomains.
 
 ---
 
 ### DNSRECON
 
 
- > 
- > **<font color=red>dnsrecon -t brt -d</font> \[TARGET_DOMAIN\]**</br>
- > Find subdomains (brute force).
 
 ---
 
 ### SUBLIST3R
 
 
- > 
- > **<font color=red>sublist3r.py -d</font>  \[TARGET_DOMAIN\]</br>**
- > Find subdomains (using search engines).
 
 # Web Paths Fuzz
 

@@ -23,4 +23,4 @@ description: A free and open source distributed version control system.
  > **<font color=red>git config --global</font> user.name myName**</br>
  > Change parameter value.
 
-## GIT Base
+## GIT Basis

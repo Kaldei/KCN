@@ -6,13 +6,9 @@ description: A Metasploit module that generates shellcodes.
 
 **[https://github.com/rapid7/metasploit-framework/blob/master/msfvenom](https://github.com/rapid7/metasploit-framework/blob/master/msfvenom)**
 
-## MSFVENOM Base
+## MSFVENOM Basis
 
-Payloads naming convention : \[OS\]/\[arch\]/\[payload\]
 
- > 
- > **<font color=red>msfvenom --list payloads</font>**</br>
- > List payloads.
 
 ## MSFVENOM Linux Reverse Shell
 

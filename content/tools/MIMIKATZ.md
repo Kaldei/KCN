@@ -6,20 +6,9 @@ description: "A tool to play with Windows security, written in C."
 
 **[https://github.com/gentilkiwi/mimikatz](https://github.com/gentilkiwi/mimikatz)**
 
-## MIMIKATZ Base
+## MIMIKATZ Basis
 
 
- > 
- > **<font color=red>load kiwi</font>**</br>
- > Starts Mimikatz.
-
- > 
- > **<font color=red>help kiwi</font>**</br>
- > Show Mimikatz commands.
-
- > 
- > **<font color=red>privilege::debug</font>**</br>
- > Ensure this outputs \[output '20' OK\]. Debug allows us to debug a process we normally couldn't access to (administrator privileges).
 
 ## MIMIKATZ Enumeration
 

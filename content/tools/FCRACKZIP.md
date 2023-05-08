@@ -6,12 +6,9 @@ description: "A zip password cracker, similar to fzc, zipcrack and others."
 
 **[http://oldhome.schmorp.de/marc/fcrackzip.html](http://oldhome.schmorp.de/marc/fcrackzip.html)**
 
-## FCRACKZIP Base
+## FCRACKZIP Basis
 
 
- > 
- > **<font color=red>fcrackzip -v -D -p</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font> <font color=red>-u </font>myZipFile.zip**</br>
- > Crack ZIP archive password.
 
 ## FCRACKZIP Flags
 

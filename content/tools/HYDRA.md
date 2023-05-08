@@ -6,11 +6,9 @@ description: A very fast and flexible login cracker.
 
 **[https://github.com/vanhauser-thc/thc-hydra](https://github.com/vanhauser-thc/thc-hydra)**
 
-## HYDRA Base
+## HYDRA Basis
 
 
- > 
- > **<font color=red>hydra -l </font>username <font color=red>-P</font> wordlist.txt \[TARGET_IP\] service**
 
 ## HYDRA Flags
 

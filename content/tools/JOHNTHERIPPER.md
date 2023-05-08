@@ -6,12 +6,9 @@ description: An advanced offline password cracker.
 
 **[https://github.com/openwall/john](https://github.com/openwall/john)**
 
-## Base
+## Basis
 
 
- > 
- > **<font color=red>john --wordlist=</font>/usr/share/wordlists/rockyou.txt hash.txt**</br>
- > Crack unknown hash.
 
 ## Flags
 

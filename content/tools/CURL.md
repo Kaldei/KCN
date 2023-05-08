@@ -6,12 +6,9 @@ description: A command line tool and library for transferring data with URL synt
 
 **[https://github.com/curl/curl](https://github.com/curl/curl)**
 
-## CURL Base
+## CURL Basis
 
 
- > 
- > **<font color=red>curl</font> http://my.url**</br>
- > Get HTTP Content.
 
 ## CURL Flags
 
