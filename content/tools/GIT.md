@@ -6,10 +6,6 @@ description: A free and open source distributed version control system.
 
 **[https://git-scm.com/](https://git-scm.com/)**
 
-## GIT HEAD
-
-`HEAD` is the location in the commit tree. It's a "pointer" to a commit. It is possible to move it with git checkout.
-
 ## GIT Config
 
 
@@ -26,6 +22,10 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git config --global http.sslBackend schannel</font>**</br>
  > Switch from OpenSSL (default) to Schannel SSL Backend (Windows built-in). This is useful in an organization with enterprise-managed certificates.
+
+## GIT HEAD
+
+`HEAD` is the location in the commit tree. It's a "pointer" to a commit. It is possible to move it with git checkout.
 
 ## GIT Basis
 
@@ -65,7 +65,7 @@ description: A free and open source distributed version control system.
  > Create a commit.
  > 
  > **<font color=red>git commit --amend</font>**</br>
- > Modify las commit.
+ > Modify last commit.
  > 
  > **<font color=red>git tag</font> myTag**</br>
  > Create a tag.
@@ -84,11 +84,11 @@ description: A free and open source distributed version control system.
  > Show local branches.
 
  > 
- > **<font color=red>git branch myBranch</font>**</br>
+ > **<font color=red>git branch</font> myBranch**</br>
  > Create new branch.
 
  > 
- > **<font color=red>git merge myBranch</font>**</br>
+ > **<font color=red>git merge</font> myBranch**</br>
  > Merge myBranch to current branch.
 
 ## GIT Checkout
@@ -103,18 +103,38 @@ description: A free and open source distributed version control system.
  > Move HEAD to penultimate commit of myBranch.
 
  > 
- > **<font color=red>git checkout HEAD^</font>**</br>
+ > **<font color=red>git checkout</font> HEAD^**</br>
  > Moves HEAD 1 commit back from current HEAD.
  > 
- > **<font color=red>git checkout HEAD^^^</font>**</br>
+ > **<font color=red>git checkout</font> HEAD^^^**</br>
  > Moves HEAD 3 commits back from current HEAD.
  > 
- > **<font color=red>git checkout HEAD~12</font>**</br>
+ > **<font color=red>git checkout</font> HEAD~12**</br>
  > Moves HEAD 12 commits back from current HEAD.
 
  > 
- > **<font color=red>git checkout HEAD^</font>**</br>
+ > **<font color=red>git checkout</font> HEAD^**</br>
  > Moves HEAD 1 commit back from current HEAD in the 1st parent of a merge.
  > 
- > **<font color=red>git checkout HEAD^2</font>**</br>
+ > **<font color=red>git checkout</font> HEAD^2**</br>
  > Moves HEAD 1 commit back from current HEAD in the 2nd parent of a merge.
+
+## GIT Advanced Commands
+
+
+ > 
+ > **<font color=red>git reset</font> HEAD^**</br>
+ > Moves HEAD 1 commit back as if it had never happened (can break things if pushed to remote).
+ > 
+ > **<font color=red>git revert</font> HEAD^**</br>
+ > Create new commit that undo last commit changes.
+
+ > 
+ > **<font color=red>git cherry-pick</font> commit1 ccommit12 ccommit7**</br>
+ > Add commits from other branches after HEAD.
+ > 
+ > **<font color=red>git rebase</font> myBranch**</br>
+ > Takes commits on myBranch and replays them on current branch (from their last common parent).
+ > 
+ > **<font color=red>git rebase -i HEAD~</font>4**</br>
+ > Opens the interactive rebase window. This allows to: change the order of the last 4 commits, omit some commits, overwrite commits.
