@@ -69,3 +69,21 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git push</font>**</br>
  > Push commits to remote repository.
+
+## GIT Branch
+
+
+ > 
+ > **<font color=red>git branch</font>**</br>
+ > Show local branches.
+ > 
+ > **<font color=red>git branch -r</font>**</br>
+ > Show local branches.
+
+ > 
+ > **<font color=red>git branch myBranch</font>**</br>
+ > Create new branch.
+
+ > 
+ > **<font color=red>git merge myBranch</font>**</br>
+ > Merge myBranch to current branch.
