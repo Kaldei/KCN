@@ -62,6 +62,33 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
  > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red> http-get</font> /path/**</br>
  > Brute Force HTTP Basic Access Authentication.
 
+# JWT
+
+---
+
+### JOHN
+
+
+ > 
+ > **<font color=red>john --format=HMAC-SHA512</font> jwt.txt <font color=red>--show</font>**</br>
+ > Crack JWT secret.
+
+### JWT-CRACKER
+
+
+ > 
+ > **<font color=red>jwt-cracker </font> \[myToken\] \[myAlphabet\] \[myMaxSecretLengthExpected\]**</br>
+ > Brute force attack JWT token secret.
+
+Default Alphabet : abcdefghijklmnopqrstuvwxyz
+
+### JWT_TOOL
+
+
+ > 
+ > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**</br>
+ > Dictionnary attack JWT token secret.
+
 # SSH
 
 ---
@@ -114,33 +141,6 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
  > 
  > **<font color=red>john --show</font> unshadow.txt**</br> 
  > Display cracked passwords.
-
-# JWT
-
----
-
-### JOHN
-
-
- > 
- > **<font color=red>john --format=HMAC-SHA512</font> jwt.txt <font color=red>--show</font>**</br>
- > Crack JWT secret.
-
-### JWT-CRACKER
-
-
- > 
- > **<font color=red>jwt-cracker </font> \[myToken\] \[myAlphabet\] \[myMaxSecretLengthExpected\]**</br>
- > Brute force attack JWT token secret.
-
-Default Alphabet : abcdefghijklmnopqrstuvwxyz
-
-### JWT_TOOL
-
-
- > 
- > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**</br>
- > Dictionnary attack JWT token secret.
 
 # MD5
 

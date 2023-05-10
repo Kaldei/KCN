@@ -10,7 +10,7 @@ description: A really fast password cracker.
 
 ---
 
-### Dictionary Mode (-m 0)
+### Dictionary Mode (-a 0)
 
 
  > 
@@ -19,19 +19,15 @@ description: A really fast password cracker.
 
 ---
 
-### Combinator Mode (-m 1)
+### Combinator Mode (-a 1)
 
-https://hashcat.net/wiki/doku.php?id=combinator_attack
 
- > 
- > **<font color=red>hashcat -a 1 -m</font> 0 <font color=red>"</font>myHash<font color=red>"</font> myPrefix.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
- > Dictionary attack with a prefix.
 
 ---
 
-### Mask Mode (-m 3)
+### Mask Mode (-a 3)
 
-https://hashcat.net/wiki/doku.php?id=mask_attack 
+**https://hashcat.net/wiki/doku.php?id=mask_attack** 
 
 #### Jokers
 
@@ -85,7 +81,7 @@ https://hashcat.net/wiki/doku.php?id=mask_attack
 
 ## HASHCAT Hash Type
 
-https://hashcat.net/wiki/doku.php?id=example_hashes
+**https://hashcat.net/wiki/doku.php?id=example_hashes**
 
  > 
  > **<font color=red>-m 0</font>**</br>
