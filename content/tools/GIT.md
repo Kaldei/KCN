@@ -25,7 +25,7 @@ description: A free and open source distributed version control system.
 
  > 
  > **<font color=red>git config --global http.sslBackend schannel</font>**</br>
- > Switch from OpenSSL (default) to Schannel SSL Backend (Windows buitl-in). This is usefull 
+ > Switch from OpenSSL (default) to Schannel SSL Backend (Windows built-in). This is useful in an organization with enterprise-managed certificates.
 
 ## GIT Basis
 
