@@ -67,6 +67,9 @@ description: A free and open source distributed version control system.
  > **<font color=red>git commit --amend</font>**</br>
  > Modify las commit.
  > 
+ > **<font color=red>git tag</font> myTag**</br>
+ > Create a tag.
+ > 
  > **<font color=red>git push</font>**</br>
  > Push commits to remote repository.
 
