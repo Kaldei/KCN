@@ -43,8 +43,10 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git show</font> myCommit**</br>
  > Display commit info.
+ > 
  > **<font color=red>git log</font>**</br>
  > Show commit history.
+ > 
  > **<font color=red>git log -p</font>**</br>
  > Shows difference between commits.
 
