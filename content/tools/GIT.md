@@ -87,3 +87,31 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git merge myBranch</font>**</br>
  > Merge myBranch to current branch.
+
+## GIT Checkout
+
+
+ > 
+ > **<font color=red>git checkout</font> myBranch**</br>
+ > Move HEAD to last commit of myBranch.
+
+ > 
+ > **<font color=red>git checkout</font> myBranch<font color=red>^</font>**
+ > Move HEAD to penultimate commit of myBranch.
+
+ > 
+ > **<font color=red>git checkout HEAD^</font>**</br>
+ > Moves HEAD 1 commit back from current HEAD.
+ > 
+ > **<font color=red>git checkout HEAD^^^</font>**</br>
+ > Moves HEAD 3 commits back from current HEAD.
+ > 
+ > **<font color=red>git checkout HEAD~12</font>**</br>
+ > Moves HEAD 12 commits back from current HEAD.
+
+ > 
+ > **<font color=red>git checkout HEAD^</font>**</br>
+ > Moves HEAD 1 commit back from current HEAD in the 1st parent of a merge.
+ > 
+ > **<font color=red>git checkout HEAD^2</font>**</br>
+ > Moves HEAD 1 commit back from current HEAD in the 2nd parent of a merge.
