@@ -56,6 +56,17 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 
 ---
 
+### PRIVESCHECK
+
+**https://github.com/itm4n/PrivescCheck**
+
+ > 
+ > **<font color=red>Set-ExecutionPolicy Bypass -Scope process -Force</font>**</br>
+ > **<font color=red>. .\PrivescCheck.ps1</font>**</br>
+ > **<font color=red>Invoke-PrivescCheck</font>**</br>
+
+---
+
 ### EXPLOIT-SUGGESTER
 
 **https://github.com/AonCyberLabs/Windows-Exploit-Suggester** 
@@ -109,17 +120,6 @@ WiseBootAssistant(WiseCleaner.com - Wise Boot Assistant)[C:\Program Files (x86)\
  > **<font color=red>sc.exe query</font> WiseBootAssistant**</br>
  > **<font color=red>sc.exe start</font> WiseBootAssistant**</br>
  > Restart the service to execute the crafted one. 
-
----
-
-### PRIVESCHECK
-
-**https://github.com/itm4n/PrivescCheck**
-
- > 
- > **<font color=red>Set-ExecutionPolicy Bypass -Scope process -Force</font>**</br>
- > **<font color=red>. .\PrivescCheck.ps1</font>**</br>
- > **<font color=red>Invoke-PrivescCheck</font>**</br>
 
 ---
 
