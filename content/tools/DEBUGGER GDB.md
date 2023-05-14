@@ -36,6 +36,9 @@ Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C /
  > **<font color=red>vmmap</font>**</br>
  > Show Virtual Memory Map.
 
+## GDB Memory Content
+
+
  > 
  > **<font color=red>info registers</font>**</br>
  > Give info about registers.
@@ -89,5 +92,3 @@ A Hook execute GDB commands when hitting a breakpoint.
  > 
  > **<font color=red>define hook-stop</font>**</br>
  > Switches to Hook creation mode (enter commands and end with **<font color=red>end</font>**).
-
-## GDB Visual Interface
