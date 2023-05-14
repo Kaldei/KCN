@@ -127,6 +127,27 @@ WiseBootAssistant(WiseCleaner.com - Wise Boot Assistant)[C:\Program Files (x86)\
 
 **https://github.com/dirkjanm/ROADtools/wiki/Getting-started-with-ROADrecon**
 
+# Potato Privesc
+
+---
+
+Elevate a service user with low privileges to `NT AUTHORITY\SYSTEM` privileges.
+
+Affected versions: 
+
+* Windows Server 2012 to  Windows Server 2022 
+* Windows 8 to Windows 11
+
+---
+
+### GodPotato
+
+https://github.com/BeichenDream/GodPotato/releases
+
+ > 
+ > <font color=red>GodPotato -cmd "</font>cmd /c whoami<font color=red>"</font>
+ > Privesc and run `whoami` as `NT AUTHORITY\SYSTEM`.
+
 # Abusing Schtasks
 
 ---
