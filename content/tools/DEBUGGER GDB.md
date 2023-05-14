@@ -1,5 +1,5 @@
 ---
-title: GDB
+title: DEBUGGER GDB
 summary: The GNU Project Debugger.
 description: The GNU Project Debugger.
 ---
