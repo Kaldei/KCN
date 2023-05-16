@@ -140,7 +140,7 @@ description: A very famous network discovery tool.
  > **<font color='red'>--script</font> http-put <font color='red'>--script-args</font> http-put.url='/dav/shell.php',http-put.file='./shell.php'**
  > Script with arguments
 
-## NMAP SMB Scan
+### NMAP SMB Scan
 
 
  > 
@@ -151,7 +151,13 @@ description: A very famous network discovery tool.
  > **<font color=red>nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount</font> \[TARGET_IP\]</br>**
  > Enumerate rpcbind.
 
-## NMAP Weak Cipher Scan
+
+**<font color=red>nmap --script=smb2-security-mode.nse -p445</font> \[TARGET_IP\]**</br>
+Scan for disabled SMB Signing.
+
+![tool-nmap-smb_signing.png](../attachments/tool-nmap-smb_signing.png)
+
+### NMAP Weak Cipher Scan
 
 
  > 
