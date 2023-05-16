@@ -6,11 +6,11 @@ description: A really fast password cracker.
 
 **[https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat)**
 
-## HASHCAT Mods
+## HASHCAT Attack Types
 
 ---
 
-### Dictionary Mode (-a 0)
+### Dictionary Attack (-a 0)
 
 
  > 
@@ -19,13 +19,17 @@ description: A really fast password cracker.
 
 ---
 
-### Combinator Mode (-a 1)
+### Combinator Attack (-a 1)
 
+**https://hashcat.net/wiki/doku.php?id=combinator_attack**
 
+ > 
+ > **<font color=red>hashcat -a 1 -m</font> 0 <font color=red>"</font>myHash<font color=red>"</font> myPrefix.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > Dictionary attack with a prefix.
 
 ---
 
-### Mask Mode (-a 3)
+### Mask Attack (-a 3)
 
 **https://hashcat.net/wiki/doku.php?id=mask_attack** 
 
@@ -56,7 +60,7 @@ description: A really fast password cracker.
  > **<font color=red>?b</font>**</br>
  > 0x00 - 0xff
 
-#### Exemples
+#### Examples
 
  > 
  > **<font color=red>hashcat -a 3 -m</font> 0 <font color=red>"</font>myHash<font color=red>" ?l?l?l?l</font>**</br>
@@ -79,9 +83,9 @@ description: A really fast password cracker.
  > **<font color=red>-o</font>** myOutFile</br>
  > Store output info in myFile.
 
-## HASHCAT Hash Type
+## HASHCAT Hash Types
 
-**https://hashcat.net/wiki/doku.php?id=example_hashes**
+**[https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)**
 
  > 
  > **<font color=red>-m 0</font>**</br>
@@ -108,12 +112,11 @@ description: A really fast password cracker.
  > **<font color=red>-m 13600</font>**</br>
  > WinZip.
 
-## HASHCAT Exemples
+## HASHCAT Examples
 
+---
 
- > 
- > **<font color=red>hashcat -a 0 -m 1100 0 '</font>15a57c379ebdfea572ad1ff91eb6ef0c:Administrator<font color=red>'</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
- > Crack DCC (Domain Cached Credentials) hash.
+### ZIP
 
 
  > 
@@ -123,3 +126,15 @@ description: A really fast password cracker.
  > 
  > **<font color=red>hashcat -a -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
  > Crack ZIP archive password.
+
+### DDC
+
+
+ > 
+ > **<font color=red>hashcat -a 0 -m 1100 0 '</font>15a57c379ebdfea572ad1ff91eb6ef0c:Administrator<font color=red>'</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > Crack DCC (Domain Cached Credentials) hash.
+
+### NetNTLMv2
+
+**<font color=red>hashcat -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+Crack NetNTMLv2 hashes.

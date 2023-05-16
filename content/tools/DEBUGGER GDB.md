@@ -78,7 +78,7 @@ Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C /
  > **<font color=red>break \*main</font>**</br>
  > Add a breakpoint to main function.
  > 
- > \**<font color=red>break *</font>address**</br>
+ > **<font color=red>break \*</font>address**</br>
  > Add a breakpoint to an address.
 
  > 
