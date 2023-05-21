@@ -156,3 +156,10 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > 
  > **<font color=red>use</font> <font color=lightblue>linux/gather/hashdump</font>**</br>
  > Dump users hashes.
+
+### Auxiliary SMB
+
+
+ > 
+ > **<font color=red>use</font> <font color=lightblue>auxiliary/scanner/smb/smb_enum_gpp</font>**</br>
+ > Detect vulnerable GPP policies (credentials encrypted with leaked key).
