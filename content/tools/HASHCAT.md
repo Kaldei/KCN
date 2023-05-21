@@ -136,5 +136,14 @@ description: A really fast password cracker.
 
 ### NetNTLMv2
 
-**<font color=red>hashcat -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
-Crack NetNTMLv2 hashes.
+
+ > 
+ > **<font color=red>hashcat -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > Crack NetNTMLv2 hashes.
+
+### Kerberos 5 TGS-REP
+
+
+ > 
+ > **<font color=red>hashcat -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
+ > Crack the Kerberos 5 TGS-REP hash.
