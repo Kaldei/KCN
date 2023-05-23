@@ -17,9 +17,10 @@ description: "A tool to play with Windows security, written in C."
  > **<font color=red>help kiwi</font>**</br>
  > Show Mimikatz commands.
 
+
  > 
  > **<font color=red>privilege::debug</font>**</br>
- > Ensure this outputs \[output '20' OK\]. Debug allows us to debug a process we normally couldn't access to (administrator privileges).
+ > Ensure user has administrator privileges (ensure the output is `[output '20' OK]`). This indicates that debugging a process is possible.
 
 ## MIMIKATZ Enumeration
 
