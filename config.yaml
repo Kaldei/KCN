@@ -3,7 +3,7 @@ canonifyURLs: true
 languageCode: en-us
 title: KDSN
 theme: PaperMod
-paginate: 30
+paginate: 25
 
 markup:
   goldmark:
