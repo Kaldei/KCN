@@ -20,7 +20,7 @@ description: Vulnerability Assesment step – a note for finding and assessing v
  > **<font color=red>serachsploit -x</font> 4401**
  > Affiche l’exploit 4401.
 
-# Web Vulnerability Scan
+# Web Vulnerability Scanners
 
 ---
 
@@ -60,7 +60,7 @@ description: Vulnerability Assesment step – a note for finding and assessing v
  > **<font color=red>-e u</font>**
  > Enumerate Users.
 
-# Graphical Interface Scanners
+# General Vulnerability Scanners
 
 ---
 
