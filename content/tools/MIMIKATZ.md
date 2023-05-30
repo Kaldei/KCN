@@ -77,7 +77,7 @@ description: "A tool to play with Windows security, written in C."
 
 Note: To create a Silver Ticket, change the `/name:` to a domain admin account or a service account.
 
-![lsadump-golden_ticket.png](../attachments/lsadump-golden_ticket.png)
+![exploit-lsadump-golden_ticket.png](../attachments/exploit-lsadump-golden_ticket.png)
 Credit: TCM Security
 
  > 

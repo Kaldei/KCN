@@ -47,6 +47,7 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 * Determining the kernel of the machine and search for kernel exploitation (such as Dirtyc0w).
 * Misconfigured file and directory permissions.
 * pspy (process snooping): https://github.com/DominicBreuker/pspy 
+* https://redteamrecipe.com/40-Method-For-Privilege-Escalation/
 
 # Automated Scripts
 

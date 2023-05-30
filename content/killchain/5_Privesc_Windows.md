@@ -42,6 +42,12 @@ description: Privilege Escalation step – a note for elevating privileges on a 
  > **<font color=red>reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s</font>**</br>
  > Look for Putty credentials in registers (SimonTatham is PuTTY’s creator).
 
+# Others Suggestions
+
+---
+
+* https://redteamrecipe.com/40-Method-For-Privilege-Escalation/
+
 # Windows Automated Scripts
 
 ---
