@@ -2,7 +2,7 @@
 title: Index
 ---
 
-<h1 class="text-center">KALDEI'S SEC NOTES</h1>
+<h1 class="text-center">KALDEI'S SECURITY NOTES</h1>
 
 
 ## What can you find here? 🔮
@@ -19,7 +19,7 @@ Disclaimer: My notes are more or less updated and most likely contain mistakes o
   </header>
   <div class="entry-content">
     <p>
-      This category gathers notes I use in the different stages of an attack.</br>
+      This category gathers notes I use in the different stages of an attack.
       They are arranged, kinda like the "Cyber Kill Chain" model, in 5 steps (Enumeration, Vulnerability Assessment, Gaining Access, Foothold, and Privilege Escalation).
     </p>
   </div>
@@ -31,7 +31,7 @@ Disclaimer: My notes are more or less updated and most likely contain mistakes o
   </header>
   <div class="entry-content">
     <p>
-      This category gathers notes that detail the use of all the cybersecurity tools I encountered (most of them are offensive tools).</br>
+      This category gathers notes that detail the use of all the cybersecurity tools I encountered (most of them are offensive tools).
       There is no particular organization here: theses notes are sorted in alphabetical order.
     </p>
   </div>
