@@ -6,10 +6,9 @@ title: Index
 
 
 ## What can you find here? 🔮
-My notes about cybersecurity and stuff. Could be useful to someone, so I share them. 
+My notes about cybersecurity and stuff. They are in "Cheat Sheets" format and allow me to quickly recall and reuse tools and technics I've encountered. Could be useful to someone, so I share them.
 
-These notes are "Cheat Sheets", they allow me to quickly recall and reuse tools and technics I've encountered. 
-Disclaimer: My notes are more or less updated and most likely contain mistakes or things that will not work. If you find something broken feel free to reach me.
+Disclaimer: My notes are more or less updated, and most likely contain mistakes or things that will not work. If you find something broken feel free to reach me.
 
 
 ## Where to go from here? 🧭
