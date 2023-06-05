@@ -108,7 +108,7 @@ description: A really fast password cracker.
  > NTLMv2.
  > 
  >  > 
- >  > **<font color=red>hashcat -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ >  > **<font color=red>hashcat -a 0 -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  >  > Crack NetNTMLv2 hashes.
 
  > 
@@ -124,6 +124,14 @@ description: A really fast password cracker.
  > MS Cache - DCC2 (Domain Cached Credentials 2).
 
  > 
+ > **<font color=red>-m 13100</font>**</br>
+ > Kerberos 5 TGS-</br>.
+ > 
+ >  > 
+ >  > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
+ >  > Crack the Kerberos 5 TGS-REP hash.
+
+ > 
  > **<font color=red>-m 13000</font>**</br>
  > RAR.
 
@@ -136,31 +144,5 @@ description: A really fast password cracker.
  >  > Remove name of the file and archive from the hash (at the beginning and the end).
  > 
  >  > 
- >  > **<font color=red>hashcat -a -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
+ >  > **<font color=red>hashcat -a 0 -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
  >  > Crack ZIP archive password.
-
-## HASHCAT Examples
-
----
-
-### ZIP
-
-
- > 
- > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forhashcat.txt**</br>
- > Remove name of the file and archive from the hash (at the beginning and the end).
-
- > 
- > **<font color=red>hashcat -a -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
- > Crack ZIP archive password.
-
-### DDC
-
-### NetNTLMv2
-
-### Kerberos 5 TGS-REP
-
-
- > 
- > **<font color=red>hashcat -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
- > Crack the Kerberos 5 TGS-REP hash.
