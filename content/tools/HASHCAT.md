@@ -90,27 +90,54 @@ description: A really fast password cracker.
  > 
  > **<font color=red>-m 0</font>**</br>
  > MD5.
+
  > 
  > **<font color=red>-m 500</font>**</br>
  > MD5crypt, MD5 (Unix), Cisco-IOS.
+
  > 
  > **<font color=red>-m 1800</font>**</br>
  > SHA256 Unix.
+
  > 
  > **<font color=red>-m 1000</font>**</br>
  > NTLM.
+
+ > 
+ > **<font color=red>-m 5600</font>**</br>
+ > NTLMv2.
+ > 
+ >  > 
+ >  > **<font color=red>hashcat -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ >  > Crack NetNTMLv2 hashes.
+
  > 
  > **<font color=red>-m 1100</font>**</br>
  > MS Cache - DCC (Domain Cached Credentials).
  > 
+ >  > 
+ >  > **<font color=red>hashcat -a 0 -m 1100 0 '</font>15a57c379ebdfea572ad1ff91eb6ef0c:Administrator<font color=red>'</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ >  > Crack DCC (Domain Cached Credentials) hash.
+
+ > 
  > **<font color=red>-m 2100</font>**</br>
  > MS Cache - DCC2 (Domain Cached Credentials 2).
+
  > 
  > **<font color=red>-m 13000</font>**</br>
  > RAR.
+
  > 
  > **<font color=red>-m 13600</font>**</br>
  > WinZip.
+ > 
+ >  > 
+ >  > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forhashcat.txt**</br>
+ >  > Remove name of the file and archive from the hash (at the beginning and the end).
+ > 
+ >  > 
+ >  > **<font color=red>hashcat -a -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
+ >  > Crack ZIP archive password.
 
 ## HASHCAT Examples
 
@@ -129,17 +156,7 @@ description: A really fast password cracker.
 
 ### DDC
 
-
- > 
- > **<font color=red>hashcat -a 0 -m 1100 0 '</font>15a57c379ebdfea572ad1ff91eb6ef0c:Administrator<font color=red>'</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
- > Crack DCC (Domain Cached Credentials) hash.
-
 ### NetNTLMv2
-
-
- > 
- > **<font color=red>hashcat -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
- > Crack NetNTMLv2 hashes.
 
 ### Kerberos 5 TGS-REP
 

