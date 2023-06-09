@@ -109,6 +109,13 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > **<font color=red>set payload</font> linux/x86/meterpreter/reverse_tcp**</br>
  > Handler for linux (efl) reverse shell.
 
+
+ > 
+ > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
+ > 
+ > **<font color=red>set payload</font> windows/x64/meterpreter/reverse_tcp**</br>
+ > Handler for Windows Meterpreter.
+
 ### Reverse Shell Windows
 
 

