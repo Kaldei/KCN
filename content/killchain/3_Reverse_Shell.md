@@ -90,8 +90,6 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
 
 # Reverse Shell Windows
 
-## 
-
 ---
 
 ### BAT

