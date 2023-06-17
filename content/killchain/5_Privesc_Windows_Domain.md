@@ -71,8 +71,6 @@ Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
  > **<font color=red>Get-NetGPO | select displayname, whenchanged</font>**</br>
  > List policies with when they were changed.
 
-\]
-
 # Pass the Password
 
 ---
