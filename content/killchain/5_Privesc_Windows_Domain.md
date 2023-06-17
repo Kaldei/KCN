@@ -14,13 +14,64 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 ![killchain-AD-attacks_mind_map.png](../attachments/killchain-AD-attacks_mind_map.png) 
 Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
-# Enumeration
+# Enumerate Users and Groups
 
 ---
 
 ### POWERVIEW
 
-!!!
+
+ > 
+ > **<font color=red>Get-NetUser</font>**</br>
+ > Enumerate users and their properties. 
+ > 
+ > **<font color=red>Get-NetUser | select cn</font>**</br>
+ > Enumerate domain Common Names for users.
+ > 
+ > **<font color=red>Get-NetUser | select description</font>**</br>
+ > Enumeration description for users.
+
+ > 
+ > **<font color=red>Get-UserPropery -Properties logoncount</font>**</br>
+ > Show connection count (might see a honeypot account).
+
+ > 
+ > **<font color=red>Get-NetGroupMember -name "Domain Admins"</font>**</br>
+ > Enumerate users belonging to admin groups.
+ > 
+ > **<font color=red>Get-NetGroup -name \*admin\*</font>**</br>
+ > Enumerate all groups with admin in it.
+
+# Enumerate Domain Information
+
+---
+
+### POWERVIEW
+
+
+ > 
+ > **<font color=red>Get-NetDomain</font>**</br>
+ > Infos about the domain.
+ > 
+ > **<font color=red>Get-NetDomainController</font>**</br>
+ > Info about the Domain Controller.
+
+ > 
+ > **<font color=red>Get-NetComputer</font>**</br>
+ > Infos about servers and computers in the domain.
+
+ > 
+ > **<font color=red>Get-DomainPolicy</font>**</br>
+ > Infos about Domain Policy.
+
+ > 
+ > **<font color=red>Get-NetGPO</font>**</br>
+ > List GPOs.
+ > 
+ > **<font color=red>Get-NetGPO | select displayname, whenchanged</font>**</br>
+ > List policies with when they were changed.
+
+\]
 
 # Pass the Password
 
