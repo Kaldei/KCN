@@ -172,7 +172,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>fuff -w</font> /usr/share/wordlists/seclists/Discovery/Web-Content/big.txt<font color=red>:FUZZ -u</font> http://\[TARGET_DOMAIN\]/<font color=red>FUZZ</font></br>**
+ > **<font color=red>fuff -w</font> /usr/share/wordlists/seclists/Discovery/Web-Content/big.txt <font color=red>-u</font> http://\[TARGET_DOMAIN\]/<font color=red>FUZZ</font></br>**
  > Web Path FUZZ
 
 ---
