@@ -10,9 +10,13 @@ description: A fast and customizable vulnerability scanner based on simple YAML 
 
  > 
  > https://github.com/projectdiscovery/nuclei/releases
-
  > 
  > **<font color=orange>go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest</font>**</br>
+
+## Templates
+
+ > 
+ > https://github.com/projectdiscovery/nuclei-templates
 
 ## Basis
 
