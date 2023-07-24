@@ -1,12 +1,12 @@
 ---
-title: DEBUGGER GDB
+title: GDB
 summary: The GNU Project Debugger.
 description: The GNU Project Debugger.
 ---
 
 **https://www.sourceware.org/gdb/**
 
-## GDB Launch
+## Launch
 
 Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C / OpenCL / Modula-2 / Pascal / Rust
 
@@ -18,7 +18,7 @@ Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C /
  > **<font color=red>gdb -p 'pidof</font> myFile<font color=red>'</font>**
  > Attach GDB to the process id of myFile (running program).
 
-## GDB Basis
+## Basis
 
 
  > 
@@ -36,7 +36,7 @@ Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C /
  > **<font color=red>vmmap</font>**</br>
  > Show Virtual Memory Map.
 
-## GDB Memory Content
+## Memory Content
 
 
  > 
@@ -50,7 +50,7 @@ Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C /
  > **<font color=red>set</font> $eax=0**</br>
  > Set the value (here set eax to 0).
 
-## GDB Move in Program Execution
+## Move in Program Execution
 
 
  > 
@@ -71,7 +71,7 @@ Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C /
  > **<font color=red>ni</font>**</br>
  > Step one instruction (no step into function calls).
 
-## GDB Breakpoint
+## Breakpoint
 
 
  > 
@@ -85,7 +85,7 @@ Supported languages: Ada / Assembly / C / C++ / D / Fortran / Go / Objective-C /
  > **<font color=red>del</font>**</br>
  > Delete a breakpoint.
 
-## GDB Hook
+## Hook
 
 A Hook execute GDB commands when hitting a breakpoint.
 

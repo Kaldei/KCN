@@ -6,14 +6,14 @@ description: An Internet-scale port scanner.
 
 **[https://github.com/robertdavidgraham/masscan](https://github.com/robertdavidgraham/masscan)**
 
-## MASSCAN Basis
+## Basis
 
 
  > 
  > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font>443</br>**
  > Host discovering scan.
 
-## MASSCAN Ports
+## Ports
 
 
  > 

@@ -6,16 +6,16 @@ description: A free and open source distributed version control system.
 
 **[https://git-scm.com/](https://git-scm.com/)**
 
-## Resources
+## 
 
 * [https://ohshitgit.com/en](https://ohshitgit.com/en)
 * [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
 
-## GIT HEAD
+## HEAD
 
 `HEAD` is the location in the commit tree. It's a "pointer" to a commit. It is possible to move it with git checkout.
 
-## GIT Config
+## Config
 
 
  > 
@@ -32,7 +32,7 @@ description: A free and open source distributed version control system.
  > **<font color=red>git config --global http.sslBackend schannel</font>**</br>
  > Switch from OpenSSL (default) to Schannel SSL Backend (Windows built-in). This is useful in an organization with enterprise-managed certificates.
 
-## GIT Basis
+## Basis
 
 
  > 
@@ -78,7 +78,7 @@ description: A free and open source distributed version control system.
  > **<font color=red>git push</font>**</br>
  > Push commits to remote repository.
 
-## GIT History
+## History
 
 
  > 
@@ -97,7 +97,7 @@ description: A free and open source distributed version control system.
  > **<font color=red>git log -p</font>**</br>
  > Shows difference between commits.
 
-## GIT Branch
+## Branch
 
 
  > 
@@ -115,7 +115,7 @@ description: A free and open source distributed version control system.
  > **<font color=red>git merge</font> myBranch**</br>
  > Merge myBranch to current branch.
 
-## GIT Checkout
+## Checkout
 
 
  > 
@@ -143,7 +143,7 @@ description: A free and open source distributed version control system.
  > **<font color=red>git checkout</font> HEAD^2**</br>
  > Moves HEAD 1 commit back from current HEAD in the 2nd parent of a merge.
 
-## GIT Advanced Commands
+## Advanced Commands
 
 
  > 

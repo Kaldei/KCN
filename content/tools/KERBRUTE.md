@@ -6,7 +6,7 @@ description: A tool to perform Kerberos pre-auth bruteforcing
 
 **[https://github.com/ropnop/kerbrute](https://github.com/ropnop/kerbrute)**
 
-## KERBRUTE Find Valid Users
+## Find Valid Users
 
 
  > 

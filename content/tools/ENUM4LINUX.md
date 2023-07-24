@@ -6,7 +6,7 @@ description: A Linux alternative to enum.exe for enumerating data from Windows a
 
 **[https://github.com/CiscoCXSecurity/enum4linux](https://github.com/CiscoCXSecurity/enum4linux)**
 
-## ENUM4LINUX Basis
+## Basis
 
 
  > 
@@ -16,14 +16,14 @@ description: A Linux alternative to enum.exe for enumerating data from Windows a
  > **<font color=red>enum4linux -U</font> \[TARGET_DOMAIN\]**</br>
  > Linux Users.
 
-## ENUM4LINUX SMB
+## SMB
 
 
  > 
  > **<font color=red>enum4linux -S</font> \[TARGET_DOMAIN\]</br>**
  > List Samba Share.
 
-## ENUM4LINUX Flags
+## Flags
 
 
  > 

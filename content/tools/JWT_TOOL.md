@@ -6,7 +6,7 @@ description: "A toolkit for testing, tweaking and cracking JSON Web Tokens."
 
 **[https://github.com/ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool)**
 
-## JWT_TOOL Basis
+## Basis
 
 
  > 

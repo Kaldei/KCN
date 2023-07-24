@@ -6,28 +6,28 @@ description: An automatic SQL injection and database takeover tool.
 
 **[https://github.com/sqlmapproject/sqlmap](https://github.com/sqlmapproject/sqlmap)**
 
-## SQLMAP GET Parameter
+## GET Parameter
 
 
  > 
  > **<font color=red>sqlmap -u "http://</font>\[TARGET_IP\]<font color=red>/</font>books<font color=red>?</font>author<font color=red>=</font>Bob<font color=red>" -p</font> author**</br>
  > Look for SQL injection in author parameter.
 
-## SQLMAP POST Parameter
+## POST Parameter
 
 
  > 
  > **<font color=red>sqlmap -u "http://</font>\[TARGET_IP\]<font color=red>/</font>search<font color=red>" --data="</font>name<font color=red>=</font>Bob<font color=red>"</font>**</br>
  > Look for SQL injection in post parameter.
 
-## SQLMAP Burp Capture
+## Burp Capture
 
 
  > 
  > **<font color=red>sqlmap -r</font> \[fileFromBurpIntercept\] <font color=red>--batch</font>**</br>
  > Look for SQL injection from a BurpSuite capture.
 
-## SQLMAP Flags
+## Flags
 
 
  > 

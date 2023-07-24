@@ -6,7 +6,7 @@ description: A complete suite of tools to assess WiFi network security.
 
 **[https://github.com/aircrack-ng/aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)**
 
-## AIRCRACK-NG Monitor Mode
+## Monitor Mode
 
 
  > 
@@ -17,7 +17,7 @@ description: A complete suite of tools to assess WiFi network security.
  > **<font color=red>airmon-ng start</font> wlan0**</br>
  > Start monitor mode on wlan0 interface.
 
-## AIRCRACK-NG Capture
+## Capture
 
 
  > 
@@ -29,7 +29,7 @@ description: A complete suite of tools to assess WiFi network security.
  > Capture traffic from an AP. Need to wait for WPA handshake in the top right.
  > Can use Deauth attack to speed up the process.
 
-## AIRCRACK-NG Deauth Attack
+## Deauth Attack
 
 
  > 
@@ -43,7 +43,7 @@ description: A complete suite of tools to assess WiFi network security.
  > **<font color=red>-c</font>**</br>
  > Client to deauthenticate.
 
-## AIRCRACK-NG Crack WEP, WPA-PSK
+## Crack WEP, WPA-PSK
 
 
  > 

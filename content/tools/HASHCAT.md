@@ -6,11 +6,11 @@ description: A really fast password cracker.
 
 **[https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat)**
 
-## HASHCAT Attack Types
+## Attack Types
 
 ---
 
-### Dictionary Attack (-a 0)
+### Attack (-a 0)
 
 
  > 
@@ -19,7 +19,7 @@ description: A really fast password cracker.
 
 ---
 
-### Combinator Attack (-a 1)
+### Attack (-a 1)
 
 **https://hashcat.net/wiki/doku.php?id=combinator_attack**
 
@@ -29,7 +29,7 @@ description: A really fast password cracker.
 
 ---
 
-### Mask Attack (-a 3)
+### Attack (-a 3)
 
 **https://hashcat.net/wiki/doku.php?id=mask_attack** 
 
@@ -70,7 +70,7 @@ description: A really fast password cracker.
  > **<font color=red>hashcat -a 3 -m</font> 0 <font color=red>"</font>myHash<font color=red>" "passBegining?l?l?l?l"</font>**</br>
  > Brute force from passBeginingaaaa to passBeginingzzzz.
 
-## HASHCAT Flags
+## Flags
 
 
  > 
@@ -83,7 +83,7 @@ description: A really fast password cracker.
  > **<font color=red>-o</font>** myOutFile</br>
  > Store output info in myFile.
 
-## HASHCAT Hash Types
+## Hash Types
 
 **[https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)**
 

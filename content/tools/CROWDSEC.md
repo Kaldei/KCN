@@ -6,7 +6,7 @@ description: An open-source and paticipative IDS and IDS.
 
 **[https://www.crowdsec.net/](https://www.crowdsec.net/)**
 
-## CROWDSEC Installation
+## Install
 
 
  > 
@@ -21,7 +21,7 @@ description: An open-source and paticipative IDS and IDS.
  > **<font color=orange>sudo apt install crowdsec-firewall-bouncer-iptables</font>**</br>
  > Install the Bouncer. This installs the prevention part (it's now an IPS)
 
-## CROWDSEC Commands
+## Basis
 
 
  > 

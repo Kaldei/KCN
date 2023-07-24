@@ -6,7 +6,7 @@ description: A Windows local Privilege Escalation Awesome Script.
 
 **[https://github.com/carlospolop/PEASS-ng](https://github.com/carlospolop/PEASS-ng)**
 
-## WINPEAS Basis
+## Basis
 
 **https://github.com/carlospolop/PEASS-ng/releases**
 
@@ -14,7 +14,7 @@ description: A Windows local Privilege Escalation Awesome Script.
  > **<font color=red>winPEASx64.exe</font>**
  > Run WinPEAD
 
-## WINPEAS No quotes and Space detected
+## No Quotes and Space Detected
 
 #### WINPEAS Output
 

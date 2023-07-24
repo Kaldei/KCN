@@ -6,7 +6,7 @@ description: A Metasploit attack payload that provides an interactive shell.
 
 **[https://github.com/rapid7/meterpreter](https://github.com/rapid7/meterpreter)**
 
-## METERPRETER Enumeration
+## Enumeration
 
 
  > 
@@ -25,7 +25,7 @@ description: A Metasploit attack payload that provides an interactive shell.
  > **<font color=red>search -f</font>** flag.txt</br>
  > Search a file on the machine.
 
-## METERPRETER File Upload
+## File Upload
 
 
  > 
@@ -36,7 +36,7 @@ description: A Metasploit attack payload that provides an interactive shell.
  > **<font color=red>download</font>**</br>
  > Download a file or directory.
 
-## METERPRETER Spawn Shell
+## Spawn Shell
 
 
  > 
@@ -48,7 +48,7 @@ description: A Metasploit attack payload that provides an interactive shell.
  > **<font color=red>powershell_shell</font>**</br>
  > Spawn Powershell.
 
-## METERPRETER Attacks
+## Attacks
 
 
  > 
@@ -61,7 +61,7 @@ description: A Metasploit attack payload that provides an interactive shell.
  > Ex : Migrate to a word.exe and act like a keylogger.
  > Ex: Migrate to lsass.exe to run hashdump.
 
-## METERPRETER Impersonate
+## Impersonate
 
 If the current user has **SeDebugPrivilege** and **SeImpersonatePrivilege** privileges enabled, we are able to impersonate another user.
 
@@ -87,7 +87,7 @@ The safest to pick is **services.exe**.
  > **<font color=red>rev2self</font>**</br>
  > Revert to previous user.
 
-## METERPRETER Pivoting
+## Pivoting
 
 When we have a meterpreter shell on a machine that has access to another network, we can use it to gain access to the 2nd network.
 

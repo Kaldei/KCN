@@ -6,7 +6,7 @@ description: A swiss army knife for pentesting networks.
 
 **[https://github.com/Porchetta-Industries/CrackMapExec](https://github.com/Porchetta-Industries/CrackMapExec)**
 
-## CRACKMAPEXEC Flags
+## Flags
 
 
  > 
@@ -16,7 +16,7 @@ description: A swiss army knife for pentesting networks.
  > **<font color=red>--lsa</font>**</br>
  > Dump LSA Secrets.
 
-## CRACKMAPEXEC Pass the Password
+## Pass the Password
 
 
  > 
@@ -25,7 +25,7 @@ description: A swiss army knife for pentesting networks.
 
 ![tool-crackmapexec-example.png](../attachments/tool-crackmapexec-example.png)
 
-## CRACKMAPEXEC Pass the Hash (NT)
+## Pass the Hash (NT)
 
 
  > 

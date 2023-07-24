@@ -6,14 +6,14 @@ description: A tool aimed to identify and classify malware samples.
 
 **[https://github.com/VirusTotal/yara](https://github.com/VirusTotal/yara)**
 
-## YARA Basis
+## Basis
 
 
  > 
  > **<font color=red>yara</font> myRule<font color=red>.yar</font> /some/file**</br>
  > Execute Yara rule on a file: search for a pattern in the file.
 
-## YARA Flag
+## Flag
 
 
  > 
@@ -30,7 +30,7 @@ description: A tool aimed to identify and classify malware samples.
  > **<font color=red>-n</font>**</br>
  > Prints not satisfied rules.
 
-## YARA Rules
+## Rules
 
 **Cheat Sheet:** https://twitter.com/fr0gger\_/status/1516570364775907328/photo/1
 
@@ -64,7 +64,7 @@ rule myRule {
 
 **Valhalla Rules Database:** https://valhalla.nextron-systems.com/ 
 
-## YARA YarGen
+## YarGen
 
 **[https://github.com/Neo23x0/yarGen](https://github.com/Neo23x0/yarGen)**
 
@@ -85,5 +85,3 @@ rule myRule {
  > 
  > **<font color=red>-o</font>**</br>
  > Output Yara rule file.
-
-## YARA with OSQUERY

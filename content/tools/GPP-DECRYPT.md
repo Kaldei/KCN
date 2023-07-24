@@ -6,7 +6,7 @@ description: A tool to which extracts the username and decrypts the cpassword at
 
 **[https://github.com/t0thkr1s/gpp-decrypt](https://github.com/t0thkr1s/gpp-decrypt)**
 
-## GPP-DECRYPT Basis
+## Basis
 
 
  > 

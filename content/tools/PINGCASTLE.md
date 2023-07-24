@@ -8,7 +8,7 @@ description: An Active Directory audit tool.
 
 Free, but if you want to use it for commercial purposes, you have to pay.
 
-## PINGCASLTE Health check
+## Health check
 
 
  > 

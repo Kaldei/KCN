@@ -6,7 +6,7 @@ description: "A directory, file, DNS and vhost busting tool, written in Go."
 
 **[https://github.com/OJ/gobuster](https://github.com/OJ/gobuster)**
 
-## GOBUSTER Files and Folders Fuzz
+## Files and Folders Fuzz
 
 
  > 
@@ -16,7 +16,7 @@ description: "A directory, file, DNS and vhost busting tool, written in Go."
  > **<font color=red>gobuster dir -u</font> http://\[TARGET_IP\]:\[TARGET_PORT\] <font color=red>-w</font> myWordList</br>**
  > Search folders.
 
-## GOBUSTER Flags
+## Flags
 
 
  > 

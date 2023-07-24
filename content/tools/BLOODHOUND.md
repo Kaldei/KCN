@@ -6,7 +6,7 @@ description: A tool to reveal the hidden and often unintended relationships with
 
 **[https://github.com/BloodHoundAD/BloodHound](https://github.com/BloodHoundAD/BloodHound)**
 
-## BLOODHOUND Start (Attacker Machine)
+## Start (Attacker Machine)
 
 
  > 
@@ -16,7 +16,7 @@ description: A tool to reveal the hidden and often unintended relationships with
  > **<font color=red>bloodhound</font>**</br>
  > Start Bloodhound.
 
-## BLOODHOUND Get Loot (Target Machine)
+## Loot (Target Machine)
 
 **https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors**
 

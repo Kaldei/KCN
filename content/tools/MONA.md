@@ -6,7 +6,7 @@ description: A python script that can be used to automate and speed up specific 
 
 **[https://github.com/corelan/mona](https://github.com/corelan/mona)**
 
-## MONA Basis
+## Basis
 
 
  > 
@@ -21,7 +21,7 @@ description: A python script that can be used to automate and speed up specific 
  > **<font color=red>!mona jmp -r ESP m "essfunc.dll"</font>**</br>
  > Find jump address.
 
-## MONA Use it in IMMUNITY
+## Use it in IMMUNITY
 
 Put the followig script in `C:\Program Files (x86)\Immunity Inc\Immunity Debugger\PyCommands`
 

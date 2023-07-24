@@ -6,7 +6,7 @@ description: A FTP-like client to access SMB/CIFS resources on servers.
 
 **[https://www.samba.org/samba/docs/current/man-html/smbclient.1.html](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)**
 
-## SMBCLIENT Basis
+## Basis
 
 
  > 
@@ -21,7 +21,7 @@ description: A FTP-like client to access SMB/CIFS resources on servers.
  > **<font color=red>smbclient</font> <font color=red>//</font>\[TARGET_IP\]<font color=red>/</font>mySmbShare</br>**
  > Connect to a Share.
 
-## SMBCLIENT Flags
+## Flags
 
 
  > 

@@ -6,12 +6,12 @@ description: A PowerShell tool to gain network situational awareness on Windows 
 
 **[https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon](https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon)**
 
-## Resource
+## 
 
 * **[https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview](https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview)**
 * **[https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)**
 
-## POWERVIEW Start
+## Start
 
 
  > 
@@ -21,7 +21,7 @@ description: A PowerShell tool to gain network situational awareness on Windows 
  > **<font color=red>. .\PowerView.ps1</font>**</br>
  > Run POWERVIEW script.
 
-## POWERVIEW Users and Groups
+## Users and Groups
 
 
  > 
@@ -45,7 +45,7 @@ description: A PowerShell tool to gain network situational awareness on Windows 
  > **<font color=red>Get-NetGroup -name \*admin\*</font>**</br>
  > Enumerate all groups with admin in it.
 
-## POWERVIEW Domain
+## Domain
 
 
  > 

@@ -6,7 +6,7 @@ description: A very famous network discovery tool.
 
 **[https://github.com/nmap/nmap](https://github.com/nmap/nmap)**
 
-## NMAP Basis
+## Basis
 
 
  > 
@@ -17,13 +17,13 @@ description: A very famous network discovery tool.
  > **<font color=red>nmap -sV -sC</font>  \[TARGET_IP\]</br>**
  > Ports services + Default script.
 
-## NMAP Host dicovering Process (-sn)
+## Host dicovering Process (-sn)
 
 * **Privileged user scans targets in local network:**  ARP requests.
 * **Privileged user scans targets outside local network:** ICMP echo requests, TCP ACK to port 80, TCP SYN to port 443, and ICMP timestamp request.
 * **Unprivileged user scans targets outside local network:** SYN to ports 80 and 443.
 
-## NMAP Flags
+## Flags
 
 
  > 
@@ -49,7 +49,7 @@ description: A very famous network discovery tool.
  > **<font color=red>-r</font></br>**
  > Scan the ports in consecutive order instead of random order.
 
-## NMAP Ports
+## Ports
 
 
  > 
@@ -65,7 +65,7 @@ description: A very famous network discovery tool.
  > **<font color=red>-p-</font></br>**
  > Scan all ports.
 
-## NMAP Timing
+## Timing
 
 
  > 
@@ -87,7 +87,7 @@ description: A very famous network discovery tool.
  > **<font color=red>-T5</font></br>**
  > Insane (Can affect scan accuracy)
 
-## NMAP Scans Types
+## Scans Types
 
 
  > 
@@ -100,7 +100,7 @@ description: A very famous network discovery tool.
  > **<font color=red>-sU</font></br>**
  > UDP port scan.
 
-## NMAP Firewall Bypass and Evasion
+## Firewall Bypass and Evasion
 
 
  > 
@@ -122,7 +122,7 @@ description: A very famous network discovery tool.
  > **<font color=red>-f </font>and <font color=red>-ff</font></br>**
  > Send fragmented packets (divided into 8 and 16 bytes).
 
-## NMAP Scripts
+## Scripts
 
 **<font color='lightblue'>/usr/share/nmap/scripts</font>**
 
@@ -140,7 +140,7 @@ description: A very famous network discovery tool.
  > **<font color='red'>--script</font> http-put <font color='red'>--script-args</font> http-put.url='/dav/shell.php',http-put.file='./shell.php'**
  > Script with arguments
 
-### NMAP SMB Scan
+### SMB Scan
 
 
  > 
@@ -157,7 +157,7 @@ Scan for disabled SMB Signing.
 
 ![tool-nmap-smb_signing.png](../attachments/tool-nmap-smb_signing.png)
 
-### NMAP Weak Cipher Scan
+### Weak Cipher Scan
 
 
  > 

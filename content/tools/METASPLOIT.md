@@ -6,7 +6,7 @@ description: A penetration testing framework.
 
 **[https://github.com/rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework)**
 
-## METASPLOIT Terminology
+## Terminology
 
 ### Non-Staged Payload
 
@@ -37,7 +37,7 @@ Example: windows/meterpreter/reverse_tcp.
 
 Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-ranking.html
 
-## METASPLOIT Console
+## Console
 
 
  > 
@@ -98,7 +98,7 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > **<font color=red>spool</font>**</br>
  > Write console output into a file as well the screen.
 
-## METASPLOIT Modules
+## Modules
 
 ### Handler Multi
 

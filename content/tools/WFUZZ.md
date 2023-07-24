@@ -6,28 +6,28 @@ description: A web application fuzzer.
 
 **[https://github.com/xmendez/wfuzz](https://github.com/xmendez/wfuzz)**
 
-## WFUZZ Folder Fuzz
+## Folder Fuzz
 
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/<font color=red>FUZZ</font></br>**
  > Fuzz Folders
 
-## WFUZZ GET Fuzz
+## GET Fuzz
 
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/api/file?parameter=<font color=red>FUZZ</font></br>**
  > Fuzz GET Parameter (ex: API).
 
-## WFUZZ POST Login Brute Force
+## POST Login Brute Force
 
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList -u http://\[TARGET_IP\]:\[TARGET_PORT\]/login.php -d “username=<font color=red>FUZZ</font>&password=<font color=red>FUZZ</font>”</br>**
  > Fuzz POST Login.
 
-## WFUZZ Flags
+## Flags
 
 
  > 

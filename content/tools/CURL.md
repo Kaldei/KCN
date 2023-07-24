@@ -6,14 +6,14 @@ description: A command line tool and library for transferring data with URL synt
 
 **[https://github.com/curl/curl](https://github.com/curl/curl)**
 
-## CURL Basis
+## Basis
 
 
  > 
  > **<font color=red>curl</font> http://my.url**</br>
  > Get HTTP Content.
 
-## CURL Flags
+## Flags
 
 
  > 
@@ -44,7 +44,7 @@ description: A command line tool and library for transferring data with URL synt
  > **<font color=red>-H '</font>myHeader: myValue<font color=red>'</font>**</br>
  > Set Header.
 
-## Example GET Request with JWT
+## GET Request with JWT
 
 
  > 
@@ -52,7 +52,7 @@ description: A command line tool and library for transferring data with URL synt
  > **<font color=red>-H 'Authorization: Bearer</font> \[JWT_TOKEN\]<font color=red>'</font>**</br>
  > Example GET request with JWT.
 
-## CURL Example POST Request with JSON content
+## Example POST Request with JSON Content
 
 
  > 
@@ -62,7 +62,7 @@ description: A command line tool and library for transferring data with URL synt
  > **<font color=red>-d '{"</font>username<font color=red>":"</font>User<font color=red>","</font>password<font color=red>":"</font>P@ssw0rd<font color=red>"}'</font>**</br>
  > Example POST request with JSON content.
 
-## CURL Send File
+## Send File
 
 
  > 

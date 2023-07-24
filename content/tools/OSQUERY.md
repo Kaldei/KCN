@@ -6,7 +6,7 @@ description: "An SQL powered operating system instrumentation, monitoring, and a
 
 **[https://github.com/osquery/osquery](https://github.com/osquery/osquery)**
 
-## OSQUERY Basis
+## Basis
 
 
  > 
@@ -31,7 +31,7 @@ description: "An SQL powered operating system instrumentation, monitoring, and a
  > **<font color=red>.tables</font> \[TABLE_NAME\]**</br>
  > Display table content.
 
-## OSQUERY Tables Examples
+## Tables Examples
 
 
  > 
@@ -44,7 +44,7 @@ description: "An SQL powered operating system instrumentation, monitoring, and a
  > **<font color=red>SELECT * FROM shell_history;</font>**</br>
  > Shell history table.
 
-## OSQUERY Query Examples (SQL like)
+## Query Examples (SQL like)
 
 
  > 
@@ -56,7 +56,7 @@ description: "An SQL powered operating system instrumentation, monitoring, and a
  > 
  > **<font color=red>SELECT</font> pid, name, path <font color=red>FROM processes WHERE</font> name='lsass.exe'<font color=red>;</font>**</br>
 
-## OSQUERY WHERE Operators & Wildcards
+## WHERE Operators & Wildcards
 
 
  > 
@@ -93,7 +93,7 @@ description: "An SQL powered operating system instrumentation, monitoring, and a
 
 **![](https://lh6.googleusercontent.com/vP_tjGvX4curEEZCc0WBegW-yrGb2b9W-OqUzPJ3s4x_4UXit3wetN4rfhNz6pQpZGLBhur7vzqs5ALuWj1uTmx8eiLn5KdL5Of9um0zcLbhfF3Loiu1BovSj92yYcTbgpAI7JUgh8yNhmChEaIDLw)**
 
-## OSQUERY With YARA
+## With YARA
 
 [https://osquery.readthedocs.io/en/stable/deployment/yara/](https://osquery.readthedocs.io/en/stable/deployment/yara/) 
 

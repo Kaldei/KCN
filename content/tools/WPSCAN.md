@@ -6,14 +6,14 @@ description: A WordPress security scanner.
 
 **[https://github.com/wpscanteam/wpscan](https://github.com/wpscanteam/wpscan)**
 
-## WPSCAN Basis
+## Basis
 
 
  > 
  > **<font color=red>wpscan --url</font> \[TARGET_IP\] <font color=red>-e u,vp,vt</font>**  
  > Scan Wordpress.
 
-## WPSCAN Flags
+## Flags
 
 
  > 

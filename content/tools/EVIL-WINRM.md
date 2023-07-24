@@ -6,7 +6,7 @@ description: A WinRM shell for pentesting
 
 **[https://github.com/Hackplayers/evil-winrm](https://github.com/Hackplayers/evil-winrm)**
 
-## EVIL-WINRM Pass the Hash
+## Pass the Hash
 
 
  > 

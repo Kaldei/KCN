@@ -6,7 +6,7 @@ description: "A tool to play with Windows security, written in C."
 
 **[https://github.com/gentilkiwi/mimikatz](https://github.com/gentilkiwi/mimikatz)**
 
-## MIMIKATZ Basis
+## Basis
 
 
  > 
@@ -22,7 +22,7 @@ description: "A tool to play with Windows security, written in C."
  > **<font color=red>privilege::debug</font>**</br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
 
-## MIMIKATZ Enumeration
+## Enumeration
 
 
  > 
@@ -39,21 +39,21 @@ description: "A tool to play with Windows security, written in C."
  > **<font color=red>getprivs</font>**</br>
  > Display current user privileges. 
 
-## MIMIKATZ File Upload
+## File Upload
 
 
  > 
  > **<font color=red>upload</font> myFile**</br>
  > Transfer file to target.
 
-## MIMIKATZ Spawn Shell
+## Spawn Shell
 
 
  > 
  > **<font color=red>shell</font>**</br>
  > Open a shell.
 
-## MIMIKATZ Initial Access
+## Initial Access
 
 
  > 
@@ -68,7 +68,7 @@ description: "A tool to play with Windows security, written in C."
  > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**
  > Get a shell on the machine.
 
-## MIMIKATZ Pass the Ticket
+## Pass the Ticket
 
 
  > 
@@ -80,7 +80,7 @@ description: "A tool to play with Windows security, written in C."
  > **<font color=red>kerberos::ptt</font> myTicketFromSekurlsa<font color=red>.kirbi</font>**</br>
  > Cache and impersonate the given ticket.
 
-## MIMIKATZ Golden/Silver Ticket
+## Golden/Silver Ticket
 
 
  > 
@@ -98,7 +98,7 @@ Credit: TCM Security
 
 Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtgt:` slot, the sid of the service account into `/sid:`, and change the `/id:` to 1103.
 
-## MIMIKATZ Skeleton Key
+## Skeleton Key
 
 
  > 

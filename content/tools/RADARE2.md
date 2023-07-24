@@ -1,19 +1,19 @@
 ---
-title: DEBUGGER RADARE2
+title: RADARE2
 summary: UNIX-like reverse engineering framework and command-line toolset.
 description: UNIX-like reverse engineering framework and command-line toolset.
 ---
 
 **https://github.com/radareorg/radare2**
 
-## RADARE2 Launch
+## Launch
 
 
  > 
  > **<font color=red>r2</font> myFile**</br>
  > Open myFile in Radare2.
 
-## RADARE2 Basis
+## Basis
 
 
  > 
@@ -34,7 +34,7 @@ description: UNIX-like reverse engineering framework and command-line toolset.
  > **<font color=red>s</font> myFunction**</br>
  > Change location.
 
-## RADARE2 Memory Content
+## Memory Content
 
 
  > 
@@ -48,7 +48,7 @@ description: UNIX-like reverse engineering framework and command-line toolset.
  > **<font color=red>dr</font> <font color=red>rip=</font>address**</br>
  > Set the instruction that we want to execute next.
 
-## RADARE2 Move in Program Execution
+## Move in Program Execution
 
 
  > 
@@ -62,14 +62,14 @@ description: UNIX-like reverse engineering framework and command-line toolset.
  > **<font color=red>ds</font>**</br>
  > Step to the next instruction.
 
-## RADARE2 Breakpoint
+## Breakpoint
 
 
  > 
  > **<font color=red>db</font> address**</br>
  > Place a breakpoint.
 
-## RADARE2 Visual Mode
+## Visual Mode
 
 
  > 

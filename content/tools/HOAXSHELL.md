@@ -6,7 +6,7 @@ description: A Windows reverse shell payload generator and handler that abuses t
 
 **https://github.com/t3l3machus/hoaxshell**
 
-## HOAXSHELL Basis
+## Basis
 
 
  > 
