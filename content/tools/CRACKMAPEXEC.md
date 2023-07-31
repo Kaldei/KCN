@@ -6,6 +6,11 @@ description: A swiss army knife for pentesting networks.
 
 **[https://github.com/Porchetta-Industries/CrackMapExec](https://github.com/Porchetta-Industries/CrackMapExec)**
 
+## Resources
+
+* Workshop CrackMapExec LeHack 2023 Writeup - BOUYAICHE RAYAN
+  https://www.rayanle.cat/write-up-workshop-cme-lehack-2023/
+
 ## Flags
 
 
