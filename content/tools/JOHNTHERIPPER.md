@@ -6,14 +6,14 @@ description: An advanced offline password cracker.
 
 **[https://github.com/openwall/john](https://github.com/openwall/john)**
 
-## 
+## Basis
 
 
  > 
  > **<font color=red>john --wordlist=</font>/usr/share/wordlists/rockyou.txt hash.txt**</br>
  > Crack unknown hash.
 
-## 
+## Flags
 
 
  > 
@@ -43,28 +43,28 @@ description: An advanced offline password cracker.
  > **<font color=red>john --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> forjohn.txt**</br>
  > Crack private key passphrase.
 
-## 
+## JWT
 
 
  > 
  > **<font color=red>john --format=HMAC-SHA512</font> jwt.txt <font color=red>--show</font>**</br>
  > Crack JWT secret.
 
-## 
+## MD5
 
 
  > 
  > **<font color=red>john --format=md5crypt --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> hash.txt**</br>
  > Crack MD5 hash.
 
-## 
+## NTLM
 
 
  > 
  > **<font color=red>john --format=NT -w=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> hash.txt <font color=red>--pot=</font>output.txt**</br>
  > Crack NTLM Hash.
 
-## 
+## RAR
 
 
  > 
@@ -74,7 +74,7 @@ description: An advanced offline password cracker.
  > **<font color=red>john</font> forjohn.txt**</br>
  > Crack RAR archive password.
 
-## 
+## ZIP
 
 
  > 

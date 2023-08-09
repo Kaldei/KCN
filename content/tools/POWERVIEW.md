@@ -6,7 +6,7 @@ description: A PowerShell tool to gain network situational awareness on Windows 
 
 **[https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon](https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon)**
 
-## 
+## Resource
 
 * **[https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview](https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview)**
 * **[https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)**

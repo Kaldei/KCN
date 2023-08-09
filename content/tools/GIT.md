@@ -6,7 +6,7 @@ description: A free and open source distributed version control system.
 
 **[https://git-scm.com/](https://git-scm.com/)**
 
-## 
+## Resource
 
 * [https://ohshitgit.com/en](https://ohshitgit.com/en)
 * [https://learngitbranching.js.org/](https://learngitbranching.js.org/)

@@ -6,7 +6,7 @@ description: "A C# toolset for raw Kerberos interaction and abuses."
 
 **[https://github.com/GhostPack/Rubeus](https://github.com/GhostPack/Rubeus)**
 
-# RUBEUS Password Spraying
+## Password Spraying
 
 
  > 
