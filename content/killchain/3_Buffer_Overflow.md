@@ -1,7 +1,7 @@
 ---
 title: 3 - Buffer Overflow
-summary: Gaining Access step – a note for Buffer Overflows
-description: Gaining Access step – a note for Buffer Overflows
+summary: Gaining Access step – a note for Buffer Overflows.
+description: Gaining Access step – a note for Buffer Overflows.
 ---
 
 # Memory Architecture
