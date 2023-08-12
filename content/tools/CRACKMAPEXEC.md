@@ -8,8 +8,7 @@ description: A swiss army knife for pentesting networks.
 
 ## Resources
 
-* Workshop CrackMapExec LeHack 2023 Writeup - BOUYAICHE RAYAN
-  https://www.rayanle.cat/write-up-workshop-cme-lehack-2023/
+* [Workshop CrackMapExec LeHack 2023 Writeup - BOUYAICHE RAYAN](https://www.rayanle.cat/write-up-workshop-cme-lehack-2023/)
 
 ## Flags
 
