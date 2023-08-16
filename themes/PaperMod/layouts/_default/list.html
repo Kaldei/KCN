@@ -60,7 +60,7 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
-<article class="card shadow-1 rounded-3 white {{ $class }}">
+<article class="shadow-1 rounded-3 white {{ $class }}">
   {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <header class="entry-header">
@@ -85,14 +85,22 @@
 
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
-  <nav class="card shadow-1 rounded-3 white post-entry" style="text-align: center;">
+  <nav class="grix xs2 gutter-xs5">
     {{- if $paginator.HasPrev }}
-    <div>« {{ i18n "prev_page" }}</div>
-    <a class="entry-link" href="{{ $paginator.Prev.URL | absURL }}"></a>
+    <a class="pos-xs1 shadow-1 rounded-3 white text-center post-entry prev" href="{{ $paginator.Prev.URL | absURL }}">
+      «&nbsp;{{ i18n "prev_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}
+      {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
+      {{- end }}
+    </a>
     {{- end }}
     {{- if $paginator.HasNext }}
-    {{ i18n "next_page" }} »
-    <a class="entry-link" href="{{ $paginator.Next.URL | absURL }}"></a>
+    <a class="pos-xs2 shadow-1 rounded-3 white text-center post-entry next" href="{{ $paginator.Next.URL | absURL }}">
+      {{- i18n "next_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}
+      {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
+      {{- end }}&nbsp;»
+    </a>
     {{- end }}
   </nav>
 </footer>

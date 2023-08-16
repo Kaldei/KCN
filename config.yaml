@@ -1,9 +1,9 @@
-baseURL: 'https://kdsn.kaldei.xyz/'
+baseURL: 'https://security.kaldei.xyz/'
 canonifyURLs: true
 languageCode: en-us
 title: KDSN
 theme: PaperMod
-paginate: 25
+paginate: 15
 
 markup:
   goldmark:
@@ -37,7 +37,11 @@ menu:
       weight: 300
       identifier: tools
       url: /tools/
-    - name: About
+    - name: Search
       weight: 400
+      identifier: search
+      url: /search/
+    - name: About
+      weight: 500
       identifier: about
       url: /about/

@@ -2,10 +2,10 @@
 title: How is this site made?
 ---
 
-<div class="grix xs1 md1 lg3 gutter-xs7 vstretch">
+<div class="grix xs1 md1 lg3 gutter-xs5 vstretch">
     <div class="card shadow-1 rounded-3 white post-entry">
         <div class="card-image">
-            <img src="/images/obsidian.png" style="max-width:200px; margin-left:auto; margin-right:auto;" alt="obsidian_logo" />
+            <img src="/images/obsidian.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="obsidian_logo" />
         </div>
         <div class="card-header divider">Obsidian</div>
         <div class="card-content">
@@ -16,7 +16,7 @@ title: How is this site made?
     </div>
     <div class="card shadow-1 rounded-3 white post-entry">
         <div class="card-image">
-            <img src="/images/obsidian.png" style="max-width:200px; margin-left:auto; margin-right:auto;" alt="obsidian_logo" />
+            <img src="/images/obsidian.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="obsidian_logo" />
         </div>
         <div class="card-header divider">Obsidian Export</div>
         <div class="card-content">
@@ -27,7 +27,7 @@ title: How is this site made?
     </div>
     <div class="card shadow-1 rounded-3 white post-entry">
         <div class="card-image">
-            <img src="/images/hugo.png" style="max-width:200px; margin-left:auto; margin-right:auto;" alt="hugo_logo" />
+            <img src="/images/hugo.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="hugo_logo" />
         </div>
         <div class="card-header divider">Hugo</div>
         <div class="card-content">
@@ -38,7 +38,7 @@ title: How is this site made?
     </div>
     <div class="card shadow-1 rounded-3 white post-entry">
         <div class="card-image">
-            <img src="/images/hugo.png" style="max-width:200px; margin-left:auto; margin-right:auto;" alt="hugo_logo" />
+            <img src="/images/hugo.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="hugo_logo" />
         </div>
         <div class="card-header divider">PaperMod Theme</div>
         <div class="card-content">
@@ -49,7 +49,7 @@ title: How is this site made?
     </div>
     <div class="card shadow-1 rounded-3 white post-entry">
         <div class="card-image">
-            <img src="/images/axentix.png" style="max-width:200px; margin-left:auto; margin-right:auto;" alt="axentix_logo" />
+            <img src="/images/axentix.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="axentix_logo" />
         </div>
         <div class="card-header divider">Axentix</div>
         <div class="card-content">
@@ -60,7 +60,7 @@ title: How is this site made?
     </div>
     <div class="card shadow-1 rounded-3 white post-entry">
         <div class="card-image">
-            <img src="/images/github.png" style="max-width:200px; margin-left:auto; margin-right:auto;" alt="github_logo" />
+            <img src="/images/github.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="github_logo" />
         </div>
         <div class="card-header divider">Github Pages</div>
         <div class="card-content">

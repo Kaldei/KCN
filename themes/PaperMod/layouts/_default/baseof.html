@@ -14,15 +14,11 @@
     {{- end }} -->
 </head>
 
-<body class="layout-sidenav-fixed
-<!-- {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}} -->
-<!-- {{- print " list" -}} -->
-    <!-- {{- end -}} -->
-    <!-- {{- if eq site.Params.defaultTheme `dark` -}} -->
-    <!-- {{- print " dark" }} -->
-    <!-- {{- end -}} -->
-    " id="top">
+<body class="layout-sidenav-fixed layout-sidenav-both" id="top">
+
+    <!-- Theme Nav Bar -->
     {{- partialCached "header.html" . .Page -}}
+
     <main class="main">
 
         <!-- Custom Side Nav -->
@@ -30,7 +26,7 @@
             class="sidenav bd-r-solid bd-3 bd-grey bd-light-2 sidenav-fixed white">
             <div class="d-flex my-auto fx-col">
                 <div class="sidenav-header">
-                    <img class="responsive-media px-5 rounded-full" src="/images/logo.png" alt="Logo"/>
+                    <img class="responsive-media px-5 rounded-full" src="/images/logo.png" alt="Logo" />
                     <div class="h1">KDSN</div>
                     <p>KALDEI’S SEC NOTES</p>
                 </div>
@@ -55,28 +51,30 @@
                 </div>
             </div>
         </div>
-        <!-- Custom Side Nav -->
 
 
-        {{- block "main" . }}{{ end }}
-
-        <!-- Scrollspy -->
+        <!-- Axentix Scrollspy -->
         <div id="scrollspy-sidenav" data-ax="sidenav" class="sidenav sidenav-right sidenav-fixed white">
             <div class="scrollspy d-flex my-auto fx-col text-grey" id="scrollspy-auto"></div>
         </div>
 
+                
+        <!-- Content -->
+        {{- block "main" . }}{{ end }}
+
     </main>
+
+    <!-- Theme Footer -->
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 
     <!-- Axentix JS minified version -->
     <script src="https://cdn.jsdelivr.net/npm/axentix@2.2.0/dist/axentix.min.js"></script>
+
     <!-- Iconify -->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
     <!-- Scrollspy -->
     <script>
-        // NOTE: this is NOT to be used if data-ax="scrollspy" is set in your HTML
-        // This example is based on this documentation scrollspy.
         let scrollSpy = new Axentix.ScrollSpy('#scrollspy-auto', {
             auto: {
                 enabled: true,
@@ -84,9 +82,9 @@
                 selector: 'h1,h2',
             },
             classes: "active"
-
         });
     </script>
+
 </body>
 
 </html>
