@@ -10,7 +10,7 @@ description: An Internet-scale port scanner.
 
 
  > 
- > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font>443</br>**
+ > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font> 443</br>**
  > Host discovering scan.
 
 ## Ports

@@ -25,7 +25,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font>443</br>**
+ > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font> 443</br>**
  > Host discovering scan.
 
 # Port Scan
