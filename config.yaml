@@ -23,6 +23,14 @@ params:
   assets:
     favicon: images/favicon.png
 
+
+# Required for search bar
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
 menu:
   main:
     - name: Home
