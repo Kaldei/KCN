@@ -1,4 +1,4 @@
-<h1 align="center">📜</br>Kaldei’s Sec Notes</h1>
+<h1 align="center">📜</br>Kaldei’s Cybersecurity Notes</h1>
 <p align="center">
   Web - Personal Project - 2022
 </p>
