@@ -14,7 +14,7 @@ My notes are more or less updated, and most likely contain mistakes or things th
 
 ---
 ## Get Started
-1. Go to [https://kdsn.kaldei.xyz](https://kdsn.kaldei.xyz)
+1. Go to [https://security.kaldei.xyz](https://security.kaldei.xyz)
 2. Enjoy!
 
 

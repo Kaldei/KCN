@@ -2,7 +2,7 @@
 title: Index
 ---
 
-<h1 class="text-center">KALDEI'S SECURITY NOTES</h1>
+<h1 class="text-center">KALDEI'S CYBERSECURITY NOTES</h1>
 
 <h2 class="mt-2">Where to go from here? 🧭</h2>
 <div class="grix xs1 lg2 xl3 gutter-xs5 vstretch">
@@ -50,7 +50,7 @@ title: Index
 </div>
 
 <h2 class="mt-2">What is this website? 🤔</h2>
-<p>KDSN stands for Kaldei's Security Notes. It is a website where I host my notes about cybersecurity and stuff. They are in "Cheat Sheets" format and allow me to quickly recall and reuse tools and technics I've encountered. Could be useful to someone, so I share them :D</p>
+<p>KDCN stands for Kaldei's Cybersecurity Notes. It is a website where I host my notes about cybersecurity and stuff. They are in "Cheat Sheets" format and allow me to quickly recall and reuse tools and technics I've encountered. Could be useful to someone, so I share them :D</p>
 
 <p>Disclaimer: My notes are more or less updated, and most likely contain mistakes or things that might not work.</br>
 If you find something broken feel free to reach me.</p>
