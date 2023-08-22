@@ -6,8 +6,9 @@
 
     <!-- Axentix CSS minified version -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@2.2.0/dist/axentix.min.css">
+    <!-- Custom CSS -->
     {{ $options := (dict "targetPath" "css/custom.css" "outputStyle" "compressed") }}
-    {{ $style:= resources.Get "css/custom.scss" | toCSS $options }}
+    {{ $style:= resources.Get "custom.scss" | toCSS $options }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
     <!-- {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
