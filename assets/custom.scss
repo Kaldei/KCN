@@ -2,73 +2,55 @@
     --ax-sidenav-width: 18rem;
 }
 
-.sidenav-right{
-    --ax-sidenav-width: 15rem;
-}
-
-.nav{
-    margin-inline-start: 0;
-    max-width: 100%;
-    //justify-content: start; //space-between;
-}
-
-header:not(.header){
-    padding: 0!important;
-}
-
-.footer{
+.nav {
     max-width: unset;
-    justify-content: center;
 }
 
-.main{
+.h1 {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+    font-weight: bold;
+}
+
+header:not(.header) {
+    padding: 0 !important;
+}
+
+.main {
     max-width: unset;
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
-.post-content a{
-    box-shadow: none;
+.footer {
+    max-width: unset;
+    justify-content: center;
 }
 
-body{
-    &.dark{
-        .sidenav{
+.scrollspy a.active {
+    color: #000;
+    border-left: solid;
+    border-color: #000;
+}
+
+body {
+    &.dark {
+        .sidenav {
             background-color: #1d1e20;
             color: #fff;
         }
-        .scrollspy a.active{
-            color:#fff; 
-            border-left: solid;
+
+        .scrollspy a.active {
+            color: #fff;
             border-color: #fff;
         }
-        .post-entry{
-            background-color: #2e2e33;
-            color: #fff;
-        }
-        .pagination a{
+
+        .post-entry {
             background-color: #2e2e33;
             color: #fff;
         }
     }
 }
 
-.scrollspy a.active{
-    color:#000; 
-    border-left: solid;
-    border-color: #000;
-}
-
-.h1{
-    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
-    font-weight: bold;
-}
-
-.pagination a{
-    background-color: #fff;
-    color: #000;
-}
-
 .entry-content {
     font-size: 16px;
-} 
+}
