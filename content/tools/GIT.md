@@ -123,7 +123,7 @@ description: A free and open source distributed version control system.
  > Move HEAD to last commit of myBranch.
 
  > 
- > **<font color=red>git checkout</font> myBranch<font color=red>^</font>**
+ > **<font color=red>git checkout</font> myBranch<font color=red>^</font>**</br>
  > Move HEAD to penultimate commit of myBranch.
 
  > 
