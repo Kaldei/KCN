@@ -179,11 +179,11 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git rebase -i</font> myBranch**</br>
  > Use rebase interactive mode. Select commits that you want to modify by changing `pick` by `e` (for edit) and reorder commits as you which.
-
-git commit --amend --no-edit.
-Then make your modification and issue this command to modify the commit and validate your change.
-
-git rebase --continue
-Continue to the next commit to edit.
+ > 
+ > **<font color=red>git commit --amend --no-edit</font>**</br>
+ > Make your modification to the code and then issue this command to modify the commit (`--no-edit` to keep the name of the old commit).
+ > 
+ > **<font color=red>git rebase --continue</font>**</br>
+ > Continue to the next commit marked for edition.
 
 git rebase --committer-date-is-author-date --root -S
