@@ -41,6 +41,9 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git clone</font> \[REPO_URL\]**</br>
  > Clone remote repository to local machine.
+ > 
+ > **<font color=red>git add submodule</font> \[REPO_URL\]**</br>
+ > Add a submodule (a repo in a repo). Use `--recurse-submodule` to include submodule when using git commands.
 
  > 
  > **<font color=red>git status</font>**</br>
@@ -66,36 +69,15 @@ description: A free and open source distributed version control system.
  > **<font color=red>git commit -m "</font>Commit Message<font color=red>"</font>**</br>
  > Create a commit.
  > 
- > **<font color=red>git commit -am "</font>Commit Message<font color=red>"</font>**</br>
- > Add files in current directory and create a commit.
- > 
  > **<font color=red>git commit --amend</font>**</br>
- > Modify last commit (only works if code is not pushed.
+ > Modify last commit (only works if code is not pushed).
  > 
  > **<font color=red>git tag</font> myTag**</br>
  > Create a tag.
+
  > 
  > **<font color=red>git push</font>**</br>
  > Push commits to remote repository.
-
-## History
-
-
- > 
- > **<font color=red>git show</font> myCommit**</br>
- > Display commit info.
- > 
- > **<font color=red>git reflog</font>**</br>
- > Show commit history (one line per commit, more readable).
- > 
- > **<font color=red>git log</font>**</br>
- > Show commit history.
- > 
- > **<font color=red>git log --oneline --graph --decorate</font>**</br>
- > Show commit history with graph.
- > 
- > **<font color=red>git log -p</font>**</br>
- > Shows difference between commits.
 
 ## Branch
 
@@ -143,12 +125,39 @@ description: A free and open source distributed version control system.
  > **<font color=red>git checkout</font> HEAD^2**</br>
  > Moves HEAD 1 commit back from current HEAD in the 2nd parent of a merge.
 
+## History
+
+
+ > 
+ > **<font color=red>git show</font> myCommit**</br>
+ > Display commit information.
+
+ > 
+ > **<font color=red>git reflog</font>**</br>
+ > Show commit history (one line per commit, more readable than `git log`).
+
+ > 
+ > **<font color=red>git log</font>**</br>
+ > Show commit history.
+ > 
+ > **<font color=red>git log --pretty=fuller</font>**</br>
+ > Commit history with more info (Committer name, commit date,...).
+ > 
+ > **<font color=red>git log --show-signature</font>**</br>
+ > Show signature information on commit history.
+ > 
+ > **<font color=red>git log --oneline --graph --decorate</font>**</br>
+ > Show commit history with graph.
+ > 
+ > **<font color=red>git log -p</font>**</br>
+ > Shows difference between commits.
+
 ## Advanced Commands
 
 
  > 
  > **<font color=red>git reset</font> HEAD^**</br>
- > Moves HEAD 1 commit back as if it had never happened (can break things if pushed to remote).
+ > Moves HEAD 1 commit back as if it had never happened (can break things if the commit as laeready been pushed to remote).
  > 
  > **<font color=red>git revert</font> HEAD^**</br>
  > Create new commit that undo last commit changes.
@@ -156,9 +165,25 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git cherry-pick</font> commit1 ccommit12 ccommit7**</br>
  > Add commits from other branches after HEAD.
+
  > 
  > **<font color=red>git rebase</font> myBranch**</br>
  > Takes commits on myBranch and replays them on current branch (from their last common parent).
  > 
- > **<font color=red>git rebase -i HEAD~</font>4**</br>
- > Opens the interactive rebase window. This allows to: change the order of the last 4 commits, omit some commits, overwrite commits.
+ > **<font color=red>git rebase --root</font>**</br>
+ > Takes commits from the root of the repository and replays them.
+ > 
+ > **<font color=red>git rebase --abort</font>**</br>
+ > Abort the rebase (useful in case of issues).
+
+ > 
+ > **<font color=red>git rebase -i</font> myBranch**</br>
+ > Use rebase interactive mode. Select commits that you want to modify by changing `pick` by `e` (for edit) and reorder commits as you which.
+
+git commit --amend --no-edit.
+Then make your modification and issue this command to modify the commit and validate your change.
+
+git rebase --continue
+Continue to the next commit to edit.
+
+git rebase --committer-date-is-author-date --root -S
