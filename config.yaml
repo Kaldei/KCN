@@ -14,12 +14,10 @@ markup:
 
 params:
   title: KDCN
-  disableScrollToTop: true
-  # Don't display posts list on Home Page
-  mainSections: []
-  # Color theme (auto, light or dark)
-  defaultTheme: auto
-  #custom_css = ["css/custom.css"]
+  defaultTheme: auto # Color theme (auto, light or dark)
+  disableScrollToTop: true # Disable scroll to top button
+  mainSections: [] # Don't display posts list on Home Page
+  ShowCodeCopyButtons: true # Enable button in code block
   assets:
     favicon: images/favicon.png
 

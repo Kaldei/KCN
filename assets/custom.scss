@@ -1,5 +1,6 @@
 :root {
     --ax-sidenav-width: 18rem;
+    --primary-color: red;
 }
 
 .nav {
@@ -29,7 +30,7 @@ header:not(.header) {
 .scrollspy a.active {
     color: #000;
     border-left: solid;
-    border-color: #000;
+    border-color: var(--primary-color);
 }
 
 body {
@@ -41,7 +42,6 @@ body {
 
         .scrollspy a.active {
             color: #fff;
-            border-color: #fff;
         }
 
         .post-entry {
@@ -53,4 +53,50 @@ body {
 
 .entry-content {
     font-size: 16px;
+}
+
+
+.post-entry:after {
+    content: "";
+    height: 75px;
+    width: 1px;
+    position: absolute;
+    left: 0px;
+    transition: top, opacity;
+    transition-duration:500ms;
+    transition-timing-function: ease;
+    background: linear-gradient(transparent, var(--primary-color), transparent);
+}
+
+.post-entry:after {
+    top: 40%;
+    opacity: 0;
+}
+
+.post-entry:hover:after {
+    top: 10%;
+    opacity: 1;
+}
+
+
+.sidenav-header:before,
+.sidenav-header:after {
+    content: "";
+    position: absolute;
+    top: 88%;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    // box-shadow: 0px 0px 4px 1px var(--primary-color);
+}
+
+.sidenav-header:before {
+    height: 1px;
+    width: 50px;
+    translate: -20px -1rem;
+}
+
+.sidenav-header:after {
+    height: 2px;
+    width: 30px;
+    translate: 26px calc(-1rem - 0.5px);
 }
