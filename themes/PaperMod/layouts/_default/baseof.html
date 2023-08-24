@@ -23,10 +23,11 @@
     <main class="main">
 
         <!-- Custom Side Nav -->
-        <div id="example-sidenav" data-ax="sidenav" class="sidenav bd-r-solid bd-3 bd-grey bd-light-2 sidenav-fixed">
+        <div id="example-sidenav" data-ax="sidenav" class="sidenav bd-r-solid bd-3 bd-grey bd-light-1 sidenav-fixed">
             <div class="d-flex my-auto fx-col">
                 <div class="sidenav-header">
-                    <img class="rounded-4" src="/images/logo.png" style="width: 70%; height: auto;"alt="Logo" />
+                    <img class="rounded-4 bd-solid bd-3 bd-grey bd-light-1" src="/images/logo.png"
+                        style="width: 70%; height: auto;" alt="Logo" />
                     <div class="h1">KDCN</div>
                     <p>KALDEI’S CYBERSEC NOTES</p>
                 </div>
@@ -36,7 +37,7 @@
                         class="btn transparent text-grey">
                         <span class="iconify-inline font-s7" data-icon="akar-icons:linkedin-box-fill"></span>
                     </a>
-                    <a href="https://github.com/Kaldei" target="_blank" rel="noopener" 
+                    <a href="https://github.com/Kaldei" target="_blank" rel="noopener"
                         class="btn transparent text-grey">
                         <span class="iconify-inline font-s7" data-icon="akar-icons:github-fill"></span>
                     </a>
@@ -83,6 +84,45 @@
             },
             classes: "active"
         });
+    </script>
+
+    <script>
+        const links = document.querySelectorAll('.scrollspy a');
+        let clickedOne = null
+
+        // When there is no scroll set active class to the first element
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+            links.forEach(l => l.classList.remove('active'));
+            links[0].classList.add('active');
+        }
+
+        // Remove active class to clicked one when scroll
+        window.addEventListener('wheel', function () {
+            if (clickedOne && document.querySelectorAll('.active').length > 2) {
+                links[clickedOne].classList.remove('active');
+                clickedOne = null;
+            }
+        });
+
+        // Set active class when click
+        links.forEach((link, index) => {
+            link.addEventListener('click', function (event) {
+                setTimeout(function () {
+                    // Remove 'active' class from all links
+                    links.forEach(l => l.classList.remove('active'));
+
+                    // Add 'active' class to the clicked link
+                    link.classList.add('active');
+
+                    // Require to remove active class when scroll
+                    clickedOne = index;
+                }, 0.001); // Because race condition with scrollspy's code on last element 
+
+            });
+
+        });
+
+
     </script>
 
 </body>
