@@ -13,7 +13,7 @@ description: A free and open source distributed version control system.
 
 ## HEAD
 
-`HEAD` is the location in the commit tree. It's a "pointer" to a commit. It is possible to move it with git checkout.
+`HEAD` is the location in the commit tree. It's a "pointer" to a commit. It is possible to move it with `git checkout`.
 
 ## Config
 
@@ -29,8 +29,15 @@ description: A free and open source distributed version control system.
  > Change parameter value.
 
  > 
+ > **<font color=red>git config --global gpg.format ssh</font>**</br>
+ > Set SSH key method to sign commits.
+ > 
+ > **<font color=red>git config --global user.signingkey</font> /path/to/my/public/key**</br>
+ > Specify the public key to used for signing commits (the private key has to be configured in GitHub settings.
+
+ > 
  > **<font color=red>git config --global http.sslBackend schannel</font>**</br>
- > Switch from OpenSSL (default) to Schannel SSL Backend (Windows built-in). This is useful in an organization with enterprise-managed certificates.
+ > Switch SSL Backend from OpenSSL (default) to Schannel (Windows built-in). This is useful in an organization with enterprise-managed certificates.
 
 ## Basis
 
@@ -66,11 +73,11 @@ description: A free and open source distributed version control system.
  > Add stashed code back into the code.
 
  > 
- > **<font color=red>git commit -m "</font>Commit Message<font color=red>"</font>**</br>
- > Create a commit.
+ > **<font color=red>git commit -S -m "</font>Commit Message<font color=red>"</font>**</br>
+ > Create a commit (`-S` to sign the commit and `-m` to set the commit's message).
  > 
  > **<font color=red>git commit --amend</font>**</br>
- > Modify last commit (only works if code is not pushed).
+ > Modify last commit (only works if commit was not pushed).
  > 
  > **<font color=red>git tag</font> myTag**</br>
  > Create a tag.
@@ -152,7 +159,7 @@ description: A free and open source distributed version control system.
  > **<font color=red>git log -p</font>**</br>
  > Shows difference between commits.
 
-## Advanced Commands
+## Rewrite History
 
 
  > 
@@ -173,6 +180,9 @@ description: A free and open source distributed version control system.
  > **<font color=red>git rebase --root</font>**</br>
  > Takes commits from the root of the repository and replays them.
  > 
+ > <font color=red>git rebase --committer-date-is-author-date --root </font>
+ > Rebase commits from the root and keep original commit date. 
+ > 
  > **<font color=red>git rebase --abort</font>**</br>
  > Abort the rebase (useful in case of issues).
 
@@ -184,6 +194,56 @@ description: A free and open source distributed version control system.
  > Make your modification to the code and then issue this command to modify the commit (`--no-edit` to keep the name of the old commit).
  > 
  > **<font color=red>git rebase --continue</font>**</br>
- > Continue to the next commit marked for edition.
+ > Continue to the next commit marked for edition.4
 
-git rebase --committer-date-is-author-date --root -S
+## Advanced Rewrite History
+
+#### Change Commits Author Name
+
+ > 
+ > **<font color=red>git branch -r | grep -v '->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done</font>**</br>
+ > Checkout all branches locally.
+
+````bash
+git filter-branch --force --tag-name-filter cat --commit-filter '
+        if [ "$GIT_AUTHOR_NAME" = "myOldName" ];
+        then
+                GIT_AUTHOR_NAME="myNewName";
+                GIT_AUTHOR_EMAIL="myEmail@email.com";
+                GIT_COMMITTER_NAME="myNewName";
+                GIT_COMMITTER_EMAIL="myEmail@email.com";
+                git commit-tree "$@";
+        else
+                git commit-tree "$@";
+        fi' -- --all
+````
+
+ > 
+ > Change author and committer names for each commit authored by a specific name.
+
+ > 
+ > **<font color=red>git push --all origin --force</font>**</br>
+ > Push changes (all branches) to origin. Force is required because it rewrites history.
+
+#### Sign Old Commits of a Specific Author
+
+ > 
+ > **<font color=red>git branch -r | grep -v '->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done</font>**</br>
+ > Checkout all branches locally.
+
+````bash
+git filter-branch --force --tag-name-filter cat --commit-filter '
+        if [ "$GIT_AUTHOR_NAME" = "myName" ];
+        then
+                git commit-tree -S "$@";
+        else
+                git commit-tree "$@";
+        fi' -- --all
+````
+
+ > 
+ > Sign each commits authored by a specific name.
+
+ > 
+ > **<font color=red>git push --all origin --force</font>**</br>
+ > Push changes (all branches) to origin. Force is required because it rewrite history.
