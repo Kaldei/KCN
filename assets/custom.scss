@@ -22,6 +22,11 @@ header:not(.header) {
     margin-right: 2rem;
 }
 
+.page-footer{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
 .footer {
     max-width: unset;
     justify-content: center;
@@ -58,7 +63,7 @@ body {
 
 .post-entry:after {
     content: "";
-    height: 75px;
+    height: 30%;
     width: 1px;
     position: absolute;
     left: 0px;
@@ -69,12 +74,12 @@ body {
 }
 
 .post-entry:after {
-    top: 40%;
+    top: 65%;
     opacity: 0;
 }
 
 .post-entry:hover:after {
-    top: 10%;
+    top: 35%;
     opacity: 1;
 }
 
