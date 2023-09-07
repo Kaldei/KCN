@@ -8,16 +8,12 @@ description: A really fast password cracker.
 
 ## Attack Types
 
----
-
 ### Attack (-a 0)
 
 
  > 
  > **<font color=red>hashcat -a 0 -m </font>0 “myHash” <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Dictionary attack.
-
----
 
 ### Attack (-a 1)
 
@@ -26,8 +22,6 @@ description: A really fast password cracker.
  > 
  > **<font color=red>hashcat -a 1 -m</font> 0 <font color=red>"</font>myHash<font color=red>"</font> myPrefix.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Dictionary attack with a prefix.
-
----
 
 ### Attack (-a 3)
 
@@ -120,7 +114,7 @@ description: A really fast password cracker.
 
  > 
  > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
- > Crack the Kerberos 5 TGS-REP hash.
+ > Crack Kerberos 5 TGS-REP hash.
 
  > 
  > **<font color=red>-m 13000</font>**</br>
