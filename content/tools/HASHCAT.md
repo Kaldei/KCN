@@ -113,8 +113,8 @@ description: A really fast password cracker.
 
 
  > 
- > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
- > Crack Kerberos 5 TGS-REP hash.
+ > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > Crack Kerberos KRB_TGS_REP hash.
 
  > 
  > **<font color=red>-m 13000</font>**</br>

