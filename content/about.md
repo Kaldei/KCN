@@ -1,15 +1,21 @@
 ---
-title: How is this site made?
+title: About
 ---
 
-<div class="grix xs1 md1 lg3 gutter-xs5 vstretch">
+<h2 id="What is this website?">What is this website?</h2>
+<p>KDCN stands for Kaldei's Cybersecurity Notes. It is a website where I host my notes about cybersecurity and stuff. They are in "Cheat Sheets" format and allow me to quickly recall and reuse tools and technics I've encountered. Could be useful to someone, so I share them :D</p>
 
-<div class="shadow-1 rounded-3 white post-entry">
+<p>Disclaimer! My notes are more or less updated, and most likely contain mistakes or things that might not work. If you find something broken feel free to reach me.</p>
+
+
+<h2 id="How is this site made?">How is this site made?</h2>
+<div class="grix xs1 md1 lg3 gutter-xs5 vstretch text-center">
+
+<div class="shadow-1 rounded-3 post-entry">
     <img src="/images/obsidian.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="obsidian_logo" />
     <header class="entry-header">
         <h3>Obsidian</h3>
     </header>
-    <div class="divider"></div>
     <div class="entry-content">
         Obsidian is the tool I use to write my notes (in Markdown). Obsidian allows me, thanks to its embedded notes
         function, to cut my notes into small pieces that I then integrate into several notes.
@@ -17,12 +23,11 @@ title: How is this site made?
     <a class="entry-link shadow-0" href="https://obsidian.md/" target="_blank" rel="noopener"></a>
 </div>
 
-<div class="shadow-1 rounded-3 white post-entry">
+<div class="shadow-1 rounded-3 post-entry">
     <img src="/images/obsidian.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="obsidian_logo" />
     <header class="entry-header">
         <h3>Obsidian Export</h3>
     </header>
-    <div class="divider"></div>
     <div class="entry-content">
         Obsidian Export allows me to export my Obsidian Markdown notes into CommonMark format. This is a mandatory
         step because Hugo does not completely support Obsidian Markdown syntax.
@@ -30,12 +35,11 @@ title: How is this site made?
     <a class="entry-link shadow-0" href="https://github.com/zoni/obsidian-export" target="_blank" rel="noopener"></a>
 </div>
 
-<div class="shadow-1 rounded-3 white post-entry">
+<div class="shadow-1 rounded-3 post-entry">
     <img src="/images/hugo.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="hugo_logo" />
     <header class="entry-header">
         <h3>Hugo</h3>
     </header>
-    <div class="divider"></div>
     <div class="entry-content">
         Hugo is a static website generator. It allows me to generate a website directly from my notes (after
         converting them with Obsidian Export).
@@ -43,12 +47,11 @@ title: How is this site made?
     <a class="entry-link shadow-0" href="https://gohugo.io/" target="_blank" rel="noopener"></a>
 </div>
 
-<div class="shadow-1 rounded-3 white post-entry">
+<div class="shadow-1 rounded-3 post-entry">
     <img src="/images/hugo.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="hugo_logo" />
     <header class="entry-header">
         <h3>PaperMod Theme</h3>
     </header>
-    <div class="divider"></div>
     <div class="entry-content">
         PaperMod is the Hugo theme I use for my website. This theme manages the aesthetic part of the content
         (central part of the website) as well as the navbar and the theme management (light and dark).
@@ -56,12 +59,11 @@ title: How is this site made?
     <a class="entry-link shadow-0" href="https://github.com/adityatelange/hugo-PaperMod" target="_blank" rel="noopener"></a>
 </div>
 
-<div class="shadow-1 rounded-3 white post-entry">
+<div class="shadow-1 rounded-3 post-entry">
     <img src="/images/axentix.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="axentix_logo" />
     <header class="entry-header">
         <h3>Axentix</h3>
     </header>
-    <div class="divider"></div>
     <div class="entry-content">
         Axentix is an awesome frontend framework made by a friend of mine (by the
         way, thank you Stallos for the help). I used Axentix to add the sidenav to the left and the amazing scrollspy to the right <3. 
@@ -69,12 +71,11 @@ title: How is this site made?
     <a class="entry-link shadow-0" href="https://useaxentix.com/" target="_blank" rel="noopener"></a>
 </div>
 
-<div class="shadow-1 rounded-3 white post-entry">
+<div class="shadow-1 rounded-3 post-entry">
     <img src="/images/github.png" style="max-width:150px; margin-left:auto; margin-right:auto;" alt="github_logo" />
     <header class="entry-header">
         <h3>GitHub Pages</h3>
     </header>
-    <div class="divider"></div>
     <div class="entry-content">
         Github Pages is the place where the website is hosted. I set up a GitHub Action on my repository which builds (with Hugo) and then deploys the website as soon as there is a new commit. 
     </div>
