@@ -2,7 +2,7 @@
 title: Index
 ---
 
-<h1 class="text-center pb-">KALDEI'S CYBERSECURITY NOTES</h1>
+<h1 class="text-center">KALDEI'S CYBERSECURITY NOTES</h1>
 
 <div class="grix xs1 text-center">
 
@@ -12,7 +12,7 @@ title: Index
     </header>
     <div class="entry-content">
       <p >
-        Notes for the different stages of an attack, they're sorted kinda like the "Cyber Kill Chain":</br>
+        Notes for the different stages of an attack. They're sorted kinda like the "Cyber Kill Chain":</br>
         Enumeration, Vulnerability Assessment, Gaining Access, Foothold, and Privilege Escalation.
       </p>
     </div>

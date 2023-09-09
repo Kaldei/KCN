@@ -3,7 +3,7 @@ title: About
 ---
 
 <h2 id="What is this website?">What is this website?</h2>
-<p>KDCN stands for Kaldei's Cybersecurity Notes. It is a website where I host my notes about cybersecurity and stuff. They are in "Cheat Sheets" format and allow me to quickly recall and reuse tools and technics I've encountered. Could be useful to someone, so I share them :D</p>
+<p>KDCN stands for Kaldei's Cybersecurity Notes. It is a website where I host my notes about cybersecurity and stuff. They are in "Cheat Sheet" format and allow me to quickly recall and reuse tools and technics I've encountered. Could be useful to someone, so I share them :D</p>
 
 <p>Disclaimer! My notes are more or less updated, and most likely contain mistakes or things that might not work. If you find something broken feel free to reach me.</p>
 
