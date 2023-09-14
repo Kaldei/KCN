@@ -1,0 +1,42 @@
+---
+title: "WSTG Mind Map"
+description: "Scroll → and ↓ to explore the Mind Map!"
+---
+
+<div class="rounded-4 bd-solid bd-3 bd-grey bd-light-1" style="position: relative; overflow: hidden;">
+
+    <div style="position: absolute; top: 1%; right: 6%;">
+        <a id="wstg_map-fullscreen" class="shadow-0" href="../attachments/wstg_ming_map.png"
+            title="Full screen (opens new tab)" target="_blank" rel="noopener">⛶</a>
+    </div>
+    <div style="position: absolute; top: 1%; right: 2%;">
+        <a class="shadow-0" href="https://github.com/Kaldei/PERSO-Obsidian-WSTGMindMap"
+            title="Kaldei/PERSO-Obsidian-WSTGMindMap (opens new tab)" target="_blank" rel="noopener">
+            <span class="iconify-inline font-2" data-icon="akar-icons:github-fill"></span>
+        </a>
+    </div>
+
+
+    <div id="wstg_map-viewer" style="max-width: 100%; max-height: 75vh; overflow: scroll;">
+        <img id="wstg_map-img" src="../attachments/wstg_ming_map.png" style="max-width: initial;" alt="WSTG Mind Map">
+    </div>
+
+</div>
+
+
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.getElementById("wstg_map-img").src = "../attachments/wstg_ming_map-dark.png";
+        document.getElementById("wstg_map-fullscreen").href = "../attachments/wstg_ming_map-dark.png";
+    }
+
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.getElementById("wstg_map-img").src = "../attachments/wstg_ming_map.png";
+            document.getElementById("wstg_map-fullscreen").href = "../attachments/wstg_ming_map.png";
+        } else {
+            document.getElementById("wstg_map-img").src = "../attachments/wstg_ming_map-dark.png";
+            document.getElementById("wstg_map-fullscreen").href = "../attachments/wstg_ming_map-dark.png";
+        }
+    })
+</script>

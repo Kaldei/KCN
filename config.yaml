@@ -33,21 +33,25 @@ menu:
   main:
     - name: Home
       identifier: home
-      weight: 100
+      weight: 1
       url: /
     - name: Kill Chain
-      weight: 200
+      weight: 2
       identifier: posts
       url: /killchain/
     - name: Tools
-      weight: 300
+      weight: 3
       identifier: tools
       url: /tools/
+    - name: WSTG Mind Map
+      weight: 4
+      identifier: WSTG Mind Map
+      url: /wstgmap/
     - name: Search
-      weight: 400
+      weight: 5
       identifier: search
       url: /search/
     - name: About
-      weight: 500
+      weight: 6
       identifier: about
       url: /about/
