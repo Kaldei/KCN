@@ -140,10 +140,6 @@ description: A free and open source distributed version control system.
  > Display commit information.
 
  > 
- > **<font color=red>git reflog</font>**</br>
- > Show commit history (one line per commit, more readable than `git log`).
-
- > 
  > **<font color=red>git log</font>**</br>
  > Show commit history.
  > 
@@ -158,6 +154,9 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git log -p</font>**</br>
  > Shows difference between commits.
+ > 
+ > **<font color=red>git reflog</font>**</br>
+ > Show local history with IDs.
 
 ## Rewrite History
 
@@ -170,7 +169,7 @@ description: A free and open source distributed version control system.
  > Create new commit that undo last commit changes.
 
  > 
- > **<font color=red>git cherry-pick</font> commit1 ccommit12 ccommit7**</br>
+ > **<font color=red>git cherry-pick</font> commit1 commit12 ccommit7**</br>
  > Add commits from other branches after HEAD.
 
  > 
