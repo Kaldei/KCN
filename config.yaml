@@ -1,7 +1,7 @@
 baseURL: 'https://security.kaldei.xyz/'
 canonifyURLs: true
 languageCode: en-us
-title: KDCN
+title: KCN
 theme: PaperMod
 paginate: 15
 
@@ -13,7 +13,7 @@ markup:
       typographer: false
 
 params:
-  title: KDCN
+  title: KCN
   defaultTheme: auto # Color theme (auto, light or dark)
   disableScrollToTop: true # Disable scroll to top button
   mainSections: [] # Don't display posts list on Home Page

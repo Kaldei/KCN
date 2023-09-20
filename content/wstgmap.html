@@ -6,16 +6,16 @@ description: "Scroll → and ↓ to explore the Mind Map!"
 <div class="rounded-4 bd-solid bd-3 bd-grey bd-light-1" style="position: relative; overflow: hidden;">
 
     <div class="grix xs2 gutter-xs2" style="position: absolute; top: 1%; right: 3%;">
-        <a id="wstg_map-fullscreen" class="shadow-0" href="https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-dark.png"
+        <a id="wstg_map-fullscreen" class="shadow-0" href="https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-dark.png"
             title="Full screen (opens new tab)" target="_blank" rel="noopener">⛶</a>
-        <a class="shadow-0" href="https://github.com/Kaldei/PERSO-Obsidian-WSTGMindMap"
-            title="Kaldei/PERSO-Obsidian-WSTGMindMap (opens new tab)" target="_blank" rel="noopener">
+        <a class="shadow-0" href="https://github.com/Kaldei/WSTGMindMap"
+            title="Kaldei/WSTGMindMap (opens new tab)" target="_blank" rel="noopener">
             <span class="iconify-inline font-2" data-icon="akar-icons:github-fill"></span>
         </a>
     </div>
 
     <div id="wstg_map-viewer" style="max-width: 100%; max-height: 75vh; overflow: scroll;  overscroll-behavior: none;">
-        <img id="wstg_map-img" src="https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-light.png" style="max-width: initial;" alt="WSTG Mind Map">
+        <img id="wstg_map-img" src="https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-light.png" style="max-width: initial;" alt="WSTG Mind Map">
     </div>
 
 </div>
@@ -23,17 +23,17 @@ description: "Scroll → and ↓ to explore the Mind Map!"
 
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.getElementById("wstg_map-img").src = "https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
-        document.getElementById("wstg_map-fullscreen").href = "https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
+        document.getElementById("wstg_map-img").src = "https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
+        document.getElementById("wstg_map-fullscreen").href = "https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
     }
 
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
-            document.getElementById("wstg_map-img").src = "https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-light.png";
-            document.getElementById("wstg_map-fullscreen").href = "https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-light.png";
+            document.getElementById("wstg_map-img").src = "https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-light.png";
+            document.getElementById("wstg_map-fullscreen").href = "https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-light.png";
         } else {
-            document.getElementById("wstg_map-img").src = "https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
-            document.getElementById("wstg_map-fullscreen").href = "https://media.githubusercontent.com/media/Kaldei/PERSO-Obsidian-WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
+            document.getElementById("wstg_map-img").src = "https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
+            document.getElementById("wstg_map-fullscreen").href = "https://media.githubusercontent.com/media/Kaldei/WSTGMindMap/main/WSTG_Map/wstg_map-dark.png";
         }
     })
 </script>
