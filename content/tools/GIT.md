@@ -200,8 +200,11 @@ description: A free and open source distributed version control system.
 
 #### Change Commits Author Name
 
+````bash
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+````
+
  > 
- > **<font color=red>git branch -r | grep -v '->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done</font>**</br>
  > Checkout all branches locally.
 
 ````bash
@@ -227,8 +230,11 @@ git filter-branch --force --tag-name-filter cat --commit-filter '
 
 #### Sign Old Commits of a Specific Author
 
+````bash
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+````
+
  > 
- > **<font color=red>git branch -r | grep -v '->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done</font>**</br>
  > Checkout all branches locally.
 
 ````bash
