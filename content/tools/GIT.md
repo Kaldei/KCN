@@ -181,9 +181,6 @@ description: A free and open source distributed version control system.
  > 
  > **<font color=red>git rebase --committer-date-is-author-date --root</font>**</br>
  > Rebase commits from the root and keep original commit date. 
- > 
- > **<font color=red>git rebase --abort</font>**</br>
- > Abort the rebase (useful in case of issues).
 
  > 
  > **<font color=red>git rebase -i</font> myBranch**</br>
@@ -193,7 +190,10 @@ description: A free and open source distributed version control system.
  > Make your modification to the code and then issue this command to modify the commit (`--no-edit` to keep the name of the old commit).
  > 
  > **<font color=red>git rebase --continue</font>**</br>
- > Continue to the next commit marked for edition.4
+ > Continue to the next commit marked for edition.
+ > 
+ > **<font color=red>git rebase --abort</font>**</br>
+ > Abort the rebase (useful in case of issues).
 
 ## Advanced Rewrite History
 
