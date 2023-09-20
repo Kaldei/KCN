@@ -180,7 +180,7 @@ description: A free and open source distributed version control system.
  > **<font color=red>git rebase --root</font>**</br>
  > Takes commits from the root of the repository and replays them.
  > 
- > <font color=red>git rebase --committer-date-is-author-date --root </font>
+ > **<font color=red>git rebase --committer-date-is-author-date --root</font>**</br>
  > Rebase commits from the root and keep original commit date. 
  > 
  > **<font color=red>git rebase --abort</font>**</br>
