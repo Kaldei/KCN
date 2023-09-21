@@ -1,7 +1,7 @@
 ---
 title: BLOODHOUND
-summary: A tool to reveal the hidden and often unintended relationships within an Active Directory or Azure environment.
-description: A tool to reveal the hidden and often unintended relationships within an Active Directory or Azure environment.
+summary: A tool to reveal hidden and unintended relationships within an Active Directory or Azure environment.
+description: A tool to reveal hidden and unintended relationships within an Active Directory or Azure environment.
 ---
 
 **[https://github.com/BloodHoundAD/BloodHound](https://github.com/BloodHoundAD/BloodHound)**

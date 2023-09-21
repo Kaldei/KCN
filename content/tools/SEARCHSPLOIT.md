@@ -10,10 +10,11 @@ description: A command line search tool for Exploit-DB.
 
 
  > 
- > **<font color=orange>apt install exploitdb</font>**
+ > **<font color=orange>apt install exploitdb</font>**</br>
+ > Install ExploitDB.
  > 
- > **<font color=red>serachsploit</font> name version**
+ > **<font color=red>serachsploit</font> name version**</br>
  > Recherche d’exploits connues (de Exploit-DB).
  > 
- > **<font color=red>serachsploit -x</font> 4401**
+ > **<font color=red>serachsploit -x</font> 4401**</br>
  > Affiche l’exploit 4401.

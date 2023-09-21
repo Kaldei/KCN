@@ -10,26 +10,26 @@ description: A WordPress security scanner.
 
 
  > 
- > **<font color=red>wpscan --url</font> \[TARGET_IP\] <font color=red>-e u,vp,vt</font>**  
+ > **<font color=red>wpscan --url</font> \[TARGET_IP\] <font color=red>-e u,vp,vt</font>**</br>
  > Scan Wordpress.
 
 ## Flags
 
 
  > 
- > **<font color=red>-e vp</font>**
+ > **<font color=red>-e vp</font>**</br>
  > Enumerate Vulnerable Plugins.
  > 
- > **<font color=red>-e vt</font>**
+ > **<font color=red>-e vt</font>**</br>
  > Enumerate Vulnerable Themes.
  > 
- > **<font color=red>-e cb</font>**
+ > **<font color=red>-e cb</font>**</br>
  > Enumerate Config Backups.
  > 
- > **<font color=red>-e dbe</font>**
+ > **<font color=red>-e dbe</font>**</br>
  > Enumerate DB Exports.
  > 
- > **<font color=red>-e u</font>**
+ > **<font color=red>-e u</font>**</br>
  > Enumerate Users.
 
 ## WPSCAN WordPress Login Brute Force

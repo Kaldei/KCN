@@ -12,12 +12,13 @@ description: Vulnerability Assesment step – a note for finding and assessing v
 
 
  > 
- > **<font color=orange>apt install exploitdb</font>**
+ > **<font color=orange>apt install exploitdb</font>**</br>
+ > Install ExploitDB.
  > 
- > **<font color=red>serachsploit</font> name version**
+ > **<font color=red>serachsploit</font> name version**</br>
  > Recherche d’exploits connues (de Exploit-DB).
  > 
- > **<font color=red>serachsploit -x</font> 4401**
+ > **<font color=red>serachsploit -x</font> 4401**</br>
  > Affiche l’exploit 4401.
 
 # Web Vulnerability Scanners
@@ -28,10 +29,10 @@ description: Vulnerability Assesment step – a note for finding and assessing v
 
 
  > 
- > **<font color=red>nikto -h</font> \[TARGET_IP\]**	
+ > **<font color=red>nikto -h</font> \[TARGET_IP\]**</br>
  > Web vuln scan.
  > 
- > **<font color=red>nikto -h http://</font>\[TARGET_IP\]:\[TARGET_PORT\]<font color=red>/</font>path <font color=red>-id</font> myUser<font color=red>:</font>myPass**
+ > **<font color=red>nikto -h http://</font>\[TARGET_IP\]:\[TARGET_PORT\]<font color=red>/</font>path <font color=red>-id</font> myUser<font color=red>:</font>myPass**</br>
  > Web vuln scan with credential and login page.
 
 ---
@@ -40,24 +41,24 @@ description: Vulnerability Assesment step – a note for finding and assessing v
 
 
  > 
- > **<font color=red>wpscan --url</font> \[TARGET_IP\] <font color=red>-e u,vp,vt</font>**  
+ > **<font color=red>wpscan --url</font> \[TARGET_IP\] <font color=red>-e u,vp,vt</font>**</br>
  > Scan Wordpress.
 
 
  > 
- > **<font color=red>-e vp</font>**
+ > **<font color=red>-e vp</font>**</br>
  > Enumerate Vulnerable Plugins.
  > 
- > **<font color=red>-e vt</font>**
+ > **<font color=red>-e vt</font>**</br>
  > Enumerate Vulnerable Themes.
  > 
- > **<font color=red>-e cb</font>**
+ > **<font color=red>-e cb</font>**</br>
  > Enumerate Config Backups.
  > 
- > **<font color=red>-e dbe</font>**
+ > **<font color=red>-e dbe</font>**</br>
  > Enumerate DB Exports.
  > 
- > **<font color=red>-e u</font>**
+ > **<font color=red>-e u</font>**</br>
  > Enumerate Users.
 
 # General Vulnerability Scanners

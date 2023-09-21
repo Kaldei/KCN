@@ -1,7 +1,7 @@
 ---
 title: MONA
-summary: A python script that can be used to automate and speed up specific searches on Immunity Debugger and WinDBG.
-description: A python script that can be used to automate and speed up specific searches on Immunity Debugger and WinDBG.
+summary: A python script to automate and speed up specific searches on Immunity Debugger and WinDBG.
+description: A python script to automate and speed up specific searches on Immunity Debugger and WinDBG.
 ---
 
 **[https://github.com/corelan/mona](https://github.com/corelan/mona)**
