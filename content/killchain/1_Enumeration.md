@@ -173,7 +173,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
  > 
  > **<font color=red>fuff -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Discovery/Web-Content/big.txt</font><font color=red>:FUZZ -u</font> http://\[TARGET_DOMAIN\]/<font color=red>FUZZ</font></br>**
- > Web Path FUZZ
+ > Web Path FUZZ.
 
 ---
 
@@ -182,7 +182,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/<font color=red>FUZZ</font></br>**
- > Fuzz Folders
+ > Fuzz Folders.
 
 # API Fuzz
 
@@ -204,7 +204,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
  > 
  > **<font color=red>ffuf -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Discovery/DNS/namelist.txt</font> <font color=red>-H "Host: FUZZ.</font>\[TARGET_DOMAIN\]<font color=red>" -u</font> http://\[TARGET_DOMAIN\] <font color=red>-fs</font> 2395</br>**
- > Virtual Host FUZZ
+ > Virtual Host FUZZ.
 
 # User Fuzz
 
@@ -215,4 +215,4 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
  > 
  > **<font color=red>ffuf -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Usernames/Names/names.txt</font> <font color=red>-X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_DOMAIN\]/signup <font color=red>-mr </font>"username already exists"</br>**
- > User Enumeration
+ > User Enumeration.

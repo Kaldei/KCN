@@ -11,7 +11,7 @@ description: A web application fuzzer.
 
  > 
  > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/<font color=red>FUZZ</font></br>**
- > Fuzz Folders
+ > Fuzz Folders.
 
 ## GET Fuzz
 
