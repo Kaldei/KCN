@@ -132,6 +132,27 @@ description: A free and open source distributed version control system.
  > **<font color=red>git checkout</font> HEAD^2**</br>
  > Moves HEAD 1 commit back from current HEAD in the 2nd parent of a merge.
 
+## LFS
+
+
+ > 
+ > **<font color=red>git lfs install</font>**</br>
+ > Initiate LFS for the repo.
+
+ > 
+ > **<font color=red>git lfs ls-files</font>**</br>
+ > Show currently tracked files.
+ > 
+ > **<font color=red>git lfs status</font>**</br>
+ > Show staged files.
+
+ > 
+ > **<font color=red>git lfs track "</font>\*.png<font color=red>"</font>**</br>
+ > Update LFS config to track all new PNG files added to the repo.
+ > 
+ > **<font color=red>git add .gitattributes</font>**</br>
+ > Add LFS config.
+
 ## History
 
 
