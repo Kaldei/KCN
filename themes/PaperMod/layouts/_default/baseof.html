@@ -23,13 +23,14 @@
     <main class="main container">
 
         <!-- Custom Side Nav -->
-        <div id="example-sidenav" data-ax="sidenav" class="sidenav sidenav-fixed bd-r-solid bd-3 bd-grey bd-light-1">
+        <div id="example-sidenav" data-ax="sidenav" class="sidenav sidenav-fixed bd-r-solid bd-2">
             <div class="d-flex my-auto fx-col">
                 <div class="sidenav-header">
-                    <img class="rounded-4 bd-solid bd-3 bd-grey bd-light-1" src="/images/logo.png"
-                        style="width: 70%; height: auto;" alt="Logo" />
-                    <div class="h1">KCN</div>
-                    <p>KALDEI’S CYBERSEC NOTES</p>
+                    <img class="rounded-4 shadow-1" src="/images/logo.png"
+                        style="width: 65%; height: auto;" alt="Logo" />
+                    <div class="h1">{{ .Site.Params.acronym }}</div>
+                    <!-- <p>KALDEI’S {{ .Site.Params.domainMaj }} NOTES</p> -->
+                    <p>Kaldei's {{ .Site.Params.topic }} Notes</p>
                 </div>
 
                 <div class="grix xs6 center">

@@ -1,19 +1,14 @@
+title: KCN
 baseURL: 'https://security.kaldei.xyz/'
 canonifyURLs: true
 languageCode: en-us
-title: KCN
 theme: PaperMod
 paginate: 15
 
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-    extensions:
-      typographer: false
-
 params:
-  title: KCN
+  acronym : KCN # Custom variable
+  topic: Cybersecurity # Custom variable
+
   defaultTheme: auto # Color theme (auto, light or dark)
   disableScrollToTop: true # Disable scroll to top button
   mainSections: [] # Don't display posts list on Home Page
@@ -21,6 +16,13 @@ params:
   assets:
     favicon: images/favicon.png
 
+# Required for markdown coloration
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      typographer: false
 
 # Required for search bar
 outputs:
