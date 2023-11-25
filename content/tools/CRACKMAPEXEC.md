@@ -27,7 +27,7 @@ description: A swiss army knife for pentesting networks.
  > **<font color=red>crackmapexec smb</font> \[TARGET_NETWORK_ADDRESS\]<font color=red>/</font>\[TARGET_CIDR\] <font color=red>-d</font> \[TARGET_DOMAIN\] <font color=red>-u</font> \[mySamName\] <font color=red>-p</font> \[myUserPassword\]**</br>
  > Pass the Password around the network to find pwnable machines.
 
-![tool-crackmapexec-example.png](../attachments/tool-crackmapexec-example.png)
+![tool-crackmapexec-example.png](../../attachments/tool-crackmapexec-example.png)
 
 ## Pass the Hash (NT)
 

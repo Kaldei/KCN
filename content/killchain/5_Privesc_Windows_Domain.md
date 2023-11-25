@@ -11,7 +11,7 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 * [Pentesting Active Directory Mind Map - ODC](https://github.com/esidate/pentesting-active-directory/tree/main)
 * [Top Five Ways I Got Domain Admin 2018 Edition - Adam Toscher](https://adam-toscher.medium.com/top-five-ways-i-got-domain-admin-on-your-internal-network-before-lunch-2018-edition-82259ab73aaa)
 
-![killchain-AD-attacks_mind_map.png](../attachments/killchain-AD-attacks_mind_map.png) 
+![killchain-AD-attacks_mind_map.png](../../attachments/killchain-AD-attacks_mind_map.png) 
 Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
 # Enumerate Users and Groups
@@ -84,7 +84,7 @@ Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
  > **<font color=red>crackmapexec smb</font> \[TARGET_NETWORK_ADDRESS\]<font color=red>/</font>\[TARGET_CIDR\] <font color=red>-d</font> \[TARGET_DOMAIN\] <font color=red>-u</font> \[mySamName\] <font color=red>-p</font> \[myUserPassword\]**</br>
  > Pass the Password around the network to find pwnable machines.
 
-![tool-crackmapexec-example.png](../attachments/tool-crackmapexec-example.png)
+![tool-crackmapexec-example.png](../../attachments/tool-crackmapexec-example.png)
 
 
  > 
@@ -302,7 +302,7 @@ The safest to pick is **services.exe**.
 
 SPN (Service Principal Name) is the mapping between a service and the account or the name of the machine with which the service is associated.
 
-![exploit_kerberoasting_principle.png](../attachments/exploit_kerberoasting_principle.png)
+![exploit_kerberoasting_principle.png](../../attachments/exploit_kerberoasting_principle.png)
 
 ### Requirements
 
@@ -388,7 +388,7 @@ A Silver Ticker is TGS (Ticket Granting Service).
 
 Note: To create a Silver Ticket, change the `/name:` to a domain admin account or a service account.
 
-![exploit-lsadump-golden_ticket.png](../attachments/exploit-lsadump-golden_ticket.png)
+![exploit-lsadump-golden_ticket.png](../../attachments/exploit-lsadump-golden_ticket.png)
 Credit: TCM Security
 
  > 

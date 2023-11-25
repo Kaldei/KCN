@@ -27,4 +27,4 @@ Put the followig script in `C:\Program Files (x86)\Immunity Inc\Immunity Debugge
 
 https://github.com/corelan/mona
 
-![tool-mona-immunity.png](../attachments/tool-mona-immunity.png)
+![tool-mona-immunity.png](../../attachments/tool-mona-immunity.png)

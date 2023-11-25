@@ -5,16 +5,23 @@ languageCode: en-us
 theme: PaperMod
 paginate: 15
 
-params:
-  acronym : KCN # Custom variable
-  topic: Cybersecurity # Custom variable
 
+params:
+  # Custom variables
+  acronym: KCN
+  topic: Cybersecurity 
+  color: "red"
+
+  # Parameters
+  # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   defaultTheme: auto # Color theme (auto, light or dark)
   disableScrollToTop: true # Disable scroll to top button
   mainSections: [] # Don't display posts list on Home Page
   ShowCodeCopyButtons: true # Enable button in code block
+
   assets:
     favicon: images/favicon.png
+
 
 # Required for markdown coloration
 markup:
@@ -24,12 +31,14 @@ markup:
     extensions:
       typographer: false
 
+
 # Required for search bar
 outputs:
     home:
         - HTML
         - RSS
         - JSON
+
 
 menu:
   main:
