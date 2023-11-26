@@ -1,6 +1,6 @@
 :root {
     --ax-sidenav-width: 18rem;
-    --primary-color: red;
+    --primary-color: {{ .Site.Params.color }};
 }
 
 .nav {
