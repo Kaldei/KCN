@@ -43,7 +43,7 @@ description: A very fast and flexible login cracker.
  > **<font color=red>-t</font> 4**</br>
  > Number of parallel connections per target.
 
-## 
+## SSH
 
 
  > 
@@ -64,7 +64,7 @@ description: A very fast and flexible login cracker.
  > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red> http-get</font> /path/**</br>
  > Brute Force HTTP Basic Access Authentication.
 
-## 
+## FTP
 
 
  > 
