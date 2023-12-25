@@ -18,19 +18,17 @@
     <!-- Theme Nav Bar -->
     {{- partialCached "header.html" . .Page -}}
 
-    <main class="main container">
+    <main class="">
 
         <!-- Custom Side Nav -->
         <div id="example-sidenav" data-ax="sidenav" class="sidenav sidenav-fixed bd-r-solid bd-2">
-            <div class="d-flex my-auto fx-col">
-                <div class="sidenav-header">
-                    <img class="rounded-4 shadow-1" src="/images/logo.png" style="width: 65%; height: auto;"
-                        alt="Logo" />
-                    <div class="h1">{{ .Site.Params.acronym }}</div>
-                    <p class="text-center font-s2">Kaldei's {{ .Site.Params.topic }} Notes</p>
-                </div>
+            <div class="my-auto text-center grix center">
+                <img class="rounded-4 shadow-1" src="/images/logo.png" style="width: 60%; height: auto;" alt="Logo" />
+                <div class="h1" style="font-weight: bold;">{{ .Site.Params.acronym }}</div>
+                <div class="sidenav-header"></div>
+                <p class="font-s2">Kaldei's {{ .Site.Params.topic }} Notes</p>
 
-                <div class="grix xs5 center">
+                <div class="grix xs5 center gutter-xs7 pt-3">
                     <a class="pos-xs2" href="https://www.kaldei.xyz/" title="Main Website">
                         <span class="iconify-inline font-s4" data-icon="bxs:home"></span>
                     </a>
@@ -54,8 +52,9 @@
 
 
         <!-- Content -->
-        {{- block "main" . }}{{ end }}
-
+        <div class="container">
+            {{- block "main" . }}{{ end }}
+        </div>
     </main>
 
     <!-- Theme Footer -->
