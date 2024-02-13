@@ -352,7 +352,6 @@ This attack require users with pre-authentication disabled.
 
  > 
  > **<font color=red>Rubeus.exe asreproast</font>**</br>
-  
  > Dump Kerberos hashes of AS_REProastable users. (Then Insert `23$` after `$krb5asrep$` and use `hashcat -m 18200`).
 
 
