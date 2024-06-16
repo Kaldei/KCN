@@ -8,12 +8,14 @@ description: Gaining Access step – a note for Buffer Overflows.
 
 ---
 
-## Memory
+### Memory
 
 ![killchain-buffer_overflow-architecture-memory.png](../../attachments/killchain-buffer_overflow-architecture-memory.png)
 Source: TCM Security
 
-## Stack
+---
+
+### Stack
 
 ![killchain-buffer_overflow-architecture-stack.png](../../attachments/killchain-buffer_overflow-architecture-stack.png)
 Source: TCM Security
@@ -34,7 +36,9 @@ Source: TCM Security
 
 ---
 
-## 1 - Fuzzing
+---
+
+### 1 - Fuzzing
 
  > 
  > **<font color=red>1_fuzzer.py</font>**</br>
@@ -69,9 +73,11 @@ while True:
 
 ````
 
-## 2 - Controlling EIP (Finding Offset)
+---
 
-### Method 1: Manual
+### 2 - Controlling EIP (Finding Offset)
+
+#### Method 1: Manual
 
  > 
  > **<font color=red>/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l</font> 3000**</br>
@@ -130,7 +136,7 @@ except:
  > 
  > Set "retn" variable to "BBBB" (EIP overwrite).
 
-### Method 2: Mona
+#### Method 2: Mona
 
 Immunity : !mona findmsp -distance 2400
 
@@ -138,9 +144,11 @@ Immunity : !mona findmsp -distance 2400
 
 ![exploit-buffer_overflow-eip_mona.png](../../attachments/exploit-buffer_overflow-eip_mona.png)
 
-## 3 - Finding Bad characters
+---
 
-### Method 1: Manual
+### 3 - Finding Bad characters
+
+#### Method 1: Manual
 
  > 
  > **<font color=red>!mona bytearray -b "</font>\\x00<font color=red>"</font>**</br>
@@ -176,7 +184,7 @@ print()
  > * Bad chars will not necessarily be B0.
  > * When there are consecutive bad chars, the only bad is the first one (but we can remove them by precaution).
 
-### Method 2: Mona
+#### Method 2: Mona
 
  > 
  > **<font color=red>!mona config -set workingfolder</font> c:\mona**</br>
@@ -198,15 +206,17 @@ Do it again adding bad chars :
  > **<font color=red>!mona bytearray -cpb</font> "\x00\x07\x08\x2e\x2f\xa0\xa1"**</br>
  > Generate Byte array.
 
-## 4 - Find Jump Point
+---
 
-### Method 1: Manual
+### 4 - Find Jump Point
+
+#### Method 1: Manual
 
  > 
  > Set "retn" variable to the jump point (backward because of little endian).
  > Ex :  0x01020304 -> "\x04\x03\x02\x01
 
-### Method 2: Mona
+#### Method 2: Mona
 
  > 
  > **<font color=red>!mona jmp -r esp -cpb </font>"\x00\x07\x08\x2e\x2f\xa0\xa1"**</br>
@@ -214,7 +224,9 @@ Do it again adding bad chars :
 
 ![exploit-buffer_overflow-jump_point_mona.png](../../attachments/exploit-buffer_overflow-jump_point_mona.png)
 
-## 5 - Generate Shellcode (MSFVNOM)
+---
+
+### 5 - Generate Shellcode (MSFVNOM)
 
 
  > 
