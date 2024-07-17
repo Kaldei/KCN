@@ -46,7 +46,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive # Fetch Hugo themes
-          lfs: true # Fetch LFS data
 
       - name: Configure GitHub Pages
         id: pages
