@@ -4,6 +4,12 @@ summary: "Enumeration step – a note for enumerating hosts, ports, subdomains, 
 description: "Enumeration step – a note for enumerating hosts, ports, subdomains, web paths, users, ..."
 ---
 
+# Resources
+
+---
+
+* [Enumeration Mind Map - Ignitetechnologies](https://github.com/Ignitetechnologies/Mindmap/blob/main/Enumeration/Enumeration%20HD.png)
+
 # Host Discovering
 
 ---
