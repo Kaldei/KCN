@@ -42,7 +42,7 @@ Reverse shells are a good way to bypass firewalls. The drawback is that we need 
  > 
  > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
  > 
- > \*\*<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font> \*\*</br>
+ > **<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font>**</br>
  > **<font color=red>exploit</font>**</br>
  > Handler for linux (efl) reverse shell.
 
@@ -111,7 +111,7 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
 
 ---
 
-### MSVENOM
+### MSFVENOM
 
 
  > 
@@ -152,7 +152,7 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
 
 ---
 
-### MSVENOM
+### MSFVENOM
 
 
  > 

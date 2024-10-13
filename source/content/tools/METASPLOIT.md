@@ -106,7 +106,7 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > 
  > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
  > 
- > \*\*<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font> \*\*</br>
+ > **<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font>**</br>
  > **<font color=red>exploit</font>**</br>
  > Handler for linux (efl) reverse shell.
 
