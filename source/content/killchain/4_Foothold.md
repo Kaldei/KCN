@@ -69,9 +69,6 @@ description: Foothold step – a note for confirming foothold and adding a littl
 ### MIMIKATZ
 
 
- > 
- > **<font color=red>upload</font> myFile**</br>
- > Transfer file to target.
 
 ---
 

@@ -14,18 +14,21 @@ description: A Metasploit attack payload that provides an interactive shell.
  > Info about the system.
 
  > 
- > **<font color=red>getuid</font>**</br>
- > Get current user.
-
- > 
  > **<font color=red>getenv</font>**</br>
  > Get one or more environment variable values.
+
+ > 
+ > **<font color=red>getuid</font>**</br>
+ > Get current user.
+ > 
+ > **<font color=red>getprivs</font>**</br>
+ > Display current user privileges. 
 
  > 
  > **<font color=red>search -f</font>** flag.txt</br>
  > Search a file on the machine.
 
-## File Upload
+## File Transfer
 
 
  > 
@@ -44,9 +47,26 @@ description: A Metasploit attack payload that provides an interactive shell.
  > Spawn a shell.
 
  > 
- > **<font color=red>load powershell</font>**</br>
+ > **<font color=red>load </font>**</br>
  > **<font color=red>powershell_shell</font>**</br>
  > Spawn Powershell.
+
+## Spawn Mimikatz
+
+
+ > 
+ > **<font color=red>privilege::debug</font>**</br>
+ > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
+
+
+\>
+
+ > 
+ > **<font color=red>load kiwi</font>**</br>
+ > Starts Mimikatz.
+ > 
+ > **<font color=red>help kiwi</font>**</br>
+ > Show Mimikatz commands.
 
 ## Attacks
 
