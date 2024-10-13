@@ -56,9 +56,9 @@ description: A Metasploit attack payload that provides an interactive shell.
  > Dump hashes from Windows SAM base (for linux use module  linux/gather/hashdump). 
 
  > 
- > **<font color=red>migrate</font>** 716
- > Migrate to another process. 
- > Ex : Migrate to a word.exe and act like a keylogger.
+ > **<font color=red>migrate</font>** 716</br>
+ > Migrate to another process.</br>
+ > Ex : Migrate to a word.exe and act like a keylogger.</br>
  > Ex: Migrate to lsass.exe to run hashdump.
 
 ## Impersonate
