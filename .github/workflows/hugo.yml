@@ -2,7 +2,7 @@
 name: Deploy Hugo to Pages
 
 
-# --- Trigger --- # 
+# --- Trigger --- #
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -29,28 +29,28 @@ concurrency:
 
 # --- Jobs --- #
 jobs:
-  # --- Job 1: Build --- # 
+  # --- Job 1: Build --- #
   job_name_build:
     runs-on: ubuntu-latest
-    
+
     env:
       HUGO_VERSION: 0.102.3
-    
+
     steps:
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Checkout code 
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           submodules: recursive # Fetch Hugo themes
 
       - name: Configure GitHub Pages
         id: pages
-        uses: actions/configure-pages@v2
-        
+        uses: actions/configure-pages@v5
+
       - name: Build Hugo
         # For maximum backward compatibility with Hugo modules
         env:
@@ -59,24 +59,24 @@ jobs:
         run: |
           cd ./source
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-  
+
       - name: Upload artifact (Hugo Build)
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./source/public
 
 
-  # --- Job 2: Deployment --- # 
-  job_name_deploy:      
+  # --- Job 2: Deployment --- #
+  job_name_deploy:
     runs-on: ubuntu-latest
-    
+
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}    
-      
+      url: ${{ steps.deployment.outputs.page_url }}
+
     needs: job_name_build
-  
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
