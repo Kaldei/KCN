@@ -185,7 +185,6 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
  > 
  > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forjohn.txt**</br>
  > Prepare ZIP archive for John.
-
  > 
  > **<font color=red>john</font> forjohn.txt**</br>
  > Crack ZIP archive password.
@@ -198,7 +197,6 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
  > 
  > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forhashcat.txt**</br>
  > Remove name of the file and archive from the hash (at the beginning and the end).
-
  > 
  > **<font color=red>hashcat -a 0 -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
  > Crack ZIP archive password.

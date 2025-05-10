@@ -80,7 +80,6 @@ description: An advanced offline password cracker.
  > 
  > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forjohn.txt**</br>
  > Prepare ZIP archive for John.
-
  > 
  > **<font color=red>john</font> forjohn.txt**</br>
  > Crack ZIP archive password.

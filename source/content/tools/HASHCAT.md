@@ -8,14 +8,14 @@ description: A really fast password cracker.
 
 ## Attack Types
 
-### Attack (-a 0)
+### Dictionary Attack (-a 0)
 
 
  > 
  > **<font color=red>hashcat -a 0 -m </font>0 “myHash” <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Dictionary attack.
 
-### Attack (-a 1)
+### Combinator Attack (-a 1)
 
 **https://hashcat.net/wiki/doku.php?id=combinator_attack**
 
@@ -23,7 +23,7 @@ description: A really fast password cracker.
  > **<font color=red>hashcat -a 1 -m</font> 0 <font color=red>"</font>myHash<font color=red>"</font> myPrefix.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Dictionary attack with a prefix.
 
-### Attack (-a 3)
+### Mask Attack (-a 3)
 
 **https://hashcat.net/wiki/doku.php?id=mask_attack** 
 
@@ -73,6 +73,11 @@ description: A really fast password cracker.
  > 
  > **<font color=red>-m</font>**</br>
  > Hashing type (ex: 1800 = MD5).
+
+ > 
+ > **<font color=red>-O</font>**</br>
+ > Enable kernel optimization (GPU).
+
  > 
  > **<font color=red>-o</font>** myOutFile</br>
  > Store output info in myFile.
@@ -81,17 +86,25 @@ description: A really fast password cracker.
 
 **[https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)**
 
+### MD5
+
+
  > 
  > **<font color=red>-m 0</font>**</br>
  > MD5.
-
  > 
  > **<font color=red>-m 500</font>**</br>
  > MD5crypt, MD5 (Unix), Cisco-IOS.
 
+### SHA
+
+
  > 
  > **<font color=red>-m 1800</font>**</br>
  > SHA256 Unix.
+
+### Windows
+
 
  > 
  > **<font color=red>-m 1000</font>**</br>
@@ -116,6 +129,9 @@ description: A really fast password cracker.
  > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Crack Kerberos KRB_TGS_REP hash.
 
+### Archive
+
+
  > 
  > **<font color=red>-m 13000</font>**</br>
  > RAR.
@@ -124,7 +140,6 @@ description: A really fast password cracker.
  > 
  > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forhashcat.txt**</br>
  > Remove name of the file and archive from the hash (at the beginning and the end).
-
  > 
  > **<font color=red>hashcat -a 0 -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
  > Crack ZIP archive password.
