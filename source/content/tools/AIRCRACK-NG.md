@@ -25,15 +25,19 @@ description: A complete suite of tools to assess WiFi network security.
  > Listen for APs around.
 
  > 
- > **<font color=red>airodump-ng --channel</font> 6 <font color=red>--bssid</font> AP:MAC <font color=red>-w capture</font> wlan0mon**</br>
- > Capture traffic from an AP. Need to wait for WPA handshake in the top right.
- > Can use Deauth attack to speed up the process.
+ > **<font color=red>airodump-ng </font>wlan0mon <font color=red>-w scan</font>**</br>
+ > Identify target BSSID and Channel.
+
+ > 
+ > **<font color=red>airodump-ng</font>  wlan0mon <font color=red>-w capture --bssid</font> AP:MAC  <font color=red>--channel</font> 6**</br>
+ > Capture traffic from an AP. Need to wait for WPA handshake in the top right.</br>
+ > Can use Deauth Attack to speed up the process.
 
 ## Deauth Attack
 
 
  > 
- > **<font color=red>aireplay-ng -0 1 -a </font>AP:MAC <font color=red>-c</font> CLIENT:MAC wlan0mon**</br>
+ > **<font color=red>aireplay-ng</font> wlan0mon <font color=red>-0 1 -a </font>AP:MAC <font color=red>-c</font> CLIENT:MAC**</br>
  > Deauth attack (kick the client off the AP really quick).
 
  > 

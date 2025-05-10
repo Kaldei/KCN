@@ -129,7 +129,7 @@ description: A really fast password cracker.
  > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
  > Crack Kerberos KRB_TGS_REP hash.
 
-### Archive
+### Archive Files
 
 
  > 
