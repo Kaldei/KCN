@@ -70,8 +70,8 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 
  > 
- > **<font color=red>john --format=HMAC-SHA512</font> jwt.txt <font color=red>--show</font>**</br>
- > Crack JWT secret.
+ > **<font color=red>john --format=</font>HMAC-SHA512 jwt.txt <font color=red></font>**</br>
+ > Brute force JWT's key used for signature. Choose the `alg` used by the token (e.g. `HMAC-SHA256`, `HMAC-SHA512`, ...).
 
 ### JWT-CRACKER
 
