@@ -94,6 +94,20 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 ---
 
+### Word Lists
+
+* **<font color='lightblue'>/usr/share/seclists/Discovery/DNS/services-names.txt</font>**
+* **<font color='lightblue'>/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt</font>**
+* **<font color='lightblue'>/usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt</font>**
+* **<font color='lightblue'>/usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt</font>**
+
+
+ > 
+ > **<font color=red>cewler http://</font>\[TARGET_HOST\] <font color=red>--depth</font> 5 <font color=red>-o</font> my_cewler_wordlist.txt**</br>
+ > Generate a wordlist from the target website.
+
+---
+
 ### ASSETFINDER
 
 
@@ -141,24 +155,22 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 ### Word Lists
 
-* **<font color='lightblue'>/usr/share/wordlists/drib/big.txt/</font> \<- Really Good**
-* **<font color='lightblue'>/usr/share/wordlists/dirb/common.txt/</font> ← Fast**
-* **<font color='lightblue'>/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt/</font>← Medium**
+* **<font color='lightblue'>/usr/share/wordlists/drib/big.txt</font> (Really Good)**
+* **<font color='lightblue'>/usr/share/wordlists/dirb/common.txt</font> (Fast)**
+* **<font color='lightblue'>/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt</font> (Medium)**
 
 ---
 
 ### Known Paths
 
-* Tomcat -> /manager
-* Liferay -> /admin ?
-* Durpal-> /admin ou /drupal
-* Typo3 -> /typo3/
-* Matomo -> /administrator ?
-* Joomla -> /administrator
-* Kentico -> /cms -> /CMSPages/logon.aspx
-* October -> /backend -> /backend/backend/auth/signin
-* Umbraco -> /umbraco/ -> /umbraco/login.aspx
-* Laravel -> /admin -> /admin/auth/login
+* Tomcat: `/manager`
+* Durpal: `/admin` or `/drupal`
+* Typo3: `/typo3/`
+* Joomla: `/administrator`
+* Kentico: `/cms` -> `/CMSPages/logon.aspx`
+* October: `/backend` -> `/backend/backend/auth/signin`
+* Umbraco: `/umbraco/` -> `/umbraco/login.aspx`
+* Laravel: `/admin` -> `/admin/auth/login`
 
 ---
 
