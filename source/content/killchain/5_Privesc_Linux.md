@@ -62,7 +62,12 @@ https://github.com/carlospolop/PEASS-ng/releases
 
 ---
 
-# 
+### TRAITOR
+
+https://github.com/liamg/traitor
+
+ > 
+ > **<font color=red>traitor</font>**</br>
 
 ---
 
