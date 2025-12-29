@@ -80,6 +80,11 @@ https://github.com/rebootuser/LinEnum
 
 ---
 
+### LYNSIS
+
+ > 
+ > **lynis audit system --pentest**</br>
+
 ---
 
 ### METASPLOIT
