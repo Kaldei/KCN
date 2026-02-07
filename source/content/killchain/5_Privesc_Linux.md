@@ -98,12 +98,27 @@ https://github.com/rebootuser/LinEnum
 
 ---
 
+### Resource
+
+[https://gtfobins.github.io/](https://gtfobins.github.io/)
+
+---
+
 ### CP
 
  > 
  > **<font color=red>cp /root/</font> /home/myUser/**</br>
  > **<font color=red>cd</font> /home/myUser/root**</br>
  > Access root content.
+
+---
+
+### LESS
+
+ > 
+ > **<font color=red>less</font> /etc/hosts**</br>
+ > **<font color=red>!/bin/sh</font>**</br>
+ > Get a root shell.
 
 ---
 

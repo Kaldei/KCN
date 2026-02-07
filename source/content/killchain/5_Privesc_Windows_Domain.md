@@ -197,7 +197,8 @@ There are two different hash types, `LM` and `NT`:
 
  > 
  > **<font color=red>python3 /opt/impacket/examples/psexec.py </font>\[TARGET_DOMAIN\]<font color=red>/</font>\[mySamName\]<font color=red>@</font>\[TARGET_IP\] <font color=red>-hashes</font> \[myUserLMHASH\]<font color=red>:</font>\[myUserNTHASH\]**</br>
- > Pass the Hash attack (LM+NT).
+ > Pass the Hash attack (LM+NT).</br>
+ > Note: If the LM Hash is `AAD3B435B51404EEAAD3B435B51404EE` and the NT Hash is `31D6CFE0D16AE931B73C59D7E0C089C0` this means there is no password for this user (by default the user won't be able to authenticate (with empty password) unless the `PASSWD_NOTREQD` flag is set).
 
 ### Mitigation
 
