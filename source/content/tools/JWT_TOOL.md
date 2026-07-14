@@ -2,13 +2,19 @@
 title: JWT_TOOL
 summary: "A toolkit for testing, tweaking and cracking JSON Web Tokens."
 description: "A toolkit for testing, tweaking and cracking JSON Web Tokens."
+tags:
+  - jwt_tool
+---
+
+# JWT_TOOL
+
 ---
 
 **[https://github.com/ticarpi/jwt_tool](https://github.com/ticarpi/jwt_tool)**
 
-## Basis
+### Basis
 
 
  > 
- > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**</br>
+ > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**<br>
  > Dictionnary attack JWT token secret.

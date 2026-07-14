@@ -2,6 +2,8 @@
 title: 3 – Brute Force
 summary: "Gaining Access step – a note for brute forcing passwords, login pages, archives, ..."
 description: "Gaining Access step – a note for brute forcing passwords, login pages, archives, ..."
+tags:
+  - brute-force
 ---
 
 # Words Lists :
@@ -21,7 +23,7 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 
  > 
- > **<font color=red>wfuzz -c -z file,</font>myWordList -u http://\[TARGET_IP\]:\[TARGET_PORT\]/login.php -d “username=<font color=red>FUZZ</font>&password=<font color=red>FUZZ</font>”</br>**
+ > **<font color=red>wfuzz -c -z file,</font>myWordList -u http://\[TARGET_IP\]:\[TARGET_PORT\]/login.php -d “username=<font color=red>FUZZ</font>&password=<font color=red>FUZZ</font>”**<br>
  > Fuzz POST Login.
 
 ---
@@ -30,7 +32,7 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 
  > 
- > **<font color=red>hydra -vV -L</font> myUsersFile.txt  <font color=red>-P</font> /usr/share/wordlists/rockyou.txt  \[TARGET_IP\] <font color=red>http-post-form ‘</font>/path/to/form.php<font color=red>:</font>username<font color=red>=^USER^&</font>password<font color=red>=^PASS^&</font>login=Login:<font color=red>F=</font>ChainNotOK<font color=red>’</font>**</br>
+ > **<font color=red>hydra -vV -L</font> myUsersFile.txt  <font color=red>-P</font> /usr/share/wordlists/rockyou.txt  \[TARGET_IP\] <font color=red>http-post-form ‘</font>/path/to/form.php<font color=red>:</font>username<font color=red>=^USER^&</font>password<font color=red>=^PASS^&</font>login=Login:<font color=red>F=</font>ChainNotOK<font color=red>’</font>**<br>
  > Brute Force HTTP POST form with valid username.
 
 ---
@@ -39,7 +41,7 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 
  > 
- > **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font><font color=red>:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_IP\]/login <font color=red>-fc 200</font>**</br>
+ > **<font color=red>ffuf -w </font>myUsersFile.txt<font color=red>:W1,</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font><font color=red>:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_IP\]/login <font color=red>-fc 200</font>**<br>
  > Brute Force HTTP POST form with valid username.
 
 ---
@@ -48,7 +50,7 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 
  > 
- > **<font color=red>wpscan --url </font>http://\[TARGET_IP\]/blog <font color=red>--usernames</font> admin <font color=red>--passwords</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > **<font color=red>wpscan --url </font>http://\[TARGET_IP\]/blog <font color=red>--usernames</font> admin <font color=red>--passwords</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**<br>
  > Brute force WordPress user's credentials.
 
 # HTTP Basic Access Auth
@@ -59,7 +61,7 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 
  > 
- > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red> http-get</font> /path/**</br>
+ > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P</font> /usr/share/wordlists/rockyou.txt \[TARGET_IP\]<font color=red> http-get</font> /path/**<br>
  > Brute Force HTTP Basic Access Authentication.
 
 # JWT
@@ -70,14 +72,14 @@ description: "Gaining Access step – a note for brute forcing passwords, login 
 
 
  > 
- > **<font color=red>john --format=</font>HMAC-SHA512 jwt.txt <font color=red></font>**</br>
+ > **<font color=red>john --format=</font>HMAC-SHA512 jwt.txt <font color=red></font>**<br>
  > Brute force JWT's key used for signature. Choose the `alg` used by the token (e.g. `HMAC-SHA256`, `HMAC-SHA512`, ...).
 
 ### JWT-CRACKER
 
 
  > 
- > **<font color=red>jwt-cracker </font> \[myToken\] \[myAlphabet\] \[myMaxSecretLengthExpected\]**</br>
+ > **<font color=red>jwt-cracker </font> \[myToken\] \[myAlphabet\] \[myMaxSecretLengthExpected\]**<br>
  > Brute force attack JWT token secret.
 
 Default Alphabet : abcdefghijklmnopqrstuvwxyz
@@ -86,7 +88,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**</br>
+ > **<font color=red>jwt_tool</font> \[myToken\] \[myDictionary\]**<br>
  > Dictionnary attack JWT token secret.
 
 # SSH
@@ -97,7 +99,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>hydra -L</font> myUsersFile <font color=red>-P</font> myPassFile \[TARGET_IP\]<font color=red> ssh</font>**</br>
+ > **<font color=red>hydra -L</font> myUsersFile <font color=red>-P</font> myPassFile \[TARGET_IP\]<font color=red> ssh</font>**<br>
  > Brute Force SSH.
 
 # SSH Private Key Passphrase
@@ -108,10 +110,10 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>/usr/share/john/ssh2john.py</font> private_key <font color=red>\></font> forjohn.txt**</br>
+ > **<font color=red>/usr/share/john/ssh2john.py</font> private_key <font color=red>\></font> forjohn.txt**<br>
  > Prepare private key for John.
  > 
- > **<font color=red>john --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> forjohn.txt**</br>
+ > **<font color=red>john --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> forjohn.txt**<br>
  > Crack private key passphrase.
 
 # FTP
@@ -122,7 +124,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P </font>/usr/share/wordlists/rockyou.txt  \[TARGET_IP\] <font color=red>ftp</font>**</br>
+ > **<font color=red>hydra -vV -l </font>myUser <font color=red>-P </font>/usr/share/wordlists/rockyou.txt  \[TARGET_IP\] <font color=red>ftp</font>**<br>
  > Brute Force FTP Login.
 
 # Linux Unshadow
@@ -133,13 +135,13 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>unshadow /etc/passwd /etc/shadow ></font> unshadowd.txt**</br>
+ > **<font color=red>unshadow /etc/passwd /etc/shadow ></font> unshadowd.txt**<br>
  > Prepare passwd and shadow file for John.
  > 
- > **<font color=red>john unshadow.txt --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > **<font color=red>john unshadow.txt --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**<br>
  > Crack user passwords.
  > 
- > **<font color=red>john --show</font> unshadow.txt**</br> 
+ > **<font color=red>john --show</font> unshadow.txt**<br> 
  > Display cracked passwords.
 
 # MD5
@@ -150,7 +152,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>john --format=md5crypt --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> hash.txt**</br>
+ > **<font color=red>john --format=md5crypt --wordlist=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> hash.txt**<br>
  > Crack MD5 hash.
 
 # NTLM
@@ -161,7 +163,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>john --format=NT -w=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> hash.txt <font color=red>--pot=</font>output.txt**</br>
+ > **<font color=red>john --format=NT -w=</font><font color=lightblue>/usr/share/wordlists/rockyou.txt</font> hash.txt <font color=red>--pot=</font>output.txt**<br>
  > Crack NTLM Hash.
 
 # DCC
@@ -172,7 +174,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>hashcat -a 0 -m 1100 0 '</font>15a57c379ebdfea572ad1ff91eb6ef0c:Administrator<font color=red>'</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > **<font color=red>hashcat -a 0 -m 1100 0 '</font>15a57c379ebdfea572ad1ff91eb6ef0c:Administrator<font color=red>'</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**<br>
  > Crack DCC (Domain Cached Credentials) hash.
 
 # ZIP
@@ -183,10 +185,10 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forjohn.txt**</br>
+ > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forjohn.txt**<br>
  > Prepare ZIP archive for John.
  > 
- > **<font color=red>john</font> forjohn.txt**</br>
+ > **<font color=red>john</font> forjohn.txt**<br>
  > Crack ZIP archive password.
 
 ---
@@ -195,10 +197,10 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forhashcat.txt**</br>
+ > **<font color=red>zip2john</font> myFile.zip <font color=red>\></font> forhashcat.txt**<br>
  > Remove name of the file and archive from the hash (at the beginning and the end).
  > 
- > **<font color=red>hashcat -a 0 -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**</br>
+ > **<font color=red>hashcat -a 0 -m 13600</font> forhashcat.txt <font color=lightblue>/usr/share/wordslist/rockyou.txt</font>**<br>
  > Crack ZIP archive password.
 
 ---
@@ -207,7 +209,7 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>fcrackzip -v -D -p</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font> <font color=red>-u </font>myZipFile.zip**</br>
+ > **<font color=red>fcrackzip -v -D -p</font> <font color=lightblue>/usr/share/wordlists/rockyou.txt</font> <font color=red>-u </font>myZipFile.zip**<br>
  > Crack ZIP archive password.
 
 # RAR
@@ -218,8 +220,8 @@ Default Alphabet : abcdefghijklmnopqrstuvwxyz
 
 
  > 
- > **<font color=red>rar2john</font> myFile.rar <font color=red>\></font> forjohn.txt**</br>
+ > **<font color=red>rar2john</font> myFile.rar <font color=red>\></font> forjohn.txt**<br>
  > Prepare RAR archive for John.
  > 
- > **<font color=red>john</font> forjohn.txt**</br>
+ > **<font color=red>john</font> forjohn.txt**<br>
  > Crack RAR archive password.

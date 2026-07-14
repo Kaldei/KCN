@@ -2,6 +2,8 @@
 title: 1 – Enumeration
 summary: "Enumeration step – a note for enumerating hosts, ports, subdomains, web paths, users, ..."
 description: "Enumeration step – a note for enumerating hosts, ports, subdomains, web paths, users, ..."
+tags:
+  - enumeration
 ---
 
 # Resources
@@ -18,11 +20,11 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>arp-scan -l</font> eth0**</br>
+ > **<font color=red>arp-scan -l</font> eth0**<br>
  > Scan for hosts in the same network of the specifeid interface.
 
  > 
- > **<font color=red>netdiscover -r</font> \[TARGET_NETWORK\]/24**</br>
+ > **<font color=red>netdiscover -r</font> \[TARGET_NETWORK\]/24**<br>
  > Return MAC address of this network.
 
 ---
@@ -31,7 +33,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font> 443</br>**
+ > **<font color=red>masscan</font> \[TARGET_NETWORK\]/24 <font color=red>-p</font> 443**<br>
  > Host discovering scan.
 
 # Port Scan
@@ -42,11 +44,11 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>nmap -sn</font> \[TARGET_NETWORK\]/24</br>**
+ > **<font color=red>nmap -sn</font> \[TARGET_NETWORK\]/24**<br>
  > Do not do port scan: scan for hosts (ARP, ICMP, TCP/UDP Ping). 
 
  > 
- > **<font color=red>nmap -sV -sC</font>  \[TARGET_IP\]</br>**
+ > **<font color=red>nmap -sV -sC</font>  \[TARGET_IP\]**<br>
  > Ports services + Default script.
 
 # SMB Scan
@@ -57,15 +59,15 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> --no-pass</font></br>**
+ > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> --no-pass</font>**<br>
  > List Shares anonymously.
 
  > 
- > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> -U</font> myUser</br>**
+ > **<font color=red>smbclient -L </font>\[TARGET_IP\]<font color=red> -U</font> myUser**<br>
  > List Shares with a user.
 
  > 
- > **<font color=red>smbclient</font> <font color=red>//</font>\[TARGET_IP\]<font color=red>/</font>mySmbShare</br>**
+ > **<font color=red>smbclient</font> <font color=red>//</font>\[TARGET_IP\]<font color=red>/</font>mySmbShare**<br>
  > Connect to a Share.
 
 ---
@@ -74,11 +76,11 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse</font> \[TARGET_IP\]</br>**
+ > **<font color=red>nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse</font> \[TARGET_IP\]**<br>
  > Search for SMB Shares.
 
  > 
- > **<font color=red>nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount</font> \[TARGET_IP\]</br>**
+ > **<font color=red>nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount</font> \[TARGET_IP\]**<br>
  > Enumerate rpcbind.
 
 ---
@@ -87,7 +89,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>enum4linux -S</font> \[TARGET_DOMAIN\]</br>**
+ > **<font color=red>enum4linux -S</font> \[TARGET_DOMAIN\]**<br>
  > List Samba Share.
 
 # Subdomains Fuzz
@@ -103,7 +105,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>cewler http://</font>\[TARGET_HOST\] <font color=red>--depth</font> 5 <font color=red>-o</font> my_cewler_wordlist.txt**</br>
+ > **<font color=red>cewler http://</font>\[TARGET_HOST\] <font color=red>--depth</font> 5 <font color=red>-o</font> my_cewler_wordlist.txt**<br>
  > Generate a wordlist from the target website.
 
 ---
@@ -114,10 +116,10 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
  > 
  > **<font color=orange>go install github.com/tomnomnom/assetfinder@latest</font>**
  > 
- > **<font color=red>assetfinder</font> \[TARGET_DOMAIN\]**</br>
+ > **<font color=red>assetfinder</font> \[TARGET_DOMAIN\]**<br>
  > Find subdomains and some that could be related.
  > 
- > **<font color=red>assetfinder --subs-only</font> \[TARGET_DOMAIN\]**</br>
+ > **<font color=red>assetfinder --subs-only</font> \[TARGET_DOMAIN\]**<br>
  > Find only subdomains (stay in the scope).
 
 ---
@@ -128,7 +130,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
  > 
  > **<font color=orange>go install github.com/OWASP/Amass/v3/...@master</font>**
  > 
- > **<font color=red>amass enum -d</font> \[TARGET_DOMAIN\]**</br>
+ > **<font color=red>amass enum -d</font> \[TARGET_DOMAIN\]**<br>
  > Find subdomains.
 
 ---
@@ -137,7 +139,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>dnsrecon -t brt -d</font> \[TARGET_DOMAIN\]**</br>
+ > **<font color=red>dnsrecon -t brt -d</font> \[TARGET_DOMAIN\]**<br>
  > Find subdomains (brute force).
 
 ---
@@ -146,7 +148,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>sublist3r.py -d</font>  \[TARGET_DOMAIN\]</br>**
+ > **<font color=red>sublist3r.py -d</font>  \[TARGET_DOMAIN\]**<br>
  > Find subdomains (using search engines).
 
 # Web Paths Fuzz
@@ -178,10 +180,10 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>gobuster dir -u</font> http://\[TARGET_IP\]:\[TARGET_PORT\] <font color=red>-w</font> myWordList <font color=red>-x</font> php,txt,html</br>**
+ > **<font color=red>gobuster dir -u</font> http://\[TARGET_IP\]:\[TARGET_PORT\] <font color=red>-w</font> myWordList <font color=red>-x</font> php,txt,html**<br>
  > Search files.
  > 
- > **<font color=red>gobuster dir -u</font> http://\[TARGET_IP\]:\[TARGET_PORT\] <font color=red>-w</font> myWordList</br>**
+ > **<font color=red>gobuster dir -u</font> http://\[TARGET_IP\]:\[TARGET_PORT\] <font color=red>-w</font> myWordList**<br>
  > Search folders.
 
 ---
@@ -190,7 +192,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>fuff -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Discovery/Web-Content/big.txt</font><font color=red>:FUZZ -u</font> http://\[TARGET_DOMAIN\]/<font color=red>FUZZ</font></br>**
+ > **<font color=red>fuff -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Discovery/Web-Content/big.txt</font><font color=red>:FUZZ -u</font> http://\[TARGET_DOMAIN\]/<font color=red>FUZZ</font>**<br>
  > Web Path FUZZ.
 
 ---
@@ -199,7 +201,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/<font color=red>FUZZ</font></br>**
+ > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/<font color=red>FUZZ</font>**<br>
  > Fuzz Folders.
 
 # API Fuzz
@@ -210,7 +212,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/api/file?parameter=<font color=red>FUZZ</font></br>**
+ > **<font color=red>wfuzz -c -z file,</font>myWordList http://\[TARGET_IP\]:\[TARGET_PORT\]/api/file?parameter=<font color=red>FUZZ</font>**<br>
  > Fuzz GET Parameter (ex: API).
 
 # Virutals Hosts Fuzz
@@ -221,7 +223,7 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>ffuf -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Discovery/DNS/namelist.txt</font> <font color=red>-H "Host: FUZZ.</font>\[TARGET_DOMAIN\]<font color=red>" -u</font> http://\[TARGET_DOMAIN\] <font color=red>-fs</font> 2395</br>**
+ > **<font color=red>ffuf -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Discovery/DNS/namelist.txt</font> <font color=red>-H "Host: FUZZ.</font>\[TARGET_DOMAIN\]<font color=red>" -u</font> http://\[TARGET_DOMAIN\] <font color=red>-fs</font> 2395**<br>
  > Virtual Host FUZZ.
 
 # User Fuzz
@@ -232,5 +234,5 @@ description: "Enumeration step – a note for enumerating hosts, ports, subdomai
 
 
  > 
- > **<font color=red>ffuf -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Usernames/Names/names.txt</font> <font color=red>-X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_DOMAIN\]/signup <font color=red>-mr </font>"username already exists"</br>**
+ > **<font color=red>ffuf -w</font> <font color=lightblue>/usr/share/wordlists/seclists/Usernames/Names/names.txt</font> <font color=red>-X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u</font> http://\[TARGET_DOMAIN\]/signup <font color=red>-mr </font>"username already exists"**<br>
  > User Enumeration.

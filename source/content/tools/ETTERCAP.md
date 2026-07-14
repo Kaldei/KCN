@@ -2,31 +2,39 @@
 title: ETTERCAP
 summary: A comprehensive suite for man in the middle attacks.
 description: A comprehensive suite for man in the middle attacks.
+tags:
+  - ettercap
+---
+
+# ETTERCAP
+
 ---
 
 **[https://github.com/Ettercap/ettercap](https://github.com/Ettercap/ettercap)**
 
-## Basis
+### Basis
 
 
  > 
  > **<font color=red>ettercap -T -S -i</font> wlan0 <font color=red>-M arp:remote /</font>\[ROUTER_IP\]<font color=red>// /</font>\[TARGET_IP\]<font color=red>//</font>**
 
-## Flags
+---
+
+### Flags
 
 
  > 
- > **<font color=red>-T</font>**</br>
+ > **<font color=red>-T</font>**<br>
  > Text Only (no GUI). 
  > 
- > **<font color=red>-S</font>**</br>
+ > **<font color=red>-S</font>**<br>
  > Do no use SSL.
  > 
- > **<font color=red>-i </font>wlan0**</br>
+ > **<font color=red>-i </font>wlan0**<br>
  > Specify interface.
  > 
- > **<font color=red>-M </font>**</br>
+ > **<font color=red>-M </font>**<br>
  > Man In The Middle Attack.
  > 
- > **<font color=red>arp:remote</font>**</br>
+ > **<font color=red>arp:remote</font>**<br>
  > Attack Method.
