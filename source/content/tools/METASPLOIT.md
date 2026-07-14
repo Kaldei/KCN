@@ -39,7 +39,7 @@ Example: windows/meterpreter/reverse_tcp.
 
 ### Exploit Ranking
 
-![tool-metasploit-terminology-exploit_ranking.png](../../attachments/tool-metasploit-terminology-exploit_ranking.png)
+![tool-metasploit-terminology-exploit_ranking.png](../../_attachments/tool-metasploit-terminology-exploit_ranking.png)
 
 Source: https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-ranking.html
 

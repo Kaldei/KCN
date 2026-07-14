@@ -12,7 +12,7 @@ tags:
 
 **[https://www.immunityinc.com/products/debugger/](https://www.immunityinc.com/products/debugger/)**
 
-![tool-immunity-overview.png](../../attachments/tool-immunity-overview.png)
+![tool-immunity-overview.png](../../_attachments/tool-immunity-overview.png)
 
 ### Basis
 
@@ -32,4 +32,4 @@ Put the followig script in `C:\Program Files (x86)\Immunity Inc\Immunity Debugge
 
 https://github.com/corelan/mona
 
-![tool-mona-immunity.png](../../attachments/tool-mona-immunity.png)
+![tool-mona-immunity.png](../../_attachments/tool-mona-immunity.png)

@@ -176,7 +176,7 @@ tags:
  > **<font color=red>nmap --script=smb2-security-mode.nse -p445</font> \[TARGET_IP\]**<br>
  > Scan for disabled SMB Signing.
 
-![tool-nmap-smb_signing.png](../../attachments/tool-nmap-smb_signing.png)
+![tool-nmap-smb_signing.png](../../_attachments/tool-nmap-smb_signing.png)
 
 ### Weak Cipher Scan
 

@@ -12,14 +12,14 @@ tags:
 
 ### Memory
 
-![killchain-buffer_overflow-architecture-memory.png](../../attachments/killchain-buffer_overflow-architecture-memory.png)
+![killchain-buffer_overflow-architecture-memory.png](../../_attachments/killchain-buffer_overflow-architecture-memory.png)
 Source: TCM Security
 
 ---
 
 ### Stack
 
-![killchain-buffer_overflow-architecture-stack.png](../../attachments/killchain-buffer_overflow-architecture-stack.png)
+![killchain-buffer_overflow-architecture-stack.png](../../_attachments/killchain-buffer_overflow-architecture-stack.png)
 Source: TCM Security
 
 # Basis
@@ -123,7 +123,7 @@ except:
 
  > 
  > Look at EIP Value (Immunity > Registers (in CPU Window))
- > ![exploit-buffer_overflow-eip_manual.png](../../attachments/exploit-buffer_overflow-eip_manual.png)
+ > ![exploit-buffer_overflow-eip_manual.png](../../_attachments/exploit-buffer_overflow-eip_manual.png)
 
  > 
  > **<font color=red>/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l</font> 3000 <font color=red>-q</font> 386F4337**<br>
@@ -144,7 +144,7 @@ Immunity : !mona findmsp -distance 2400
 
 → EIP contains normal pattern : 0x6f43396e (offset 1978)
 
-![exploit-buffer_overflow-eip_mona.png](../../attachments/exploit-buffer_overflow-eip_mona.png)
+![exploit-buffer_overflow-eip_mona.png](../../_attachments/exploit-buffer_overflow-eip_mona.png)
 
 ---
 
@@ -174,11 +174,11 @@ print()
 
  > 
  > Follow EIP in Immunity.
- > ![exploit-buffer_overflow-bad_chars_manual_1.png](../../attachments/exploit-buffer_overflow-bad_chars_manual_1.png)
+ > ![exploit-buffer_overflow-bad_chars_manual_1.png](../../_attachments/exploit-buffer_overflow-bad_chars_manual_1.png)
 
  > 
  > Check if all chars are here in right order.
- > ![exploit-buffer_overflow-bad_chars_manual_2.png](../../attachments/exploit-buffer_overflow-bad_chars_manual_2.png)
+ > ![exploit-buffer_overflow-bad_chars_manual_2.png](../../_attachments/exploit-buffer_overflow-bad_chars_manual_2.png)
 
  > 
  > Notes : 
@@ -200,7 +200,7 @@ print()
  > **<font color=red>!mona compare -f</font> bytearray.bin <font color=red>-a</font> ESP-ADDR**<br>
  > Find bad chars.
 
-![exploit-buffer_overflow-bad_chars_mona.png](../../attachments/exploit-buffer_overflow-bad_chars_mona.png)
+![exploit-buffer_overflow-bad_chars_mona.png](../../_attachments/exploit-buffer_overflow-bad_chars_mona.png)
 
 Do it again adding bad chars :
 
@@ -224,7 +224,7 @@ Do it again adding bad chars :
  > **<font color=red>!mona jmp -r esp -cpb </font>"\x00\x07\x08\x2e\x2f\xa0\xa1"**<br>
  > Return all "jmp esp" (specify bad chars after -cpb).
 
-![exploit-buffer_overflow-jump_point_mona.png](../../attachments/exploit-buffer_overflow-jump_point_mona.png)
+![exploit-buffer_overflow-jump_point_mona.png](../../_attachments/exploit-buffer_overflow-jump_point_mona.png)
 
 ---
 
