@@ -35,4 +35,4 @@ Put the followig script in `C:\Program Files (x86)\Immunity Inc\Immunity Debugge
 
 https://github.com/corelan/mona
 
-![tool-mona-immunity.png](../../_attachments/tool-mona-immunity.png)
+![tool-mona-immunity.png](../../../../../1-collect/compendium/_attachments/tool-mona-immunity.png)

@@ -78,7 +78,7 @@ tags:
 
 Note: To create a Silver Ticket, change the `/name:` to a domain admin account or a service account.
 
-![exploit-lsadump-golden_ticket.png](../../_attachments/exploit-lsadump-golden_ticket.png)
+![exploit-lsadump-golden_ticket.png](../../../../../1-collect/compendium/_attachments/exploit-lsadump-golden_ticket.png)
 Credit: TCM Security
 
  > 
