@@ -72,7 +72,7 @@ rule myRule {
 }
 ````
 
-**Valhalla Rules Database:** https://valhalla.nextron-systems.com/ 
+**Valhalla Rules Database:** https://valhalla.nextron-systems.com/
 
 ---
 

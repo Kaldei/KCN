@@ -49,4 +49,4 @@ WiseBootAssistant(WiseCleaner.com - Wise Boot Assistant)[C:\Program Files (x86)\
  > **<font color=red>sc.exe stop</font> WiseBootAssistant**<br>
  > **<font color=red>sc.exe query</font> WiseBootAssistant**<br>
  > **<font color=red>sc.exe start</font> WiseBootAssistant**<br>
- > Restart the service to execute the crafted one. 
+ > Restart the service to execute the crafted one.

