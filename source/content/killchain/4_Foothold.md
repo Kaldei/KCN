@@ -68,12 +68,6 @@ tags:
 
 ---
 
-### MIMIKATZ
-
-
-
----
-
 ### METERPRETER
 
 
